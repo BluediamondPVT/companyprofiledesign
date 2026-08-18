@@ -1,0 +1,17 @@
+[
+  {
+    "img": "/assets/images/resource/team.png",  
+    "title": "Creativity",
+    "desc": "We believe in mingling our creativity with our customer’s ideology to create the best creative result to support them in achieving their business goals."
+  },
+  {
+    "img": "/assets/images/resource/team2.png",  
+    "title": "Quality",
+    "desc": "We will never compromise with our quality solutions. Our design solutions will bring the rightful value to our customers and their business goals."
+  },
+  { 
+    "img": "/assets/images/resource/team3.png",  
+    "title": "Service",
+    "desc": "We pledge to provide the best professional service to all our valuable customers. We will always value our customer’s time and their investment in us."
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "number": "2",
+    "symbol": "K+",
+    "desc": "Requests executed"
+  },
+  {
+    "number": "1500",
+    "symbol": "+",
+    "desc": "Number of clients"
+  },
+  {
+    "number": "50",
+    "symbol": "+",
+    "desc": "Employees"
+  },
+  {
+    "number": "15",
+    "symbol": "+",
+    "desc": "Experience"
+  }
+]
+
+

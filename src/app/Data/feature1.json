@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "/assets/images/resource/1icon.png",
+    "title": "Planning & Strategy",
+    "desc": "We design and place every content strategically based on how your customers should respond to it; we use a bit of human science in the design process."
+  },
+  {
+    "icon": "/assets/images/resource/2icon.png",
+    "title": "Rich & Original Content",
+    "desc": "Experienced and creative content writers will write all the content for your company profile; we assure you 100% plagiarism free content." 
+  },
+  {
+    "icon": "/assets/images/resource/3icon.png",
+    "title": "Size & Layout Optimization",
+    "desc": "Based on your requirement, we help you to select and design a properly sized company profile which are attractive and of high resolution." 
+  },
+  {
+    "icon": "/assets/images/resource/4icon.png",
+    "title": "Portable Digital Format",
+    "desc": "We will always provide you with a portable softcopy of your designer company profile so that you can share the same with your customers online." 
+  },
+  {
+    "icon": "/assets/images/resource/5icon.png",
+    "title": "Printing Assistance",
+    "desc": "We will guide you to select the best quality and suitable material for printing your company profile, starting from paper selection to print quality." 
+  }
+]
