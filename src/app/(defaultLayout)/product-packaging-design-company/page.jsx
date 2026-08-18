@@ -29,7 +29,7 @@ export const metadata = {
     type: "article",
     images: [
       {
-        url: "/",
+        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.jpg",
         width: 1920,
         height: 1080,
         alt: "Product Packaging Design Company",
@@ -117,6 +117,7 @@ const schemaGraph = {
       "primaryImageOfPage": { "@id": "https://www.companyprofiledesign.in/product-packaging-design-company/#primaryimage" },
       "image": { "@id": "https://www.companyprofiledesign.in/product-packaging-design-company/#primaryimage" },
       "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.jpg",
+      "datePublished": "2025-12-02T14:09:17+00:00",
       "description": "Looking for a Product Packaging Design Company that can make your products stand out on shelves and online marketplaces?",
       "breadcrumb": { "@id": "https://www.companyprofiledesign.in/product-packaging-design-company/#breadcrumb" },
       "inLanguage": "en-US"
