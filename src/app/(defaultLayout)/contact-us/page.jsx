@@ -137,8 +137,7 @@ const ContactUsPage = () => {
                 <BreadCumb
                     bgImg="/assets/images/resource/inner-bg.jpg"
                     subTitle="Contact"
-                    title="Feel Free to Contact with <br>Our Support Team"
-                    content="Reach out to our expert team for high-quality company profiles, brochure designs, catalogue layouts, and branding solutions."
+                    title="Contact Now With Us For A Great Starts…!!!"
                 />
                 <Contact />
                 <Cta2 />

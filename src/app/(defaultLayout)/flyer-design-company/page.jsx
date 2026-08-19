@@ -1,4 +1,4 @@
-import About4 from '@/app/Components/About/About4';
+import CatalogueAbout from '@/app/Components/About/CatalogueAbout';
 import Cta from '@/app/Components/Cta/Cta';
 import Portfolio from '@/app/Components/Portfolio/Portfolio';
 import WhyBestCatalogue from '@/app/Components/Feature/WhyBestCatalogue';
@@ -200,7 +200,7 @@ const FlyerDesignPage = () => {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
             />
-            <About4 
+            <CatalogueAbout 
                 title="Flyer Design Company"
                 subTitle="We are the most dependable flyer design company in India"
                 paragraphs={flyerParagraphs}
@@ -208,6 +208,7 @@ const FlyerDesignPage = () => {
                 advantagesContent="A professional flyer design company helps businesses create visually appealing and strategically designed flyers that effectively communicate their message. Well-designed flyers increase brand visibility, promote offers clearly, and attract customer attention, making them an essential marketing tool for businesses looking to grow and stand out in competitive markets."
                 advantagesSubtext=""
                 customData={flyerAdvantagesData}
+                imgSrc="/assets/images/resource/flyer-design-about.jpg"
             />
 
             <Portfolio 

@@ -16,10 +16,10 @@ const WritingAbout = () => {
                             border: '1px solid #e2e8f0'
                         }}>
                             <Image 
-                                src="/assets/images/resource/about.jpg" 
+                                src="/assets/images/resource/company-profile-writing-about.webp" 
                                 alt="Company Profile Writing Services Advantage" 
                                 width={600} 
-                                height={500}
+                                height={450}
                                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
                             />
                         </div>

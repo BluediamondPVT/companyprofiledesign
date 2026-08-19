@@ -20,10 +20,23 @@ const clashdisplay = localFont({
   variable: '--heading-font',
 });
 
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="robots" content="noindex, nofollow" />
         <meta name="author" content="Company Profile Design" />
         <link rel="icon" href="/company-profile-design-favicon.png" type="image/png" sizes="any" />
         

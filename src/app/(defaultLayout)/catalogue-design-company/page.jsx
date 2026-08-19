@@ -1,4 +1,4 @@
-import About4 from '@/app/Components/About/About4';
+import CatalogueAbout from '@/app/Components/About/CatalogueAbout';
 import Cta from '@/app/Components/Cta/Cta';
 import Portfolio from '@/app/Components/Portfolio/Portfolio';
 import WhyBestCatalogue from '@/app/Components/Feature/WhyBestCatalogue';
@@ -150,7 +150,7 @@ const CatalogueDesignCompanyPage = () => {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
             />
-            <About4 />
+            <CatalogueAbout />
             <Portfolio 
                 title="Explore Our Latest Catalogue Designs for Businesses" 
                 content="As a leading catalogue design company, we have created high-quality business catalogues for clients across major cities including Delhi, Mumbai, Bangalore, Bengaluru, Chennai, Lucknow, and other business hubs. Browse our latest catalogue design work below to see the creativity, structure, and professional standards." 

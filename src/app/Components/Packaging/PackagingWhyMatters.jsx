@@ -26,6 +26,7 @@ const PackagingWhyMatters = () => {
                                 width={520} 
                                 height={450} 
                                 style={{ objectFit: 'cover', display: 'block', width: '100%', height: 'auto' }}
+                                unoptimized
                             />
                         </div>
                     </div>

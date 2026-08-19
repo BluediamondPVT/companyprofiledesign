@@ -32,6 +32,7 @@ const LogoWhyChoose = () => {
                                 width={600} 
                                 height={400} 
                                 style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+                                unoptimized
                             />
                         </div>
                     </div>

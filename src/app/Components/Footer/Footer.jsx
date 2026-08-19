@@ -7,7 +7,7 @@ const Footer = () => {
 
       const OurServices = [
         {title: 'Catalogue Design Company', link: '/catalogue-design-company'},
-        {title: 'Poster Design Company', link: '/poster-design-company'},
+       
         {title: 'Brochure Design Company', link: '/brochure-design-company'},
         {title: 'Flyer Design Company', link: '/flyer-design-company'}
       ];

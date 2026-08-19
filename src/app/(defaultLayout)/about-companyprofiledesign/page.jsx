@@ -41,6 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "About CompanyProfileDesign | Profile Design Solutions",
     description: "We are a leading profile design company in India with vast experience and expert designers offering creative, tailored company profiles and brochure designs.",
+    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png"],
   },
   verification: {
     google: [

@@ -70,11 +70,12 @@ const PptAbout = () => {
                     <div className="col-lg-6">
                         <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
                             <Image 
-                                src="/assets/images/resource/about.jpg" 
+                                src="/assets/images/resource/company-profile-powerpoint-presentation-1200x675-1.webp" 
                                 alt="Company Profile PPT Presentation" 
                                 width={600} 
                                 height={450} 
                                 style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+                                unoptimized
                             />
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import About4 from '@/app/Components/About/About4';
+import CatalogueAbout from '@/app/Components/About/CatalogueAbout';
 import PackagingServices from '@/app/Components/Packaging/PackagingServices';
 import PackagingProcess from '@/app/Components/Packaging/PackagingProcess';
 import PackagingWhyMatters from '@/app/Components/Packaging/PackagingWhyMatters';
@@ -228,7 +228,7 @@ const ProductPackagingDesignPage = () => {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
             />
             {/* 1. Header & About Section */}
-            <About4 
+            <CatalogueAbout 
                 title="Product Packaging Design Company"
                 subTitle="Creative, Modern & Market-Driven Packaging Solutions"
                 paragraphs={packagingParagraphs}

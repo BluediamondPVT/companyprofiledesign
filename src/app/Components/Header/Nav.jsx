@@ -25,11 +25,7 @@ export default function Nav({ setMobileToggle }) {
                 Catalogue Design Company
               </Link>
             </li>
-            <li>
-              <Link href="/poster-design-company" onClick={() => setMobileToggle(false)}>
-                Poster Design Company
-              </Link>
-            </li> 
+          
             <li>
               <Link href="/brochure-design-company" onClick={() => setMobileToggle(false)}>
                 Brochure Design Company

@@ -34,7 +34,9 @@ const PptHero = () => {
                             </h1>
                             
                             <p className="ppt-hero-desc">
-                                Profile Design Company provides a high-quality company profile presentation making service for businesses across the country. Our business presentation makers have an established process and understand your overall business objectives.
+                               Presentation designers at our firm help companies achieve their goals through clear and compelling Company Profile PPT Slide presentations that increase confidence and encourage action. Our team of presentation designers creates presentations that are engaging, persuasive and on-brand.
+
+
                             </p>
 
                             <div>

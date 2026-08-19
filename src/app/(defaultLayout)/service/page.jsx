@@ -18,13 +18,7 @@ const servicesData = [
     icon: "/assets/images/resource/1icon.png",
     link: "/catalogue-design-company"
   },
-  {
-    id: 2,
-    title: "Poster Design Company",
-    desc: "Eye-catching corporate and promotional poster designs engineered for high visual impact, brand awareness campaigns, and event promotion.",
-    icon: "/assets/images/resource/2icon.png",
-    link: "/poster-design-company"
-  },
+  
   {
     id: 3,
     title: "Brochure Design Company",

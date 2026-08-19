@@ -1,4 +1,4 @@
-import About4 from '@/app/Components/About/About4';
+import CatalogueAbout from '@/app/Components/About/CatalogueAbout';
 import Portfolio from '@/app/Components/Portfolio/Portfolio';
 import WhyBestCatalogue from '@/app/Components/Feature/WhyBestCatalogue';
 import GraphicWhyMatters from '@/app/Components/Graphic/GraphicWhyMatters';
@@ -284,7 +284,7 @@ const GraphicDesignPage = () => {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
             />
 
-            <About4 
+            <CatalogueAbout 
                 title="Graphic Design Company in India"
                 subTitle="Creative, Modern & Professional Design Services"
                 paragraphs={graphicParagraphs}

@@ -1,4 +1,4 @@
-import About4 from '@/app/Components/About/About4';
+import CatalogueAbout from '@/app/Components/About/CatalogueAbout';
 import Cta from '@/app/Components/Cta/Cta';
 import Portfolio from '@/app/Components/Portfolio/Portfolio';
 import WhyBestCatalogue from '@/app/Components/Feature/WhyBestCatalogue';
@@ -200,7 +200,7 @@ const BrochureDesignPage = () => {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
             />
-            <About4 
+            <CatalogueAbout 
                 title="Brochure Design Company"
                 subTitle="The Most Creative Brochure Design Company in India"
                 paragraphs={brochureParagraphs}
@@ -208,6 +208,7 @@ const BrochureDesignPage = () => {
                 advantagesContent="A professional brochure design company helps businesses create impactful, well-structured brochures that effectively represent their brand and products. A creatively designed brochure builds trust, enhances brand visibility, and communicates key information clearly, making it an essential marketing tool for business growth."
                 advantagesSubtext=""
                 customData={brochureAdvantagesData}
+                imgSrc="/assets/images/resource/brochure-design-about.jpg"
             />
 
             <Portfolio 

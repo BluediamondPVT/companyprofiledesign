@@ -1,4 +1,10 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  trailingSlash: true,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+};
 
-export default nextConfig;
+export default nextConfig; 
