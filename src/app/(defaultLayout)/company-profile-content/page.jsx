@@ -188,7 +188,6 @@ const page = () => {
                 bgImg="/assets/images/resource/inner-bg.jpg"
                 subTitle="Blog Details"
                 title="what should a company profile content"
-                content="Complete Guide for Businesses"
             />
             <CompanyProfileContent />
         </div>

@@ -1,13 +1,15 @@
-import CompanyProfileDesignGuide from '@/app/Components/BlogDetails/CompanyProfileSample';
-import BreadCumb from '@/app/Components/Common/BreadCumb';
-import React from 'react';
+import CompanyProfileDesignGuide from "@/app/Components/BlogDetails/CompanyProfileDesignGuide";
+import BreadCumb from "@/app/Components/Common/BreadCumb";
+import React from "react";
 
 // 1. Next.js App Router Metadata (Preserving WordPress SEO Authority + Enhancements)
 export const metadata = {
   title: "Company Profile Design Complete Guide for Businesses",
-  description: "Whether you are a startup or SME, investing in a professional company profile design in India significantly improves your brand image and credibility.",
+  description:
+    "Whether you are a startup or SME, investing in a professional company profile design in India significantly improves your brand image and credibility.",
   alternates: {
-    canonical: "https://www.companyprofiledesign.in/company-profile-design-guide/",
+    canonical:
+      "https://www.companyprofiledesign.in/company-profile-design-guide/",
   },
   robots: {
     index: true,
@@ -20,7 +22,8 @@ export const metadata = {
     locale: "en_IN",
     type: "article",
     title: "Company Profile Design Complete Guide for Businesses",
-    description: "Whether you are a startup or SME, investing in a professional company profile design in India significantly improves your brand image and credibility.",
+    description:
+      "Whether you are a startup or SME, investing in a professional company profile design in India significantly improves your brand image and credibility.",
     url: "https://www.companyprofiledesign.in/company-profile-design-guide/",
     siteName: "Company Profile Design | Profile Design Company",
     publishedTime: "2025-12-13T12:30:52+00:00",
@@ -37,8 +40,11 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Company Profile Design Complete Guide for Businesses",
-    description: "Whether you are a startup or SME, investing in a professional company profile design in India significantly improves your brand image and credibility.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png"],
+    description:
+      "Whether you are a startup or SME, investing in a professional company profile design in India significantly improves your brand image and credibility.",
+    images: [
+      "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+    ],
   },
   verification: {
     google: [
@@ -56,140 +62,167 @@ const schemaGraph = {
     {
       "@type": "Organization",
       "@id": "https://www.companyprofiledesign.in/#organization",
-      "name": "Company Profile Design",
-      "url": "https://www.companyprofiledesign.in/",
-      "logo": {
+      name: "Company Profile Design",
+      url: "https://www.companyprofiledesign.in/",
+      logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "width": 384,
-        "height": 80,
-        "caption": "Company Profile Design"
+        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        contentUrl:
+          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        width: 384,
+        height: 80,
+        caption: "Company Profile Design",
       },
-      "image": { "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/" },
-      "contactPoint": {
+      image: {
+        "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
+      },
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+917718967729",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi"]
+        telephone: "+917718967729",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
       },
-      "sameAs": [
-        "https://in.pinterest.com/companyprofiledesignind"
-      ]
+      sameAs: ["https://in.pinterest.com/companyprofiledesignind"],
     },
 
     // WebSite Schema
     {
       "@type": "WebSite",
       "@id": "https://www.companyprofiledesign.in/#website",
-      "url": "https://www.companyprofiledesign.in/",
-      "name": "Company Profile Design",
-      "description": "Design Company Profile, Brochures, Catalogs, etc",
-      "publisher": { "@id": "https://www.companyprofiledesign.in/#organization" },
-      "alternateName": "Profile Design Company",
-      "inLanguage": "en-US"
+      url: "https://www.companyprofiledesign.in/",
+      name: "Company Profile Design",
+      description: "Design Company Profile, Brochures, Catalogs, etc",
+      publisher: { "@id": "https://www.companyprofiledesign.in/#organization" },
+      alternateName: "Profile Design Company",
+      inLanguage: "en-US",
     },
 
     // Primary Image Object
     {
       "@type": "ImageObject",
-      "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
-      "url": "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
-      "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
-      "width": 1024,
-      "height": 576,
-      "caption": "Company Profile Design",
-      "inLanguage": "en-US"
+      "@id":
+        "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
+      url: "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+      contentUrl:
+        "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+      width: 1024,
+      height: 576,
+      caption: "Company Profile Design",
+      inLanguage: "en-US",
     },
 
     // Article / BlogPosting Schema
     {
       "@type": "Article",
-      "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/#article",
-      "isPartOf": { "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/" },
-      "author": {
-        "@type": "Person",
-        "name": "TheBDIT"
+      "@id":
+        "https://www.companyprofiledesign.in/company-profile-design-guide/#article",
+      isPartOf: {
+        "@id":
+          "https://www.companyprofiledesign.in/company-profile-design-guide/",
       },
-      "headline": "Company Profile Design Complete Guide for Businesses",
-      "datePublished": "2025-12-13T12:30:52+00:00",
-      "mainEntityOfPage": { "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/" },
-      "wordCount": 800,
-      "publisher": { "@id": "https://www.companyprofiledesign.in/#organization" },
-      "image": { "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
-      "keywords": [
+      author: {
+        "@type": "Person",
+        name: "TheBDIT",
+      },
+      headline: "Company Profile Design Complete Guide for Businesses",
+      datePublished: "2025-12-13T12:30:52+00:00",
+      mainEntityOfPage: {
+        "@id":
+          "https://www.companyprofiledesign.in/company-profile-design-guide/",
+      },
+      wordCount: 800,
+      publisher: { "@id": "https://www.companyprofiledesign.in/#organization" },
+      image: {
+        "@id":
+          "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
+      },
+      thumbnailUrl:
+        "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+      keywords: [
         "Company profile",
         "Company Profile Design",
         "Company Profile design Guide",
-        "Profile Design Company"
+        "Profile Design Company",
       ],
-      "articleSection": ["Company Profile"],
-      "inLanguage": "en-US"
+      articleSection: ["Company Profile"],
+      inLanguage: "en-US",
     },
 
     // WebPage Schema
     {
       "@type": "WebPage",
-      "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/",
-      "url": "https://www.companyprofiledesign.in/company-profile-design-guide/",
-      "name": "Company Profile Design Complete Guide for Businesses",
-      "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
-      "primaryImageOfPage": { "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage" },
-      "image": { "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
-      "datePublished": "2025-12-13T12:30:52+00:00",
-      "description": "Whether you are a startup or SME's, investing in a professional company profile design in India, significantly improve your brand image.",
-      "breadcrumb": { "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/#breadcrumb" },
-      "inLanguage": "en-US"
+      "@id":
+        "https://www.companyprofiledesign.in/company-profile-design-guide/",
+      url: "https://www.companyprofiledesign.in/company-profile-design-guide/",
+      name: "Company Profile Design Complete Guide for Businesses",
+      isPartOf: { "@id": "https://www.companyprofiledesign.in/#website" },
+      primaryImageOfPage: {
+        "@id":
+          "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
+      },
+      image: {
+        "@id":
+          "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
+      },
+      thumbnailUrl:
+        "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+      datePublished: "2025-12-13T12:30:52+00:00",
+      description:
+        "Whether you are a startup or SME's, investing in a professional company profile design in India, significantly improve your brand image.",
+      breadcrumb: {
+        "@id":
+          "https://www.companyprofiledesign.in/company-profile-design-guide/#breadcrumb",
+      },
+      inLanguage: "en-US",
     },
 
     // BreadcrumbList Schema (Home -> Our Blog -> Guide)
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.companyprofiledesign.in/company-profile-design-guide/#breadcrumb",
-      "itemListElement": [
+      "@id":
+        "https://www.companyprofiledesign.in/company-profile-design-guide/#breadcrumb",
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.companyprofiledesign.in/"
+          position: 1,
+          name: "Home",
+          item: "https://www.companyprofiledesign.in/",
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": "Our Blog",
-          "item": "https://www.companyprofiledesign.in/our-blog/"
+          position: 2,
+          name: "Our Blog",
+          item: "https://www.companyprofiledesign.in/our-blog/",
         },
         {
           "@type": "ListItem",
-          "position": 3,
-          "name": "Company Profile Design Complete Guide for Businesses",
-          "item": "https://www.companyprofiledesign.in/company-profile-design-guide/"
-        }
-      ]
-    }
-  ]
+          position: 3,
+          name: "Company Profile Design Complete Guide for Businesses",
+          item: "https://www.companyprofiledesign.in/company-profile-design-guide/",
+        },
+      ],
+    },
+  ],
 };
 
 const page = () => {
-    return (
-        <div>
-            {/* Single Consolidated Schema */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
-            />
-            <BreadCumb
-                bgImg="/assets/images/resource/inner-bg.jpg"
-                subTitle="Blog Details"
-                title="Company Profile Design Complete Guide for Businesses"
-            />
-            <CompanyProfileDesignGuide />
-        </div>
-    );
+  return (
+    <div>
+      {/* Single Consolidated Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+      />
+      <BreadCumb
+        bgImg="/assets/images/resource/inner-bg.jpg"
+        subTitle="Blog Details"
+        title="Company Profile Design Complete Guide for Businesses"
+      />
+      <CompanyProfileDesignGuide />
+    </div>
+  );
 };
 
 export default page;

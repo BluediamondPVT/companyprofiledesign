@@ -47,7 +47,7 @@ const WritingHero = () => {
                                 fontWeight: '400',
                                 padding: '0'
                             }}>
-                                Writing a content for a company profile is an art. It takes time, patience and deep understanding of your brand so that we can help you create a content that speaks for your business. We at Profile Design Company are known as the best company profile writing company in India, creating high-quality content that speaks about your company and brand values to your clients.
+                                Get high value for your business & attract maximum clients with our innovatively written Company Profile Writing Services. BDIT offers youth pre-eminent and professional content writing services with a business profile that is straightforward, simple, and easy to understand. We facilitate content with no space for uncertainty and exciting clients to instantly build a business relationship with you.
                             </p>
                         </div>
                     </div>

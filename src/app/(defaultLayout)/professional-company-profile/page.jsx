@@ -1,13 +1,15 @@
-import BlogDetails from '@/app/Components/BlogDetails/CompanyProfileSample';
-import BreadCumb from '@/app/Components/Common/BreadCumb';
-import React from 'react';
+import BlogDetails from "@/app/Components/BlogDetails/ProfessionalCompanyProfile";
+import BreadCumb from "@/app/Components/Common/BreadCumb";
+import React from "react";
 
 // 1. Next.js App Router Metadata (Preserving WordPress SEO Authority + Enhancements)
 export const metadata = {
   title: "How can you make a professional company profile?",
-  description: "Discover key steps and expert tips on how to make a professional company profile that impresses clients, builds trust, and drives business growth.",
+  description:
+    "Discover key steps and expert tips on how to make a professional company profile that impresses clients, builds trust, and drives business growth.",
   alternates: {
-    canonical: "https://www.companyprofiledesign.in/professional-company-profile/",
+    canonical:
+      "https://www.companyprofiledesign.in/professional-company-profile/",
   },
   robots: {
     index: true,
@@ -20,7 +22,8 @@ export const metadata = {
     locale: "en_IN",
     type: "article",
     title: "How can you make a professional company profile?",
-    description: "Discover key steps and expert tips on how to make a professional company profile that impresses clients, builds trust, and drives business growth.",
+    description:
+      "Discover key steps and expert tips on how to make a professional company profile that impresses clients, builds trust, and drives business growth.",
     url: "https://www.companyprofiledesign.in/professional-company-profile/",
     siteName: "Company Profile Design | Profile Design Company",
     publishedTime: "2020-01-06T07:48:18+00:00",
@@ -38,8 +41,11 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "How can you make a professional company profile?",
-    description: "Discover key steps and expert tips on how to make a professional company profile that impresses clients, builds trust, and drives business growth.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg"],
+    description:
+      "Discover key steps and expert tips on how to make a professional company profile that impresses clients, builds trust, and drives business growth.",
+    images: [
+      "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+    ],
   },
   verification: {
     google: [
@@ -57,141 +63,168 @@ const schemaGraph = {
     {
       "@type": "Organization",
       "@id": "https://www.companyprofiledesign.in/#organization",
-      "name": "Company Profile Design",
-      "url": "https://www.companyprofiledesign.in/",
-      "logo": {
+      name: "Company Profile Design",
+      url: "https://www.companyprofiledesign.in/",
+      logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "width": 384,
-        "height": 80,
-        "caption": "Company Profile Design"
+        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        contentUrl:
+          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        width: 384,
+        height: 80,
+        caption: "Company Profile Design",
       },
-      "image": { "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/" },
-      "contactPoint": {
+      image: {
+        "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
+      },
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+917718967729",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi"]
+        telephone: "+917718967729",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
       },
-      "sameAs": [
-        "https://in.pinterest.com/companyprofiledesignind"
-      ]
+      sameAs: ["https://in.pinterest.com/companyprofiledesignind"],
     },
 
     // WebSite Schema
     {
       "@type": "WebSite",
       "@id": "https://www.companyprofiledesign.in/#website",
-      "url": "https://www.companyprofiledesign.in/",
-      "name": "Company Profile Design",
-      "description": "Design Company Profile, Brochures, Catalogs, etc",
-      "publisher": { "@id": "https://www.companyprofiledesign.in/#organization" },
-      "alternateName": "Profile Design Company",
-      "inLanguage": "en-US"
+      url: "https://www.companyprofiledesign.in/",
+      name: "Company Profile Design",
+      description: "Design Company Profile, Brochures, Catalogs, etc",
+      publisher: { "@id": "https://www.companyprofiledesign.in/#organization" },
+      alternateName: "Profile Design Company",
+      inLanguage: "en-US",
     },
 
     // Primary Image Object
     {
       "@type": "ImageObject",
-      "@id": "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
-      "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
-      "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
-      "width": 1920,
-      "height": 1080,
-      "caption": "Professional Company Profile",
-      "inLanguage": "en-US"
+      "@id":
+        "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
+      url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+      contentUrl:
+        "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+      width: 1920,
+      height: 1080,
+      caption: "Professional Company Profile",
+      inLanguage: "en-US",
     },
 
     // Article / BlogPosting Schema
     {
       "@type": "Article",
-      "@id": "https://www.companyprofiledesign.in/professional-company-profile/#article",
-      "isPartOf": { "@id": "https://www.companyprofiledesign.in/professional-company-profile/" },
-      "author": {
-        "@type": "Person",
-        "name": "TheBDIT"
+      "@id":
+        "https://www.companyprofiledesign.in/professional-company-profile/#article",
+      isPartOf: {
+        "@id":
+          "https://www.companyprofiledesign.in/professional-company-profile/",
       },
-      "headline": "How can you make a professional company profile?",
-      "datePublished": "2020-01-06T07:48:18+00:00",
-      "dateModified": "2021-12-31T05:03:02+00:00",
-      "mainEntityOfPage": { "@id": "https://www.companyprofiledesign.in/professional-company-profile/" },
-      "wordCount": 637,
-      "publisher": { "@id": "https://www.companyprofiledesign.in/#organization" },
-      "image": { "@id": "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
-      "keywords": [
+      author: {
+        "@type": "Person",
+        name: "TheBDIT",
+      },
+      headline: "How can you make a professional company profile?",
+      datePublished: "2020-01-06T07:48:18+00:00",
+      dateModified: "2021-12-31T05:03:02+00:00",
+      mainEntityOfPage: {
+        "@id":
+          "https://www.companyprofiledesign.in/professional-company-profile/",
+      },
+      wordCount: 637,
+      publisher: { "@id": "https://www.companyprofiledesign.in/#organization" },
+      image: {
+        "@id":
+          "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
+      },
+      thumbnailUrl:
+        "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+      keywords: [
         "Company Profile",
         "Professional Company Profile",
-        "Profile Design"
+        "Profile Design",
       ],
-      "articleSection": ["Company Profile"],
-      "inLanguage": "en-US"
+      articleSection: ["Company Profile"],
+      inLanguage: "en-US",
     },
 
     // WebPage Schema
     {
       "@type": "WebPage",
-      "@id": "https://www.companyprofiledesign.in/professional-company-profile/",
-      "url": "https://www.companyprofiledesign.in/professional-company-profile/",
-      "name": "How can you make a professional company profile?",
-      "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
-      "primaryImageOfPage": { "@id": "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage" },
-      "image": { "@id": "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
-      "datePublished": "2020-01-06T07:48:18+00:00",
-      "dateModified": "2021-12-31T05:03:02+00:00",
-      "description": "leading professional company profile design company, we have jotted down some key points which are soul for any Corporate company profile",
-      "breadcrumb": { "@id": "https://www.companyprofiledesign.in/professional-company-profile/#breadcrumb" },
-      "inLanguage": "en-US"
+      "@id":
+        "https://www.companyprofiledesign.in/professional-company-profile/",
+      url: "https://www.companyprofiledesign.in/professional-company-profile/",
+      name: "How can you make a professional company profile?",
+      isPartOf: { "@id": "https://www.companyprofiledesign.in/#website" },
+      primaryImageOfPage: {
+        "@id":
+          "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
+      },
+      image: {
+        "@id":
+          "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
+      },
+      thumbnailUrl:
+        "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+      datePublished: "2020-01-06T07:48:18+00:00",
+      dateModified: "2021-12-31T05:03:02+00:00",
+      description:
+        "leading professional company profile design company, we have jotted down some key points which are soul for any Corporate company profile",
+      breadcrumb: {
+        "@id":
+          "https://www.companyprofiledesign.in/professional-company-profile/#breadcrumb",
+      },
+      inLanguage: "en-US",
     },
 
     // BreadcrumbList Schema (Home -> Our Blog -> Article)
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.companyprofiledesign.in/professional-company-profile/#breadcrumb",
-      "itemListElement": [
+      "@id":
+        "https://www.companyprofiledesign.in/professional-company-profile/#breadcrumb",
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.companyprofiledesign.in/"
+          position: 1,
+          name: "Home",
+          item: "https://www.companyprofiledesign.in/",
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": "Our Blog",
-          "item": "https://www.companyprofiledesign.in/our-blog/"
+          position: 2,
+          name: "Our Blog",
+          item: "https://www.companyprofiledesign.in/our-blog/",
         },
         {
           "@type": "ListItem",
-          "position": 3,
-          "name": "How can you make a professional company profile?",
-          "item": "https://www.companyprofiledesign.in/professional-company-profile/"
-        }
-      ]
-    }
-  ]
+          position: 3,
+          name: "How can you make a professional company profile?",
+          item: "https://www.companyprofiledesign.in/professional-company-profile/",
+        },
+      ],
+    },
+  ],
 };
 
 const page = () => {
-    return (
-        <div>
-            {/* Single Consolidated Schema */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
-            />
-            <BreadCumb
-                bgImg="/assets/images/resource/inner-bg.jpg"
-                subTitle="Blog Details"
-                title="How can you make a professional company profile?"
-            />
-            <BlogDetails />
-        </div>
-    );
+  return (
+    <div>
+      {/* Single Consolidated Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+      />
+      <BreadCumb
+        bgImg="/assets/images/resource/inner-bg.jpg"
+        subTitle="Blog Details"
+        title="How can you make a professional company profile?"
+      />
+      <BlogDetails />
+    </div>
+  );
 };
 
 export default page;
