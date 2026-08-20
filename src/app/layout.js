@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="robots" content="noindex, nofollow" />
         <meta name="author" content="Company Profile Design" />
-        <link rel="icon" href="/favicon.ico" type="image/png" sizes="any" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         
         {/* Google Ads Tag (gtag.js) */}
         <Script 
