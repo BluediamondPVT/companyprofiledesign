@@ -215,7 +215,7 @@ const HomePage = () => {
           btnUrl="/contact-us" 
           btnUrl2="https://wa.me/917718967729"  
           heroShape1="/assets/images/slider/hero-shp1.png"  
-          heroShape2="/assets/images/slider/hero-shp2.png"
+          heroShape2="/assets/images/slider/hero-shp2.webp"
           heroShape3="/assets/images/slider/circle.png"
         />
         <Feature1 />
