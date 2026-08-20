@@ -48,7 +48,7 @@ const LogoFaq = () => {
                     {/* Left Image */}
                     <div className="col-lg-5 mb-5 mb-lg-0 text-center">
                         <Image 
-                            src="/assets/images/resource/logo-design-faq.png" 
+                            src="/assets/images/resource/logo-design-faq.webp" 
                             alt="FAQs" 
                             width={400} 
                             height={500} 

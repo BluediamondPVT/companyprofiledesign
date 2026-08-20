@@ -4,8 +4,10 @@ import React from "react";
 
 // 1. Next.js App Router Metadata (Preserving WordPress SEO Authority + Enhancements)
 export const metadata = {
-  title: "Terms and Conditions | Company Profile Design | Profile Design Company",
-  description: "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
+  title:
+    "Terms and Conditions | Company Profile Design | Profile Design Company",
+  description:
+    "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
   alternates: {
     canonical: "https://www.companyprofiledesign.in/terms-and-conditions/",
   },
@@ -19,8 +21,10 @@ export const metadata = {
   openGraph: {
     locale: "en_IN",
     type: "article",
-    title: "Terms and Conditions | Company Profile Design | Profile Design Company",
-    description: "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
+    title:
+      "Terms and Conditions | Company Profile Design | Profile Design Company",
+    description:
+      "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
     url: "https://www.companyprofiledesign.in/terms-and-conditions/",
     siteName: "Company Profile Design | Profile Design Company",
     images: [
@@ -34,9 +38,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms and Conditions | Company Profile Design | Profile Design Company",
-    description: "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png"],
+    title:
+      "Terms and Conditions | Company Profile Design | Profile Design Company",
+    description:
+      "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
+    images: [
+      "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+    ],
   },
   verification: {
     google: [
@@ -54,76 +62,82 @@ const schemaGraph = {
     {
       "@type": "Organization",
       "@id": "https://www.companyprofiledesign.in/#organization",
-      "name": "Company Profile Design",
-      "url": "https://www.companyprofiledesign.in/",
-      "logo": {
+      name: "Company Profile Design",
+      url: "https://www.companyprofiledesign.in/",
+      logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "width": 384,
-        "height": 80,
-        "caption": "Company Profile Design"
+        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        contentUrl:
+          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        width: 384,
+        height: 80,
+        caption: "Company Profile Design",
       },
-      "image": { "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/" },
-      "contactPoint": {
+      image: {
+        "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
+      },
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+917718967729",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi"]
+        telephone: "+917718967729",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
       },
-      "sameAs": [
-        "https://in.pinterest.com/companyprofiledesignind"
-      ]
+      sameAs: ["https://in.pinterest.com/companyprofiledesignind"],
     },
 
     // WebSite Schema
     {
       "@type": "WebSite",
       "@id": "https://www.companyprofiledesign.in/#website",
-      "url": "https://www.companyprofiledesign.in/",
-      "name": "Company Profile Design",
-      "description": "Design Company Profile, Brochures, Catalogs, etc",
-      "publisher": { "@id": "https://www.companyprofiledesign.in/#organization" },
-      "alternateName": "Profile Design Company",
-      "inLanguage": "en-US"
+      url: "https://www.companyprofiledesign.in/",
+      name: "Company Profile Design",
+      description: "Design Company Profile, Brochures, Catalogs, etc",
+      publisher: { "@id": "https://www.companyprofiledesign.in/#organization" },
+      alternateName: "Profile Design Company",
+      inLanguage: "en-US",
     },
 
     // WebPage Schema
     {
       "@type": "WebPage",
       "@id": "https://www.companyprofiledesign.in/terms-and-conditions/",
-      "url": "https://www.companyprofiledesign.in/terms-and-conditions/",
-      "name": "Terms and Conditions | Company Profile Design | Profile Design Company",
-      "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
-      "datePublished": "2021-05-29T12:10:38+00:00",
-      "dateModified": "2021-05-29T12:16:54+00:00",
-      "description": "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
-      "breadcrumb": { "@id": "https://www.companyprofiledesign.in/terms-and-conditions/#breadcrumb" },
-      "inLanguage": "en-US"
+      url: "https://www.companyprofiledesign.in/terms-and-conditions/",
+      name: "Terms and Conditions | Company Profile Design | Profile Design Company",
+      isPartOf: { "@id": "https://www.companyprofiledesign.in/#website" },
+      datePublished: "2021-05-29T12:10:38+00:00",
+      dateModified: "2021-05-29T12:16:54+00:00",
+      description:
+        "Read the official Terms and Conditions of Blue Diamond Infotech for our company profile design, brochure design, and corporate branding services.",
+      breadcrumb: {
+        "@id":
+          "https://www.companyprofiledesign.in/terms-and-conditions/#breadcrumb",
+      },
+      inLanguage: "en-US",
     },
 
     // BreadcrumbList Schema (Home -> Terms and Conditions)
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.companyprofiledesign.in/terms-and-conditions/#breadcrumb",
-      "itemListElement": [
+      "@id":
+        "https://www.companyprofiledesign.in/terms-and-conditions/#breadcrumb",
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.companyprofiledesign.in/"
+          position: 1,
+          name: "Home",
+          item: "https://www.companyprofiledesign.in/",
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": "Terms and Conditions",
-          "item": "https://www.companyprofiledesign.in/terms-and-conditions/"
-        }
-      ]
-    }
-  ]
+          position: 2,
+          name: "Terms and Conditions",
+          item: "https://www.companyprofiledesign.in/terms-and-conditions/",
+        },
+      ],
+    },
+  ],
 };
 
 const termsList = [
@@ -228,7 +242,7 @@ const TermsAndConditionsPage = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
       <BreadCumb
-        bgImg="/assets/images/resource/inner-bg.jpg"
+        bgImg="/assets/images/resource/inner-bg.webp"
         subTitle="terms-and-conditions"
         title="Terms and Conditions"
       />
@@ -333,10 +347,13 @@ const TermsAndConditionsPage = () => {
             <h3 className="text-white fw-bold mb-3">
               Have Questions About Our Terms?
             </h3>
-            <p className="text-white-50 mb-4 fs-6 mx-auto" style={{ maxWidth: "650px" }}>
+            <p
+              className="text-white-50 mb-4 fs-6 mx-auto"
+              style={{ maxWidth: "650px" }}
+            >
               If you have any questions or require clarification regarding any
-              of our terms and working policies, please feel free to reach out to
-              our support team.
+              of our terms and working policies, please feel free to reach out
+              to our support team.
             </p>
             <div className="d-flex flex-wrap justify-content-center gap-3">
               <Link

@@ -3535,7 +3535,7 @@ ul.footer-menu li a:hover {
 
 
 .breatcam-section {
-    background: url(/assets/images/resource/inner-bg.jpg);
+    background: url(/assets/images/resource/inner-bg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3543,7 +3543,7 @@ ul.footer-menu li a:hover {
 }
 
 .style-two.breatcam-section {
-    background: url(/assets/images/resource/breadcam-bg.jpg);
+    background: url(/assets/images/resource/breadcam-bg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

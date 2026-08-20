@@ -208,7 +208,7 @@ const FlyerDesignPage = () => {
                 advantagesContent="A professional flyer design company helps businesses create visually appealing and strategically designed flyers that effectively communicate their message. Well-designed flyers increase brand visibility, promote offers clearly, and attract customer attention, making them an essential marketing tool for businesses looking to grow and stand out in competitive markets."
                 advantagesSubtext=""
                 customData={flyerAdvantagesData}
-                imgSrc="/assets/images/resource/flyer-design-about.jpg"
+                imgSrc="/assets/images/resource/flyer-design-about.webp"
             />
 
             <Portfolio 

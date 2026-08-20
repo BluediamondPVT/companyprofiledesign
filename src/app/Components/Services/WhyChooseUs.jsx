@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
     }, []);
 
     return (
-        <div className="service-section service" data-background="/assets/images/resource/service-bg.jpg">
+        <div className="service-section service" data-background="/assets/images/resource/service-bg.webp">
 		<div className="container">
 			<div className="row dream1-bg">
 				<div className="col-lg-12">
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
 					<div className="row g-4">
 						<div className="col-12 col-md-6">
 							<div className="single-service-box" style={{
-								backgroundImage: 'url(/assets/images/resource/why-choose-bg1.png)',
+								backgroundImage: 'url(/assets/images/resource/why-choose-bg1.webp)',
 								backgroundRepeat: 'no-repeat',
 								backgroundSize: 'cover',
 								backgroundPosition: 'center',
@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
 
 						<div className="col-12 col-md-6">
 							<div className="single-service-box" style={{
-								backgroundImage: 'url(/assets/images/resource/why-choose-bg2.png)',
+								backgroundImage: 'url(/assets/images/resource/why-choose-bg2.webp)',
 								backgroundRepeat: 'no-repeat',
 								backgroundSize: 'cover',
 								backgroundPosition: 'center',
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
 
 						<div className="col-12 col-md-6">
 							<div className="single-service-box" style={{
-								backgroundImage: 'url(/assets/images/resource/why-choose-bg3.png)',
+								backgroundImage: 'url(/assets/images/resource/why-choose-bg3.webp)',
 								backgroundRepeat: 'no-repeat',
 								backgroundSize: 'cover',
 								backgroundPosition: 'center',
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
 
 						<div className="col-12 col-md-6">
 							<div className="single-service-box" style={{
-								backgroundImage: 'url(/assets/images/resource/why-choose-bg4.png)',
+								backgroundImage: 'url(/assets/images/resource/why-choose-bg4.webp)',
 								backgroundRepeat: 'no-repeat',
 								backgroundSize: 'cover',
 								backgroundPosition: 'center',

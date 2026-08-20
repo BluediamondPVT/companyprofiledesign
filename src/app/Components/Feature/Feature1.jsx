@@ -14,7 +14,7 @@ const Feature1 = () => {
       }, []);
 
     return (
-        <div className="feature-section" data-background="/assets/images/resource/feature-bg.jpg">
+        <div className="feature-section" data-background="/assets/images/resource/feature-bg.webp">
                 <div className="container">
                     <div className="row dream-bg">
                         <div className="col-lg-12">

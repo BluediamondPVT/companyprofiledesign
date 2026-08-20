@@ -43,7 +43,7 @@ const CatalogueAbout = ({
     image,
     aboutImage
 }) => {
-    const mainImage = imgSrc || image || aboutImage || "/assets/images/resource/catalogue-design-about.jpg";
+    const mainImage = imgSrc || image || aboutImage || "/assets/images/resource/catalogue-design-about.webp";
     const defaultParagraphs = [
         "As a leading catalogue design company, we help businesses create visually powerful, professionally structured, and sales-driven product catalogues that strengthen brand identity and boost conversions. A well-designed catalogue plays a crucial role in presenting your products clearly while influencing customer buying decisions, which is why choosing the right catalogue design company is essential.",
         "We specialize in designing custom print and digital catalogues that are visually engaging, easy to share, and optimized for marketing and sales performance. As a trusted catalogue design company in India, we understand how to combine creative layouts, compelling visuals, clear typography, and structured content to deliver catalogues that leave a lasting impression.",
@@ -59,7 +59,7 @@ const CatalogueAbout = ({
       }, []);
 
     return (
-        <div className="about-section style-three" data-background="/assets/images/resource/about-bg3.jpg">
+        <div className="about-section style-three" data-background="/assets/images/resource/about-bg3.webp">
 		<div className="container">
 			<div className="row align-items-center">
 				<div className="col-lg-5 col-md-12">

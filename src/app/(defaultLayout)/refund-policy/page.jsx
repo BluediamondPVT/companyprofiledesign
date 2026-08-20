@@ -5,7 +5,8 @@ import React from "react";
 // 1. Next.js App Router Metadata (Preserving WordPress SEO Authority + Enhancements)
 export const metadata = {
   title: "Refund Policy | Company Profile Design | Profile Design Company",
-  description: "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
+  description:
+    "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
   alternates: {
     canonical: "https://www.companyprofiledesign.in/refund-policy/",
   },
@@ -20,7 +21,8 @@ export const metadata = {
     locale: "en_IN",
     type: "article",
     title: "Refund Policy | Company Profile Design | Profile Design Company",
-    description: "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
+    description:
+      "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
     url: "https://www.companyprofiledesign.in/refund-policy/",
     siteName: "Company Profile Design | Profile Design Company",
     images: [
@@ -35,8 +37,11 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Refund Policy | Company Profile Design | Profile Design Company",
-    description: "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png"],
+    description:
+      "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
+    images: [
+      "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+    ],
   },
   verification: {
     google: [
@@ -54,76 +59,80 @@ const schemaGraph = {
     {
       "@type": "Organization",
       "@id": "https://www.companyprofiledesign.in/#organization",
-      "name": "Company Profile Design",
-      "url": "https://www.companyprofiledesign.in/",
-      "logo": {
+      name: "Company Profile Design",
+      url: "https://www.companyprofiledesign.in/",
+      logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "width": 384,
-        "height": 80,
-        "caption": "Company Profile Design"
+        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        contentUrl:
+          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        width: 384,
+        height: 80,
+        caption: "Company Profile Design",
       },
-      "image": { "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/" },
-      "contactPoint": {
+      image: {
+        "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
+      },
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+917718967729",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi"]
+        telephone: "+917718967729",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
       },
-      "sameAs": [
-        "https://in.pinterest.com/companyprofiledesignind"
-      ]
+      sameAs: ["https://in.pinterest.com/companyprofiledesignind"],
     },
 
     // WebSite Schema
     {
       "@type": "WebSite",
       "@id": "https://www.companyprofiledesign.in/#website",
-      "url": "https://www.companyprofiledesign.in/",
-      "name": "Company Profile Design",
-      "description": "Design Company Profile, Brochures, Catalogs, etc",
-      "publisher": { "@id": "https://www.companyprofiledesign.in/#organization" },
-      "alternateName": "Profile Design Company",
-      "inLanguage": "en-US"
+      url: "https://www.companyprofiledesign.in/",
+      name: "Company Profile Design",
+      description: "Design Company Profile, Brochures, Catalogs, etc",
+      publisher: { "@id": "https://www.companyprofiledesign.in/#organization" },
+      alternateName: "Profile Design Company",
+      inLanguage: "en-US",
     },
 
     // WebPage Schema
     {
       "@type": "WebPage",
       "@id": "https://www.companyprofiledesign.in/refund-policy/",
-      "url": "https://www.companyprofiledesign.in/refund-policy/",
-      "name": "Refund Policy | Company Profile Design | Profile Design Company",
-      "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
-      "datePublished": "2021-05-29T12:23:36+00:00",
-      "dateModified": "2021-05-29T12:29:22+00:00",
-      "description": "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
-      "breadcrumb": { "@id": "https://www.companyprofiledesign.in/refund-policy/#breadcrumb" },
-      "inLanguage": "en-US"
+      url: "https://www.companyprofiledesign.in/refund-policy/",
+      name: "Refund Policy | Company Profile Design | Profile Design Company",
+      isPartOf: { "@id": "https://www.companyprofiledesign.in/#website" },
+      datePublished: "2021-05-29T12:23:36+00:00",
+      dateModified: "2021-05-29T12:29:22+00:00",
+      description:
+        "Read the official Refund and Cancellation Policy of Blue Diamond Infotech for company profile design, branding, catalogue design, and corporate services.",
+      breadcrumb: {
+        "@id": "https://www.companyprofiledesign.in/refund-policy/#breadcrumb",
+      },
+      inLanguage: "en-US",
     },
 
     // BreadcrumbList Schema (Home -> Refund Policy)
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.companyprofiledesign.in/refund-policy/#breadcrumb",
-      "itemListElement": [
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.companyprofiledesign.in/"
+          position: 1,
+          name: "Home",
+          item: "https://www.companyprofiledesign.in/",
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": "Refund Policy",
-          "item": "https://www.companyprofiledesign.in/refund-policy/"
-        }
-      ]
-    }
-  ]
+          position: 2,
+          name: "Refund Policy",
+          item: "https://www.companyprofiledesign.in/refund-policy/",
+        },
+      ],
+    },
+  ],
 };
 
 const refundPoints = [
@@ -180,7 +189,7 @@ const RefundPolicyPage = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
       <BreadCumb
-        bgImg="/assets/images/resource/inner-bg.jpg"
+        bgImg="/assets/images/resource/inner-bg.webp"
         subTitle="refund-policy"
         title="Refund Policy"
       />
@@ -215,11 +224,11 @@ const RefundPolicyPage = () => {
                   className="mb-3 text-muted fs-6"
                   style={{ lineHeight: "1.8" }}
                 >
-                  We work in intent for rendering best of our services and client
-                  experience to all our customers. In order to stand out in our
-                  vision we have established standards and laid down procedures to
-                  create an atmosphere of harmony in between our client and the
-                  company.
+                  We work in intent for rendering best of our services and
+                  client experience to all our customers. In order to stand out
+                  in our vision we have established standards and laid down
+                  procedures to create an atmosphere of harmony in between our
+                  client and the company.
                 </p>
                 <p
                   className="mb-0 text-muted fs-6"

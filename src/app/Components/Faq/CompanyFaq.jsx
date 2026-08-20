@@ -56,7 +56,7 @@ const CompanyFaq = () => {
   return (
     <div
       className="about-section style-three faq"
-      data-background="/assets/images/resource/about-bg3.jpg"
+      data-background="/assets/images/resource/about-bg3.webp"
     >
       <div className="container">
         <div className="row">

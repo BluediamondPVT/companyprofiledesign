@@ -12,7 +12,7 @@ const ConstructionHero = () => {
     return (
         <div 
             className="breatcam-section construction-hero-wrapper d-flex align-items-center" 
-            data-background="/assets/images/resource/inner-bg-theme.jpg" 
+            data-background="/assets/images/resource/inner-bg-theme.webp" 
         >
             <div className="container">
                 <div className="row dream-bg align-items-center justify-content-center text-center">

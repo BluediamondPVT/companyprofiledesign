@@ -208,7 +208,7 @@ const BrochureDesignPage = () => {
                 advantagesContent="A professional brochure design company helps businesses create impactful, well-structured brochures that effectively represent their brand and products. A creatively designed brochure builds trust, enhances brand visibility, and communicates key information clearly, making it an essential marketing tool for business growth."
                 advantagesSubtext=""
                 customData={brochureAdvantagesData}
-                imgSrc="/assets/images/resource/brochure-design-about.jpg"
+                imgSrc="/assets/images/resource/brochure-design-about.webp"
             />
 
             <Portfolio 

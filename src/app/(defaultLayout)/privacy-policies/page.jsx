@@ -39,7 +39,7 @@ const PrivacyPoliciesPage = () => {
   return (
     <div>
       <BreadCumb
-        bgImg="/assets/images/resource/inner-bg.jpg"
+        bgImg="/assets/images/resource/inner-bg.webp"
         subTitle="privacy-policies"
         title="Privacy Policy"
       />

@@ -218,7 +218,7 @@ const page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
       <BreadCumb
-        bgImg="/assets/images/resource/inner-bg.jpg"
+        bgImg="/assets/images/resource/inner-bg.webp"
         subTitle="Blog Details"
         title="How can you make a professional company profile?"
       />
