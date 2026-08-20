@@ -18,6 +18,8 @@ const EnquirySidebar = () => {
     const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, result: 0 });
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState('');
 
     // Generate random math captcha
     const generateCaptcha = () => {
@@ -129,23 +131,52 @@ const EnquirySidebar = () => {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validate()) {
-            setIsSubmitted(true);
-            setTimeout(() => {
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    subject: '',
-                    message: '',
-                    captchaInput: ''
+            setIsSubmitting(true);
+            setSubmitError('');
+            
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: formData.name,
+                        email: formData.email,
+                        phone: formData.phone,
+                        subject: formData.subject,
+                        message: formData.message,
+                    }),
                 });
-                setIsSubmitted(false);
-                setIsOpen(false);
-                generateCaptcha();
-            }, 3000);
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    setIsSubmitted(true);
+                    setTimeout(() => {
+                        setFormData({
+                            name: '',
+                            email: '',
+                            phone: '',
+                            subject: '',
+                            message: '',
+                            captchaInput: ''
+                        });
+                        setIsSubmitted(false);
+                        setIsOpen(false);
+                        generateCaptcha();
+                    }, 3000);
+                } else {
+                    setSubmitError(data.error || 'Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                setSubmitError('Failed to connect to the server. Please try again.');
+            } finally {
+                setIsSubmitting(false);
+            }
         }
     };
 
@@ -297,8 +328,9 @@ const EnquirySidebar = () => {
                                 </div>
 
                                 {/* Submit Button */}
-                                <button type="submit" className="submit-btn-custom">
-                                    Submit Enquiry
+                                {submitError && <div className="error-text" style={{marginBottom: '10px', textAlign: 'center'}}>{submitError}</div>}
+                                <button type="submit" className="submit-btn-custom" disabled={isSubmitting}>
+                                    {isSubmitting ? 'Sending...' : 'Submit Enquiry'}
                                 </button>
                             </form>
                         )}
