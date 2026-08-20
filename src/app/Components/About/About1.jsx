@@ -6,7 +6,7 @@ const About1 = ({mainimage,title1,title2,content,listTitle,listItem,btnName,btnU
     return (
         <div className="row about-bg pt-0  align-items-center">
        
-        <div className="col-lg-6 ps-5">
+        <div className="col-lg-6 ps-5"> 
             <div className="company-profile-design-section-title">
                 <h1>{title1}</h1>
                 <h1>{title2}</h1>

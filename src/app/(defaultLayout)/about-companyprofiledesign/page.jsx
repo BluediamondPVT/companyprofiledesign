@@ -1,5 +1,4 @@
 import About1 from '@/app/Components/About/About1';
-import About3 from '@/app/Components/About/About3';
 import OurClients from '@/app/Components/Clients/OurClients';
 import BreadCumb from '@/app/Components/Common/BreadCumb';
 import Cta from '@/app/Components/Cta/Cta';
@@ -144,7 +143,6 @@ const page = () => {
                 title="Working together leads to <br>Amazing Outcomes."
                 content=""
             ></BreadCumb>
-            {/* <About3></About3> */}
             <About1
                 title1="About Company Profile Design"
                 content="We are a subsidiary company of Blue Diamond Infotech. We are a Profile design company with vast experience and a great team of designers. We assure you that our creative design solutions will cent percent meet your expectation and meet your business theme. We have delivered our unique designs to various companies around the world. We provide our Profile Design solutions to every domain ranging IT, Manufacturing, Construction, Retail, and many others. We take care of every minute detail of your company profile by our well written professional content that will attract your customers and increase their curiosity to know more about you and your services. Our Creative Solutions will always help you to convey your ideas and services to your customers and attract your customers. All you need is our solution to excel your goals and achieve success."
