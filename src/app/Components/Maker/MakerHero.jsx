@@ -10,7 +10,7 @@ const MakerHero = () => {
                 position: 'relative',
                 paddingTop: '180px',
                 paddingBottom: '80px',
-                backgroundImage: 'linear-gradient(rgba(11, 23, 39, 0.85), rgba(11, 23, 39, 0.92)), url("/assets/images/resource/inner-bg.jpg")',
+                backgroundImage: 'url("/assets/images/resource/inner-bg.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -24,18 +24,18 @@ const MakerHero = () => {
                             display: 'inline-flex', 
                             alignItems: 'center', 
                             gap: '8px', 
-                            backgroundColor: 'rgba(255, 255, 255, 0.12)', 
+                            backgroundColor: 'rgba(0, 0, 0, 0.05)', 
                             backdropFilter: 'blur(8px)',
                             padding: '6px 18px', 
                             borderRadius: '30px', 
                             marginBottom: '20px',
-                            border: '1px solid rgba(255, 255, 255, 0.2)'
+                            border: '1px solid rgba(0, 0, 0, 0.1)'
                         }}>
-                            <Link href="/" style={{ color: '#cbd5e1', fontSize: '14px', textDecoration: 'none', fontWeight: '500' }}>
+                            <Link href="/" style={{ color: '#475569', fontSize: '14px', textDecoration: 'none', fontWeight: '500' }}>
                                 Home
                             </Link>
-                            <span style={{ color: '#94a3b8', fontSize: '14px' }}>/</span>
-                            <span style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600' }}>
+                            <span style={{ color: '#64748b', fontSize: '14px' }}>/</span>
+                            <span style={{ color: '#0f172a', fontSize: '14px', fontWeight: '600' }}>
                                 Company Profile Maker
                             </span>
                         </div>
@@ -45,7 +45,7 @@ const MakerHero = () => {
                             fontSize: '40px', 
                             fontWeight: '800', 
                             marginBottom: '20px', 
-                            color: '#ffffff',
+                            color: '#0f172a',
                             fontFamily: 'var(--heading-font)',
                             lineHeight: '1.3'
                         }}>
@@ -56,7 +56,7 @@ const MakerHero = () => {
                         <p style={{ 
                             fontSize: '17px', 
                             lineHeight: '1.8', 
-                            color: 'rgba(255, 255, 255, 0.92)', 
+                            color: '#334155', 
                             maxWidth: '920px', 
                             margin: '0 auto',
                             fontWeight: '400'
