@@ -1,486 +1,239 @@
-import Image from "next/image";
-import Link from "next/link";
-import blogData from "../../Data/blog.json";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import BlogLayout from './BlogLayout';
+import BlogCommentForm from './BlogCommentForm';
+import { 
+    CheckCircle2, 
+    HelpCircle, 
+    FileText, 
+    Target, 
+    BookOpen, 
+    Award, 
+    Users, 
+    Layers, 
+    Sparkles, 
+    ArrowRight 
+} from 'lucide-react';
 
 const HowToWriteCompanyProfile = () => {
-  return (
-    <div className="blogs-section py-5">
-      <div className="container">
-        <div className="row">
-          {/* Left Sidebar */}
-          <div className="col-lg-4 responsive">
-            <div className="widget_search upper mb-4">
-              <form action="#" method="get">
-                <input
-                  type="text"
-                  name="s"
-                  defaultValue=""
-                  placeholder="Search Here"
-                  title="Search for:"
-                />
-                <button type="submit" className="icons">
-                  <i className="bi bi-search"></i>
-                </button>
-              </form>
-            </div>
-
-            {/* Recent Posts */}
-            <div className="widget-sidebar-box mb-4">
-              <h4 className="sidebar-title mb-4"> Recent Posts </h4>
-              {blogData.slice(0, 4).map((post, idx) => (
-                <div
-                  key={idx}
-                  className="widget-recent-post d-flex mb-3 align-items-center"
-                >
-                  <div
-                    className="rpost-thumb me-3 flex-shrink-0"
-                    style={{
-                      width: "80px",
-                      height: "65px",
-                      overflow: "hidden",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <Link href={post.link || "/blog-details"}>
-                      <Image
-                        src={post.img}
-                        alt={post.title}
-                        width={80}
-                        height={65}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </Link>
-                  </div>
-                  <div className="rpost-content">
-                    <div className="rpost-title">
-                      <h5
-                        style={{
-                          fontSize: "14px",
-                          lineHeight: "1.4",
-                          margin: 0,
-                          fontWeight: "600",
-                        }}
-                      >
-                        <Link
-                          href={post.link || "/blog-details"}
-                          style={{
-                            color: "var(--secondary-color)",
-                            textDecoration: "none",
-                          }}
-                        >
-                          {post.title}
-                        </Link>
-                      </h5>
-                      <span style={{ fontSize: "12px", color: "#777" }}>
-                        12 Aug, 2025
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Categories */}
-            <div className="widget-sidebar-box mb-4">
-              <h4 className="sidebar-title upp mb-3">Categories</h4>
-              <ul className="sidebar-menu list-unstyled">
-                <li className="py-2">
-                  <Link href="#" className="text-decoration-none text-dark">
-                    <i className="bi bi-chevron-double-right text-primary me-2"></i>{" "}
-                    Company Profile Design
-                  </Link>
-                </li>
-                <li className="py-2">
-                  <Link href="#" className="text-decoration-none text-dark">
-                    <i className="bi bi-chevron-double-right text-primary me-2"></i>{" "}
-                    Brochure Design
-                  </Link>
-                </li>
-                <li className="py-2">
-                  <Link href="#" className="text-decoration-none text-dark">
-                    <i className="bi bi-chevron-double-right text-primary me-2"></i>{" "}
-                    Corporate Branding
-                  </Link>
-                </li>
-                <li className="py-2">
-                  <Link href="#" className="text-decoration-none text-dark">
-                    <i className="bi bi-chevron-double-right text-primary me-2"></i>{" "}
-                    Content Writing
-                  </Link>
-                </li>
-                <li className="py-2">
-                  <Link href="#" className="text-decoration-none text-dark">
-                    <i className="bi bi-chevron-double-right text-primary me-2"></i>{" "}
-                    Graphic Design
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Tags */}
-            <div className="widget-sidebar-box">
-              <h4 className="sidebar-title mb-3">Popular Tags</h4>
-              <div className="tag-item">
-                <ul className="d-flex flex-wrap gap-2 list-unstyled">
-                  <li>
-                    <Link
-                      href="#"
-                      className="badge bg-light text-dark p-2 text-decoration-none"
-                    >
-                      #CompanyProfile
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="badge bg-light text-dark p-2 text-decoration-none"
-                    >
-                      #BrochureDesign
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="badge bg-light text-dark p-2 text-decoration-none"
-                    >
-                      #BrandingIndia
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="badge bg-light text-dark p-2 text-decoration-none"
-                    >
-                      #BusinessGrowth
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="badge bg-light text-dark p-2 text-decoration-none"
-                    >
-                      #GraphicDesign
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Content Area */}
-          <div className="col-lg-8">
-            <div className="single-blog-dtls-box">
-              {/* Featured Banner */}
-              <div
-                className="mb-4"
-                style={{ borderRadius: "12px", overflow: "hidden" }}
-              >
-                <Image
-                  src="/assets/images/blog/Company-Profile-Samples-1200x675.jpg"
-                  alt="Top 5 Inspiring Company Profile Samples for Business"
-                  width={846}
-                  height={476}
-                  style={{
-                    width: "100%",
-                    height: "550px",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                  }}
+    return (
+        <BlogLayout>
+            {/* Featured Post Banner Image */}
+            <div className="mb-4" style={{ borderRadius: '12px', overflow: 'hidden' }}>
+                <Image 
+                    src="/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg" 
+                    alt="How to write a Company Profile" 
+                    width={1200} 
+                    height={675} 
+                    style={{ width: '100%', height: 'auto', maxHeight: '520px', objectFit: 'cover', borderRadius: '12px' }}
+                    priority
                 />
                 <div className="meta-blog mt-3 d-flex gap-3 text-muted fs-6">
-                  <span>
-                    <i className="bi bi-calendar2-check text-primary me-1"></i>{" "}
-                    12 Aug, 2025
-                  </span>
-                  <span>
-                    <i className="bi bi-folder text-primary me-1"></i> Company
-                    Profile Design
-                  </span>
-                  <span>
-                    <i className="bi bi-person text-primary me-1"></i> By Blue
-                    Diamond Infotech
-                  </span>
+                    <span><i className="bi bi-calendar2-check text-primary me-1"></i> 15 Aug, 2025</span>
+                    <span><i className="bi bi-folder text-primary me-1"></i> Content Writing & Profile Design</span>
+                    <span><i className="bi bi-person text-primary me-1"></i> By Blue Diamond Infotech</span>
                 </div>
-              </div>
+            </div>
 
-              {/* Main Article Content */}
-              <div className="blog-content2">
-                <h2
-                  className="blog-title2 mb-4"
-                  style={{
-                    fontSize: "32px",
-                    fontWeight: "700",
-                    color: "var(--secondary-color)",
-                    lineHeight: "1.3",
-                  }}
-                >
-                  Top 5 Inspiring Company Profile Sample for Business
+            {/* Main Article Content */}
+            <div className="blog-content2">
+                <h2 className="blog-title2 mb-4" style={{ fontSize: '32px', fontWeight: '700', color: 'var(--secondary-color)', lineHeight: '1.3' }}>
+                    How to Write a Company Profile? Step-by-Step Guide for Businesses
                 </h2>
 
-                <p
-                  className="lead fs-5 mb-4"
-                  style={{ color: "#4a5568", lineHeight: "1.8" }}
-                >
-                  First impression is the last impression. Similarly every
-                  company has a profile which acts as the first impression for
-                  all clients. Hence, it is an introduction to the company and
-                  it’s services too. As it’s the first impression it’s important
-                  to have it in a systematic way with the complete information.
-                  A Company Profile Sample gives you an idea to choose your
-                  Company Profile template according to your type of business.
-                  Our company makes you choose the right one for you and also
-                  provides an in-depth explanation about the company in Company
-                  Profile PDF form.
+                <p className="lead fs-5 mb-4 text-muted" style={{ lineHeight: '1.8' }}>
+                    Writing an effective company profile is one of the most critical steps in establishing your business identity. A well-written company profile acts as your brand’s official introduction, clearly articulating who you are, what values you stand for, what services or products you offer, and why clients should choose you over competitors.
                 </p>
 
-                <hr className="my-4" />
+                <p className="mb-4 text-muted" style={{ fontSize: '17px', lineHeight: '1.8' }}>
+                    Whether you are an early-stage startup pitching to investors, an SME bidding for government tenders, or an established corporate enterprise seeking international partners, following a structured writing approach ensures your company profile delivers maximum impact.
+                </p>
 
-                <h3
-                  className="mt-4 mb-3"
-                  style={{
-                    fontSize: "24px",
-                    fontWeight: "700",
-                    color: "var(--secondary-color)",
-                  }}
-                >
-                  What are the different sections we write Company Profile for?
+                {/* Section 1 */}
+                <div className="p-4 bg-light rounded-3 mb-5 border-start border-4" style={{ borderColor: 'var(--primary-color)' }}>
+                    <h3 className="fw-bold mb-3" style={{ color: 'var(--secondary-color)' }}>What Is a Company Profile and Why Is It Crucial?</h3>
+                    <p className="mb-3 text-muted">
+                        A company profile is a professional summary that introduces your organization to prospective clients, investors, stakeholders, and job candidates. It goes beyond a simple brochure by highlighting your company’s story, core mission, vision, operational strengths, and proven track record.
+                    </p>
+                    <p className="fw-bold text-dark mb-2">Key business benefits of an impactful company profile:</p>
+                    <ul className="list-unstyled mb-0 text-muted">
+                        <li className="mb-2"><CheckCircle2 size={18} className="text-primary me-2 d-inline-block" /> <strong>Builds Immediate Credibility:</strong> Sets a professional tone from the first client interaction.</li>
+                        <li className="mb-2"><CheckCircle2 size={18} className="text-primary me-2 d-inline-block" /> <strong>Essential for Tenders & Bids:</strong> A prerequisite document for corporate supplier onboarding and government tenders.</li>
+                        <li className="mb-2"><CheckCircle2 size={18} className="text-primary me-2 d-inline-block" /> <strong>Strengthens Brand Positioning:</strong> Clearly communicates your Unique Selling Proposition (USP).</li>
+                        <li className="mb-2"><CheckCircle2 size={18} className="text-primary me-2 d-inline-block" /> <strong>Facilitates Sales Conversions:</strong> Equips your sales team with an authoritative marketing asset.</li>
+                    </ul>
+                </div>
+
+                {/* Section 2 */}
+                <h3 className="fw-bold mb-4 mt-5" style={{ color: 'var(--secondary-color)' }}>
+                    7 Step-by-Step Guide: How to Write a Winning Company Profile
                 </h3>
 
-                <p style={{ lineHeight: "1.8", color: "#4a5568" }}>
-                  Company Profile sample writing is also an art and puts you in
-                  the confusion about how to write company profile templates.
-                  That’s really not a great issue as we are here for you to make
-                  one that is going to be the best Company Profile. Here is the
-                  small description about different sectors of Company Profile
-                  Examples that we are expert in writing about:
-                </p>
-
-                {/* Sample Sectors */}
-                <div className="d-flex flex-column gap-4 my-4">
-                  {/* Sector 1 */}
-                  <div className="p-4 border rounded-3 bg-white shadow-sm">
-                    <h4
-                      className="fw-bold mb-2"
-                      style={{ color: "var(--secondary-color)" }}
-                    >
-                      1. Construction Company Profile Sample
-                    </h4>
-                    <p style={{ lineHeight: "1.8", color: "#4a5568" }}>
-                      When it comes to how to write Company Profile Writing it’s
-                      important to include the company’s bid documents,
-                      websites, brochures and annual reports, company handles,
-                      financial stabilities and resources. We are the one who is
-                      going to add all these points which are going to be
-                      highlighted in your examples with a perfect Profile
-                      Company Template, you can also check our Company Profile
-                      Examples.
+                {/* Step 1 */}
+                <div className="card mb-4 border-0 shadow-sm p-4 bg-light">
+                    <h4 className="fw-bold text-dark mb-2">Step 1: Identify the Target Purpose and Audience</h4>
+                    <p className="text-muted mb-0">
+                        Before typing a single word, define who will be reading your profile. A company profile written for B2B procurement heads requires detailed technical specifications, certifications, and compliance details, whereas a profile designed for angel investors should focus on market scalability, growth metrics, and leadership backgrounds.
                     </p>
-                    <Link
-                      href="#"
-                      className="fw-bold text-decoration-none d-inline-flex align-items-center"
-                      style={{ color: "var(--primary-color)" }}
-                    >
-                      Click Here to view the sample{" "}
-                      <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
-                  </div>
-
-                  {/* Sector 2 */}
-                  <div className="p-4 border rounded-3 bg-white shadow-sm">
-                    <h4
-                      className="fw-bold mb-2"
-                      style={{ color: "var(--secondary-color)" }}
-                    >
-                      2. IT Company Profile Sample
-                    </h4>
-                    <p style={{ lineHeight: "1.8", color: "#4a5568" }}>
-                      As for the concern with IT companies, it ensures the
-                      storing and retrieving of data and also provides technical
-                      support. So even we ensure that we never keep on a doubt
-                      on how to write a Company Profile. We know the technical
-                      words to be included while writing the Company Profile for
-                      the IT company so that you can get the best one.
-                    </p>
-                    <Link
-                      href="#"
-                      className="fw-bold text-decoration-none d-inline-flex align-items-center"
-                      style={{ color: "var(--primary-color)" }}
-                    >
-                      Click Here to view the sample{" "}
-                      <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
-                  </div>
-
-                  {/* Sector 3 */}
-                  <div className="p-4 border rounded-3 bg-white shadow-sm">
-                    <h4
-                      className="fw-bold mb-2"
-                      style={{ color: "var(--secondary-color)" }}
-                    >
-                      3. Business Solution Company Profile Sample
-                    </h4>
-                    <p style={{ lineHeight: "1.8", color: "#4a5568" }}>
-                      Business Solution companies are the ones that help in
-                      solving issues regarding financial problems and
-                      inefficient processes. We also write Company Profile
-                      Templates in this too and we experts who have better ideas
-                      about this, so you just put out your idea in front of us
-                      and that’s it the perfect Company Profile will be yours.
-                    </p>
-                    <Link
-                      href="#"
-                      className="fw-bold text-decoration-none d-inline-flex align-items-center"
-                      style={{ color: "var(--primary-color)" }}
-                    >
-                      Click Here to view the sample{" "}
-                      <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
-                  </div>
-
-                  {/* Sector 4 */}
-                  <div className="p-4 border rounded-3 bg-white shadow-sm">
-                    <h4
-                      className="fw-bold mb-2"
-                      style={{ color: "var(--secondary-color)" }}
-                    >
-                      4. Safety World Company Profile Sample
-                    </h4>
-                    <p style={{ lineHeight: "1.8", color: "#4a5568" }}>
-                      Nowadays even Safety World Companies are in a great demand
-                      and if you are starting a company with this then it’s must
-                      that you should be perfect about whatever you are going to
-                      mention. You are just a step away, reach out to us and
-                      will be writing the Best Company Profile with a whole
-                      description in a pdf form.
-                    </p>
-                    <Link
-                      href="#"
-                      className="fw-bold text-decoration-none d-inline-flex align-items-center"
-                      style={{ color: "var(--primary-color)" }}
-                    >
-                      Click Here to view the sample{" "}
-                      <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
-                  </div>
-
-                  {/* Sector 5 */}
-                  <div className="p-4 border rounded-3 bg-white shadow-sm">
-                    <h4
-                      className="fw-bold mb-2"
-                      style={{ color: "var(--secondary-color)" }}
-                    >
-                      5. Manufacturing Industries Company Profile Sample
-                    </h4>
-                    <p style={{ lineHeight: "1.8", color: "#4a5568" }}>
-                      Wondering about how to make a Company Profile Sample for
-                      your Manufacturing Industries. Everyone has a
-                      misconception that it’s not going to work. Well, not
-                      really! Your Profile is the one people are going to
-                      observe so make it best for you with a perfect Company
-                      Profile Template and your company and we are going to do
-                      it for you with all our dedication with a Company Profile
-                      PDF too.
-                    </p>
-                    <Link
-                      href="#"
-                      className="fw-bold text-decoration-none d-inline-flex align-items-center"
-                      style={{ color: "var(--primary-color)" }}
-                    >
-                      Click Here to view the sample{" "}
-                      <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
-                  </div>
                 </div>
 
-                <div className="bg-light p-4 rounded-3 border-start border-4 border-primary my-4">
-                  <p style={{ lineHeight: "1.8", color: "#4a5568", margin: 0 }}>
-                    Before writing a Company Profile, have enough knowledge
-                    about what your company is going to provide to the target
-                    audience and why you actually need one. The moment you have
-                    it you can enlighten your Company Profile PDF in a unique
-                    way that could actually differentiate it from others. Have a
-                    better idea and take it to us and we will be providing you
-                    with the best Company Profile that is going to make a right
-                    reflection in the market.
-                  </p>
+                {/* Step 2 */}
+                <div className="card mb-4 border-0 shadow-sm p-4 bg-light">
+                    <h4 className="fw-bold text-dark mb-2">Step 2: Craft an Engaging Cover Page & Introduction</h4>
+                    <p className="text-muted mb-0">
+                        Your cover page should feature your company logo, a powerful brand tagline, and your primary industry categorization. Follow this with an executive summary or “About Us” section that outlines when the company was founded, the core philosophy, and what problem your business solves in the market.
+                    </p>
                 </div>
 
-                {/* Call To Action Banner */}
-                <div
-                  className="p-4 p-md-5 my-5 text-white rounded-3 shadow-lg"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, var(--secondary-color) 0%, #001f42 100%)",
-                  }}
-                >
-                  <h3 className="text-white fw-bold mb-3">
-                    Get a Professional Company Profile Designed Today
-                  </h3>
-                  <p className="text-white-50 mb-4 fs-6">
-                    Stand out in the competitive market with a custom,
-                    high-converting company profile designed by India's leading
-                    design experts. Contact our team today for a free
-                    consultation and quote!
-                  </p>
-                  <Link
-                    href="/contact-us"
-                    className="btn px-4 py-3 fw-bold rounded-pill text-white"
-                    style={{ background: "var(--primary-color)" }}
-                  >
-                    Request Free Quote{" "}
-                    <i className="bi bi-arrow-right ms-2"></i>
-                  </Link>
+                {/* Step 3 */}
+                <div className="card mb-4 border-0 shadow-sm p-4 bg-light">
+                    <h4 className="fw-bold text-dark mb-2">Step 3: Define Clear Mission, Vision & Core Values</h4>
+                    <p className="text-muted mb-0">
+                        Keep your vision statement ambitious yet realistic. Your mission statement must clearly state how you deliver value to clients every day. List 4 to 6 core corporate values (e.g., Integrity, Innovation, Customer Centricity, Sustainable Quality) that govern your day-to-day operations.
+                    </p>
+                </div>
+
+                {/* Step 4 */}
+                <div className="card mb-4 border-0 shadow-sm p-4 bg-light">
+                    <h4 className="fw-bold text-dark mb-2">Step 4: Detail Your Products, Services & Solutions</h4>
+                    <p className="text-muted mb-0">
+                        Organize your offerings into clean categories. Focus on customer benefits rather than just listing technical features. Explain how your solutions save costs, enhance efficiency, or solve specific industry pain points for your clients.
+                    </p>
+                </div>
+
+                {/* Step 5 */}
+                <div className="card mb-4 border-0 shadow-sm p-4 bg-light">
+                    <h4 className="fw-bold text-dark mb-2">Step 5: Showcase Achievements, Certifications & Milestones</h4>
+                    <p className="text-muted mb-0">
+                        Include tangible proof of your success. ISO certifications, industry awards, years of market presence, number of completed projects, and notable brand partnerships immediately validate your company’s capability and reliability.
+                    </p>
+                </div>
+
+                {/* Step 6 */}
+                <div className="card mb-4 border-0 shadow-sm p-4 bg-light">
+                    <h4 className="fw-bold text-dark mb-2">Step 6: Introduce Key Leadership & Team Expertise</h4>
+                    <p className="text-muted mb-0">
+                        People do business with people. Briefly introduce your founders, board members, and core department leads with professional headshots, concise bios, and their cumulative years of domain experience.
+                    </p>
+                </div>
+
+                {/* Step 7 */}
+                <div className="card mb-4 border-0 shadow-sm p-4 bg-light">
+                    <h4 className="fw-bold text-dark mb-2">Step 7: Provide Clear Contact Information & Next Steps (CTA)</h4>
+                    <p className="text-muted mb-0">
+                        Conclude with verified corporate contact details: registered office address, direct telephone numbers, official business email addresses, website URL, and direct QR codes linking to your digital portfolio or inquiry forms.
+                    </p>
+                </div>
+
+                {/* Section 3 */}
+                <h3 className="fw-bold mb-4 mt-5" style={{ color: 'var(--secondary-color)' }}>
+                    Essential Checklist: Standard Company Profile Structure
+                </h3>
+                <div className="row g-3 mb-5">
+                    <div className="col-md-6">
+                        <ul className="list-group shadow-sm">
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 1. Professional Cover Page</li>
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 2. Executive Summary / About Us</li>
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 3. Mission, Vision & Core Values</li>
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 4. Organizational History / Timeline</li>
+                        </ul>
+                    </div>
+                    <div className="col-md-6">
+                        <ul className="list-group shadow-sm">
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 5. Detailed Products & Services</li>
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 6. Client Testimonials & Case Studies</li>
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 7. Leadership & Technical Team</li>
+                            <li className="list-group-item py-3"><i className="bi bi-check2-square text-success me-2"></i> 8. Full Contact Details & Call to Action</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Section 4 */}
+                <h3 className="fw-bold mb-4 mt-5" style={{ color: 'var(--secondary-color)' }}>
+                    Common Mistakes to Avoid When Writing a Company Profile
+                </h3>
+                <div className="alert alert-danger border-0 p-4 mb-5">
+                    <ul className="list-unstyled mb-0">
+                        <li className="mb-2">❌ <strong>Using Overly Complex Jargon:</strong> Keep language concise, accessible, and reader-friendly.</li>
+                        <li className="mb-2">❌ <strong>Neglecting Visual Design:</strong> Even the best written copy fails without clean layout hierarchy and balanced white space.</li>
+                        <li className="mb-2">❌ <strong>Outdated Business Information:</strong> Ensure revenue numbers, client lists, and contact numbers are up to date.</li>
+                        <li className="mb-2">❌ <strong>Lack of Clear Differentiation:</strong> Explicitly state why your business is superior to industry competitors.</li>
+                        <li>❌ <strong>Grammatical or Spelling Errors:</strong> Always perform multi-stage proofreading before final PDF export.</li>
+                    </ul>
+                </div>
+
+                {/* Section 5: FAQs */}
+                <h3 className="fw-bold mb-4 mt-5" style={{ color: 'var(--secondary-color)' }}>
+                    Frequently Asked Questions (FAQs)
+                </h3>
+                <div className="accordion mb-5" id="faqAccordionWrite">
+                    <div className="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h4 className="accordion-header" id="headingWriteOne">
+                            <button className="accordion-button bg-light fw-bold text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWriteOne" aria-expanded="true" aria-controls="collapseWriteOne">
+                                Q1. How long should a company profile be?
+                            </button>
+                        </h4>
+                        <div id="collapseWriteOne" className="accordion-collapse collapse show" aria-labelledby="headingWriteOne" data-bs-parent="#faqAccordionWrite">
+                            <div className="accordion-body text-muted">
+                                Standard company profiles range from 8 to 20 pages depending on your industry and product line depth. A concise 8-12 page profile is ideal for general marketing, while comprehensive 16-24 page documents work best for enterprise bids and tenders.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h4 className="accordion-header" id="headingWriteTwo">
+                            <button className="accordion-button collapsed bg-light fw-bold text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWriteTwo" aria-expanded="false" aria-controls="collapseWriteTwo">
+                                Q2. What is the difference between a company profile and a brochure?
+                            </button>
+                        </h4>
+                        <div id="collapseWriteTwo" className="accordion-collapse collapse" aria-labelledby="headingWriteTwo" data-bs-parent="#faqAccordionWrite">
+                            <div className="accordion-body text-muted">
+                                A company profile represents your entire organization (history, values, capabilities, team, infrastructure), whereas a brochure is typically focused on specific products, promotional offers, or temporary marketing campaigns.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h4 className="accordion-header" id="headingWriteThree">
+                            <button className="accordion-button collapsed bg-light fw-bold text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWriteThree" aria-expanded="false" aria-controls="collapseWriteThree">
+                                Q3. Should I hire professional writers for my company profile?
+                            </button>
+                        </h4>
+                        <div id="collapseWriteThree" className="accordion-collapse collapse" aria-labelledby="headingWriteThree" data-bs-parent="#faqAccordionWrite">
+                            <div className="accordion-body text-muted">
+                                Yes. Professional corporate content writers understand how to structure your brand narrative with persuasive copy, industry-specific terminology, and SEO/marketing best practices that convert readers into paying clients.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* CTA Box */}
+                <div className="p-4 p-md-5 my-5 text-white rounded-3 shadow-lg" style={{ background: 'linear-gradient(135deg, var(--secondary-color) 0%, #001f42 100%)' }}>
+                    <h3 className="text-white fw-bold mb-3">Need Professional Content Writing & Profile Design?</h3>
+                    <p className="text-white-50 mb-4 fs-6">
+                        Let India’s top company profile writers and designers craft a bespoke, high-impact profile tailored to your domain. Starting at just ₹2500 with unlimited revisions until 100% satisfaction!
+                    </p>
+                    <Link href="/contact-us" className="btn px-4 py-3 fw-bold rounded-pill text-white" style={{ background: 'var(--primary-color)' }}>
+                        Get Started Today <ArrowRight size={16} className="ms-2 d-inline-block" />
+                    </Link>
                 </div>
 
                 {/* Social Share */}
                 <div className="blogs-social-share d-flex align-items-center gap-3 my-4">
-                  <span className="social-text fw-bold">Social Share:</span>
-                  <ul className="social-share list-unstyled d-flex gap-2 mb-0">
-                    <li>
-                      <Link
-                        href="#"
-                        className="btn btn-outline-secondary btn-sm rounded-circle"
-                      >
-                        <i className="bi bi-facebook"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="btn btn-outline-secondary btn-sm rounded-circle"
-                      >
-                        <i className="bi bi-twitter"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="btn btn-outline-secondary btn-sm rounded-circle"
-                      >
-                        <i className="bi bi-linkedin"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="btn btn-outline-secondary btn-sm rounded-circle"
-                      >
-                        <i className="bi bi-whatsapp"></i>
-                      </Link>
-                    </li>
-                  </ul>
+                    <span className="social-text fw-bold">Social Share:</span>
+                    <ul className="social-share list-unstyled d-flex gap-2 mb-0">
+                        <li><Link href="#" className="btn btn-outline-secondary btn-sm rounded-circle"><i className="bi bi-facebook"></i></Link></li>
+                        <li><Link href="#" className="btn btn-outline-secondary btn-sm rounded-circle"><i className="bi bi-twitter"></i></Link></li>
+                        <li><Link href="#" className="btn btn-outline-secondary btn-sm rounded-circle"><i className="bi bi-linkedin"></i></Link></li>
+                        <li><Link href="#" className="btn btn-outline-secondary btn-sm rounded-circle"><i className="bi bi-whatsapp"></i></Link></li>
+                    </ul>
                 </div>
-              </div>
+
+                <BlogCommentForm />
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+        </BlogLayout>
+    );
 };
 
 export default HowToWriteCompanyProfile;
