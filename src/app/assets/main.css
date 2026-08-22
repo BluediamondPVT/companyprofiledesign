@@ -7164,6 +7164,7 @@ span svg {
 }
 
 .input-with-icon input,
+.input-with-icon select,
 .input-with-icon textarea {
     width: 100%;
     border: none;
@@ -7175,6 +7176,10 @@ span svg {
     font-family: inherit;
     font-weight: 500;
     transition: all 0.3s ease;
+}
+
+.input-with-icon select {
+    cursor: pointer;
 }
 
 .input-with-icon textarea {
@@ -7192,6 +7197,7 @@ span svg {
 }
 
 .input-with-icon input.error,
+.input-with-icon select.error,
 .input-with-icon textarea.error {
     border-color: #dc3545;
 }
@@ -7403,6 +7409,7 @@ span svg {
     }
 
     .input-with-icon input,
+    .input-with-icon select,
     .input-with-icon textarea {
         padding: 10px 12px 10px 36px;
         font-size: 14px;

@@ -5,6 +5,8 @@ import { usePathname } from 'next/navigation';
 
 const EnquirySidebar = () => {
     const pathname = usePathname();
+    const isExcludedPage = pathname?.includes('myorders');
+
     const [isOpen, setIsOpen] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -34,6 +36,8 @@ const EnquirySidebar = () => {
     };
 
     useEffect(() => {
+        if (isExcludedPage) return;
+
         // Reset states on path change
         setIsOpen(false);
         setIsSubmitted(false);
@@ -59,7 +63,7 @@ const EnquirySidebar = () => {
             clearTimeout(autoOpenTimer);
             window.removeEventListener('openEnquirySidebar', handleCustomOpen);
         };
-    }, [pathname]);
+    }, [pathname, isExcludedPage]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -140,6 +144,10 @@ const EnquirySidebar = () => {
             }
         }
     };
+
+    if (isExcludedPage) {
+        return null;
+    }
 
     return (
         <>
