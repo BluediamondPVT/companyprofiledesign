@@ -161,17 +161,18 @@ const Footer = () => {
             .custom-footer-list a {
                 color: #363636 !important;
                 font-size: 14px;
-                transition: all 0.3s ease;
+                transition: transform 0.2s ease, color 0.2s ease;
                 text-decoration: none;
                 display: block;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                will-change: transform;
             }
             .custom-footer-list a:hover {
                 color: #000000 !important;
                 font-weight: 600;
-                padding-left: 5px;
+                transform: translateX(5px);
             }
         `}</style>
 	</div>	

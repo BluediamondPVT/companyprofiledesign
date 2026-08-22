@@ -13,11 +13,13 @@ const kumbh_sans = Kumbh_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--body-color-font',
+  display: 'swap',
 });
 
 const clashdisplay = localFont({ 
   src: './assets/fonts/ClashDisplay.ttf',
   variable: '--heading-font',
+  display: 'swap',
 });
 
 export const metadata = {
@@ -40,12 +42,12 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Company Profile Design" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         
-        {/* Google Ads Tag (gtag.js) */}
+        {/* Google Ads Tag (gtag.js) - Defer with lazyOnload */}
         <Script 
           src="https://www.googletagmanager.com/gtag/js?id=AW-17523857833" 
-          strategy="afterInteractive" 
+          strategy="lazyOnload" 
         />
-        <Script id="google-ads-gtag-init" strategy="afterInteractive">
+        <Script id="google-ads-gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -54,12 +56,12 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* Google Analytics Tag (gtag.js) */}
+        {/* Google Analytics Tag (gtag.js) - Defer with lazyOnload */}
         <Script 
           src="https://www.googletagmanager.com/gtag/js?id=UA-120371393-6" 
-          strategy="afterInteractive" 
+          strategy="lazyOnload" 
         />
-        <Script id="google-analytics-gtag-init" strategy="afterInteractive">
+        <Script id="google-analytics-gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -68,8 +70,8 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* Google Tag Manager */}
-        <Script id="google-tag-manager-init" strategy="afterInteractive">
+        {/* Google Tag Manager - Defer with lazyOnload */}
+        <Script id="google-tag-manager-init" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

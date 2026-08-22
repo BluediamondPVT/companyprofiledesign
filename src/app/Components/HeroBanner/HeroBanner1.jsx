@@ -12,7 +12,11 @@ const HeroBanner1 = ({ bgmage, Title1, Title2, content, btnName, btnName2, btnUr
 	}, []);
 
     return (
-        <div className="hero-section d-flex align-items-center" data-background={bgmage}>
+        <div 
+            className="hero-section d-flex align-items-center" 
+            data-background={bgmage}
+            style={bgmage ? { backgroundImage: `url(${bgmage})` } : undefined}
+        >
 		<div className="container">
 			<div className="row hero-bg">
 				<div className="col-lg-12">
@@ -28,19 +32,19 @@ const HeroBanner1 = ({ bgmage, Title1, Title2, content, btnName, btnName2, btnUr
 						</div> 
 						<div className="hero-all-shape">
 							<div className="hero-shape">
-								<Image src={heroShape1} alt="img" width={500} height={467}   />
+								<Image src={heroShape1} alt="img" width={500} height={467} priority />
 							</div>
 							<div className="hero-shape2">
-								<Image src={heroShape2} alt="img" width={436} height={442}   />
+								<Image src={heroShape2} alt="img" width={436} height={442} priority />
 							</div>
 							<div className="hero-shape3">
-								<Image src="/assets/images/slider/hero-shp4.png" alt="img" width={796} height={74}   />
+								<Image src="/assets/images/slider/hero-shp4.png" alt="img" width={796} height={74} />
 							</div>
 							<div className="hero-shape4">
-								<Image src="/assets/images/slider/hero-shp.png" alt="img" width={150} height={250}   />
+								<Image src="/assets/images/slider/hero-shp.png" alt="img" width={150} height={250} />
 							</div>
 							<div className="hero-shape5">
-								<Image src={heroShape3} alt="img" width={70} height={70}   />
+								<Image src={heroShape3} alt="img" width={70} height={70} />
 							</div>
 						</div>
 					</div>
