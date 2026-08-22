@@ -30,7 +30,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         alt: "Company Profile Design Logo",
@@ -63,8 +63,8 @@ const schemaGraph = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "url": "https://www.companyprofiledesign.in/assets/images/logo.png",
+        "contentUrl": "https://www.companyprofiledesign.in/assets/images/logo.png",
         "width": 384,
         "height": 80,
         "caption": "Company Profile Design"

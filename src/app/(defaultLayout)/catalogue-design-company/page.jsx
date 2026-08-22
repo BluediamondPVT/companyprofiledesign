@@ -29,7 +29,7 @@ export const metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/catalogue-design-about.webp",
         width: 1920,
         height: 1080,
         alt: "Catalogue Design Company in India",
@@ -42,7 +42,7 @@ export const metadata = {
     description:
       "Looking for a custom catalogue design company in India? We create visually stunning, high-quality catalogues tailored to showcase your brand.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      "https://www.companyprofiledesign.in/assets/images/resource/catalogue-design-about.webp",
     ],
   },
   verification: {
@@ -66,9 +66,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -103,9 +103,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/catalogue-design-company/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/catalogue-design-about.webp",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/catalogue-design-about.webp",
       width: 1920,
       height: 1080,
       caption: "Catalogue Design Company in India",
@@ -129,7 +129,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/catalogue-design-company/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/catalogue-design-about.webp",
       description:
         "Looking for a custom catalogue design company in India? We create visually stunning, high-quality catalogues tailored to showcase your brand.",
       breadcrumb: {

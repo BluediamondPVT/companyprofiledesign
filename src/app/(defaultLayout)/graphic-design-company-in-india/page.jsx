@@ -32,7 +32,7 @@ export const metadata = {
     siteName: "Company Profile Design",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
         width: 1920,
         height: 1080,
         alt: "Graphic Design Company in India",
@@ -45,7 +45,7 @@ export const metadata = {
     description:
       "Are you searching for a Graphic Design Company in India that delivers visually striking, brand-focused, and highly creative design solutions? Partner with us today.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
     ],
   },
   verification: {
@@ -69,9 +69,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -106,9 +106,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/graphic-design-company-in-india/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
       width: 1920,
       height: 1080,
       caption: "Catalogue Design Company",
@@ -132,7 +132,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/graphic-design-company-in-india/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
       datePublished: "2025-12-02T15:10:14+00:00",
       description:
         "Are you searching for a Graphic Design Company in India that delivers visually striking, brand-focused, and highly creative design solutions?",

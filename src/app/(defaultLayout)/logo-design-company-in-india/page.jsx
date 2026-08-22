@@ -34,7 +34,7 @@ export const metadata = {
     siteName: "Company Profile Design",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/logo-design.webp",
         width: 1920,
         height: 1080,
         alt: "Logo Design Company in India",
@@ -47,7 +47,7 @@ export const metadata = {
     description:
       "Looking for a premium logo design company in India? We create visually stunning, high-quality logos tailored to showcase your brand.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      "https://www.companyprofiledesign.in/assets/images/resource/logo-design.webp",
     ],
   },
   verification: {
@@ -71,9 +71,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -108,9 +108,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/logo-design-company-in-india/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/logo-design.webp",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/logo-design.webp",
       width: 1920,
       height: 1080,
       caption: "Logo Design Company in India",
@@ -134,7 +134,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/logo-design-company-in-india/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/logo-design.webp",
       datePublished: "2025-12-02T13:15:46+00:00",
       dateModified: "2026-03-24T13:03:36+00:00",
       description:

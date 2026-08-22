@@ -30,7 +30,7 @@ export const metadata = {
     siteName: "Company Profile Design",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/content.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/company-profile-writing-about.webp",
         width: 1000,
         height: 667,
         alt: "Company Profile Writing Services",
@@ -41,7 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Company Profile Writing Services in India || Company Profile Writer",
     description: "Leading Company Profile Writing Services in India. Get high-impact, professionally written corporate profiles that attract clients and investors worldwide.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2021/09/content.jpg"],
+    images: ["https://www.companyprofiledesign.in/assets/images/resource/company-profile-writing-about.webp"],
   },
   verification: {
     google: [
@@ -64,8 +64,8 @@ const schemaGraph = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "url": "https://www.companyprofiledesign.in/assets/images/logo.png",
+        "contentUrl": "https://www.companyprofiledesign.in/assets/images/logo.png",
         "width": 384,
         "height": 80,
         "caption": "Company Profile Design"
@@ -99,8 +99,8 @@ const schemaGraph = {
     {
       "@type": "ImageObject",
       "@id": "https://www.companyprofiledesign.in/company-profile-writing/#primaryimage",
-      "url": "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/content.jpg",
-      "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/content.jpg",
+      "url": "https://www.companyprofiledesign.in/assets/images/resource/company-profile-writing-about.webp",
+      "contentUrl": "https://www.companyprofiledesign.in/assets/images/resource/company-profile-writing-about.webp",
       "width": 1000,
       "height": 667,
       "caption": "Company Profile Writing Services",
@@ -116,7 +116,7 @@ const schemaGraph = {
       "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
       "primaryImageOfPage": { "@id": "https://www.companyprofiledesign.in/company-profile-writing/#primaryimage" },
       "image": { "@id": "https://www.companyprofiledesign.in/company-profile-writing/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/content.jpg",
+      "thumbnailUrl": "https://www.companyprofiledesign.in/assets/images/resource/company-profile-writing-about.webp",
       "datePublished": "2021-09-14T06:46:08+00:00",
       "dateModified": "2021-12-31T04:24:31+00:00",
       "description": "Leading Company Profile Writing Services in India. Get high-impact, professionally written corporate profiles that attract clients and investors worldwide.",

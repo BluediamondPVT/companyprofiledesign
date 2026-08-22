@@ -30,7 +30,7 @@ export const metadata = {
     authors: ["TheBDIT"],
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         alt: "Best Company Profile Design Guide 2025",
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       "Discover the Best Company Profile Design Guide for 2025. Learn how to design a professional, modern, and impactful company profile.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+      "https://www.companyprofiledesign.in/assets/images/logo.png",
     ],
   },
   verification: {
@@ -67,9 +67,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",

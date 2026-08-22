@@ -29,7 +29,7 @@ export const metadata = {
     siteName: "Company Profile Design",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         alt: "Construction Company Profile Design",
@@ -40,7 +40,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Construction Company Profile Design in India",
     description: "Leading construction company profile design service in India. We design professional, impactful corporate profiles and brochures for builders, contractors, and developers.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png"],
+    images: ["https://www.companyprofiledesign.in/assets/images/logo.png"],
   },
   verification: {
     google: [
@@ -63,8 +63,8 @@ const schemaGraph = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "url": "https://www.companyprofiledesign.in/assets/images/logo.png",
+        "contentUrl": "https://www.companyprofiledesign.in/assets/images/logo.png",
         "width": 384,
         "height": 80,
         "caption": "Company Profile Design"

@@ -34,7 +34,7 @@ export const metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/product-packeging.webp",
         width: 1920,
         height: 1080,
         alt: "Product Packaging Design Company",
@@ -48,7 +48,7 @@ export const metadata = {
     description:
       "Looking for a Product Packaging Design Company that can make your products stand out on shelves and online marketplaces?",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      "https://www.companyprofiledesign.in/assets/images/resource/product-packeging.webp",
     ],
   },
   verification: {
@@ -72,9 +72,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -109,9 +109,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/product-packaging-design-company/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/product-packeging.webp",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/product-packeging.webp",
       width: 1920,
       height: 1080,
       caption: "Product Packaging Design Company",
@@ -136,7 +136,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/product-packaging-design-company/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/Catalouge-Design-Company-Bg.webp",
+        "https://www.companyprofiledesign.in/assets/images/resource/product-packeging.webp",
       datePublished: "2025-12-02T14:09:17+00:00",
       description:
         "Looking for a Product Packaging Design Company that can make your products stand out on shelves and online marketplaces?",

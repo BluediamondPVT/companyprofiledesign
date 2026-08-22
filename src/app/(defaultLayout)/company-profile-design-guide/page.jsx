@@ -30,7 +30,7 @@ export const metadata = {
     authors: ["TheBDIT"],
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
         width: 1024,
         height: 576,
         alt: "Company Profile Design Complete Guide",
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       "Whether you are a startup or SME, investing in a professional company profile design in India significantly improves your brand image and credibility.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+      "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
     ],
   },
   verification: {
@@ -67,9 +67,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -104,9 +104,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       width: 1024,
       height: 576,
       caption: "Company Profile Design",
@@ -139,7 +139,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       keywords: [
         "Company profile",
         "Company Profile Design",
@@ -167,7 +167,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/company-profile-design-guide/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2025/12/Company-Profile-Design-1.png",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       datePublished: "2025-12-13T12:30:52+00:00",
       description:
         "Whether you are a startup or SME's, investing in a professional company profile design in India, significantly improve your brand image.",

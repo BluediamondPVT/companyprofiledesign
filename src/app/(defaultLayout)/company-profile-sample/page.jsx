@@ -30,7 +30,7 @@ export const metadata = {
     authors: ["TheBDIT"],
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2021/06/Company-Profile-Samples.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
         width: 1440,
         height: 810,
         alt: "Company Profile Samples",
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       "Explore top inspiring company profile samples and PDF templates for businesses. Learn how to structure and design a high-impact corporate profile.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2021/06/Company-Profile-Samples.jpg",
+      "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
     ],
   },
   verification: {
@@ -67,9 +67,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -104,9 +104,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/company-profile-sample/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2021/06/Company-Profile-Samples.jpg",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2021/06/Company-Profile-Samples.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       width: 1440,
       height: 810,
       caption: "Company Profile Sample",
@@ -138,7 +138,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/company-profile-sample/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2021/06/Company-Profile-Samples.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       keywords: [
         "Company Profile",
         "Company Profile Sample",
@@ -164,7 +164,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/company-profile-sample/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2021/06/Company-Profile-Samples.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       datePublished: "2021-06-05T12:14:55+00:00",
       dateModified: "2021-06-08T06:08:28+00:00",
       description:

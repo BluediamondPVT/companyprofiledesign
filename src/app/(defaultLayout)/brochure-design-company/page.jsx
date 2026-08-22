@@ -27,7 +27,7 @@ export const metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Construction-Company-Profile-1.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/brochure-design-about.webp",
         width: 1920,
         height: 1080,
         alt: "Corporate Brochure Design Company in India",
@@ -38,7 +38,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Corporate Brochure Design Company in India | Custom Brochure Designs",
     description: "Looking for a top Corporate Brochure Design Company in India? We create professional, high-quality brochures that showcase your brand.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Construction-Company-Profile-1.jpg"],
+    images: ["https://www.companyprofiledesign.in/assets/images/resource/brochure-design-about.webp"],
   },
   verification: {
     google: [
@@ -61,8 +61,8 @@ const schemaGraph = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "url": "https://www.companyprofiledesign.in/assets/images/logo.png",
+        "contentUrl": "https://www.companyprofiledesign.in/assets/images/logo.png",
         "width": 384,
         "height": 80,
         "caption": "Company Profile Design"
@@ -96,8 +96,8 @@ const schemaGraph = {
     {
       "@type": "ImageObject",
       "@id": "https://www.companyprofiledesign.in/brochure-design-company/#primaryimage",
-      "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Construction-Company-Profile-1.jpg",
-      "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Construction-Company-Profile-1.jpg",
+      "url": "https://www.companyprofiledesign.in/assets/images/resource/brochure-design-about.webp",
+      "contentUrl": "https://www.companyprofiledesign.in/assets/images/resource/brochure-design-about.webp",
       "width": 1920,
       "height": 1080,
       "caption": "Brochure Design Company",
@@ -114,7 +114,7 @@ const schemaGraph = {
       "about": { "@id": "https://www.companyprofiledesign.in/#organization" },
       "primaryImageOfPage": { "@id": "https://www.companyprofiledesign.in/brochure-design-company/#primaryimage" },
       "image": { "@id": "https://www.companyprofiledesign.in/brochure-design-company/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Construction-Company-Profile-1.jpg",
+      "thumbnailUrl": "https://www.companyprofiledesign.in/assets/images/resource/brochure-design-about.webp",
       "description": "Looking for a top Corporate Brochure Design Company in India? We create professional, high-quality brochures that showcase your brand.",
       "breadcrumb": { "@id": "https://www.companyprofiledesign.in/brochure-design-company/#breadcrumb" },
       "inLanguage": "en-US"

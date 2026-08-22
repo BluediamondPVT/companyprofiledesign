@@ -33,7 +33,7 @@ export const metadata = {
     authors: ["TheBDIT"],
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2025/02/Brochure-Designing-Services-Riyadh-Company-Brochure-Services-Saudi-Arabia-Company-Brochure-Services-36wa5b3w3w7txmxs0fh4i2-400x250-1.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
         width: 400,
         height: 250,
         alt: "Looking for the Best Graphic Design Websites",
@@ -47,7 +47,7 @@ export const metadata = {
     description:
       "Explore top graphic design websites for creativity, innovation, and stunning visuals. Find best platforms to inspire your next design project.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2025/02/Brochure-Designing-Services-Riyadh-Company-Brochure-Services-Saudi-Arabia-Company-Brochure-Services-36wa5b3w3w7txmxs0fh4i2-400x250-1.jpg",
+      "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
     ],
   },
   verification: {
@@ -71,9 +71,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -108,9 +108,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/looking-for-the-best-graphic-design-websites/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2025/02/Brochure-Designing-Services-Riyadh-Company-Brochure-Services-Saudi-Arabia-Company-Brochure-Services-36wa5b3w3w7txmxs0fh4i2-400x250-1.jpg",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2025/02/Brochure-Designing-Services-Riyadh-Company-Brochure-Services-Saudi-Arabia-Company-Brochure-Services-36wa5b3w3w7txmxs0fh4i2-400x250-1.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
       width: 400,
       height: 250,
       inLanguage: "en-US",
@@ -144,7 +144,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/looking-for-the-best-graphic-design-websites/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2025/02/Brochure-Designing-Services-Riyadh-Company-Brochure-Services-Saudi-Arabia-Company-Brochure-Services-36wa5b3w3w7txmxs0fh4i2-400x250-1.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
       keywords: [
         "Company Profile Design",
         "Graphic Design",
@@ -172,7 +172,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/looking-for-the-best-graphic-design-websites/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2025/02/Brochure-Designing-Services-Riyadh-Company-Brochure-Services-Saudi-Arabia-Company-Brochure-Services-36wa5b3w3w7txmxs0fh4i2-400x250-1.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/graphic-firstpage.webp",
       datePublished: "2025-02-20T11:55:59+00:00",
       dateModified: "2025-02-20T12:11:18+00:00",
       description:

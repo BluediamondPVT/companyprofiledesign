@@ -27,7 +27,7 @@ export const metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Flyer-Design-Company.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/flyer-design-about.webp",
         width: 1920,
         height: 1080,
         alt: "Creative Flyer Design Services in India",
@@ -38,7 +38,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Creative Flyer Design Services in India | Custom Flyer Designs",
     description: "We are the leading flyer design company based out of Mumbai. The advantage of our Flyer Design is that it will surely attract your customers.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Flyer-Design-Company.jpg"],
+    images: ["https://www.companyprofiledesign.in/assets/images/resource/flyer-design-about.webp"],
   },
   verification: {
     google: [
@@ -61,8 +61,8 @@ const schemaGraph = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "url": "https://www.companyprofiledesign.in/assets/images/logo.png",
+        "contentUrl": "https://www.companyprofiledesign.in/assets/images/logo.png",
         "width": 384,
         "height": 80,
         "caption": "Company Profile Design"
@@ -96,8 +96,8 @@ const schemaGraph = {
     {
       "@type": "ImageObject",
       "@id": "https://www.companyprofiledesign.in/flyer-design-company/#primaryimage",
-      "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Flyer-Design-Company.jpg",
-      "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Flyer-Design-Company.jpg",
+      "url": "https://www.companyprofiledesign.in/assets/images/resource/flyer-design-about.webp",
+      "contentUrl": "https://www.companyprofiledesign.in/assets/images/resource/flyer-design-about.webp",
       "width": 1920,
       "height": 1080,
       "caption": "Flyer Design Company",
@@ -114,7 +114,7 @@ const schemaGraph = {
       "about": { "@id": "https://www.companyprofiledesign.in/#organization" },
       "primaryImageOfPage": { "@id": "https://www.companyprofiledesign.in/flyer-design-company/#primaryimage" },
       "image": { "@id": "https://www.companyprofiledesign.in/flyer-design-company/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Flyer-Design-Company.jpg",
+      "thumbnailUrl": "https://www.companyprofiledesign.in/assets/images/resource/flyer-design-about.webp",
       "description": "We are the leading flyer design company based out of Mumbai. The advantage of our Flyer Design is that it will surely attract your customers.",
       "breadcrumb": { "@id": "https://www.companyprofiledesign.in/flyer-design-company/#breadcrumb" },
       "inLanguage": "en-US"

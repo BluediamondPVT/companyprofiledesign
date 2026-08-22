@@ -29,7 +29,7 @@ export const metadata = {
     siteName: "Company Profile Design",
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/Profile-Design-Company-1.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
         width: 1920,
         height: 450,
         alt: "Company Profile Maker in India",
@@ -40,7 +40,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Company Profile Maker in India",
     description: "Top-rated company profile maker agency in India. We design professional, high-impact company profiles and corporate brochures that attract clients and investors.",
-    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2021/09/Profile-Design-Company-1.jpg"],
+    images: ["https://www.companyprofiledesign.in/assets/images/resource/about.jpg"],
   },
   verification: {
     google: [
@@ -63,8 +63,8 @@ const schemaGraph = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
-        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "url": "https://www.companyprofiledesign.in/assets/images/logo.png",
+        "contentUrl": "https://www.companyprofiledesign.in/assets/images/logo.png",
         "width": 384,
         "height": 80,
         "caption": "Company Profile Design"
@@ -98,8 +98,8 @@ const schemaGraph = {
     {
       "@type": "ImageObject",
       "@id": "https://www.companyprofiledesign.in/company-profile-maker/#primaryimage",
-      "url": "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/Profile-Design-Company-1.jpg",
-      "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/Profile-Design-Company-1.jpg",
+      "url": "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
+      "contentUrl": "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       "width": 1920,
       "height": 450,
       "caption": "Company Profile Maker in India",
@@ -115,7 +115,7 @@ const schemaGraph = {
       "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
       "primaryImageOfPage": { "@id": "https://www.companyprofiledesign.in/company-profile-maker/#primaryimage" },
       "image": { "@id": "https://www.companyprofiledesign.in/company-profile-maker/#primaryimage" },
-      "thumbnailUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2021/09/Profile-Design-Company-1.jpg",
+      "thumbnailUrl": "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       "datePublished": "2021-09-18T07:28:44+00:00",
       "dateModified": "2025-03-01T10:23:23+00:00",
       "description": "Top-rated company profile maker agency in India. We design professional, high-impact company profiles and corporate brochures that attract clients and investors.",

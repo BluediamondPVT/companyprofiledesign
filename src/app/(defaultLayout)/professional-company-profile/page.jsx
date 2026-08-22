@@ -31,7 +31,7 @@ export const metadata = {
     authors: ["TheBDIT"],
     images: [
       {
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
         width: 1920,
         height: 1080,
         alt: "How can you make a professional company profile?",
@@ -44,7 +44,7 @@ export const metadata = {
     description:
       "Discover key steps and expert tips on how to make a professional company profile that impresses clients, builds trust, and drives business growth.",
     images: [
-      "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+      "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
     ],
   },
   verification: {
@@ -68,9 +68,9 @@ const schemaGraph = {
       logo: {
         "@type": "ImageObject",
         "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
-        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        url: "https://www.companyprofiledesign.in/assets/images/logo.png",
         contentUrl:
-          "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+          "https://www.companyprofiledesign.in/assets/images/logo.png",
         width: 384,
         height: 80,
         caption: "Company Profile Design",
@@ -105,9 +105,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
-      url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+      url: "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       contentUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       width: 1920,
       height: 1080,
       caption: "Professional Company Profile",
@@ -141,7 +141,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       keywords: [
         "Company Profile",
         "Professional Company Profile",
@@ -168,7 +168,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/professional-company-profile/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/wp-content/uploads/2020/01/Professional-Company-Profile.jpg",
+        "https://www.companyprofiledesign.in/assets/images/resource/about.jpg",
       datePublished: "2020-01-06T07:48:18+00:00",
       dateModified: "2021-12-31T05:03:02+00:00",
       description:
