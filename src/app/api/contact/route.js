@@ -4,10 +4,13 @@ import { NextResponse } from 'next/server';
 export async function POST(request) {
     try {
         const data = await request.json();
-        const { name, email, phone, subject, message } = data;
+        const { name, email, phone } = data;
+        const service = data.service || '';
+        const subject = data.subject || (service ? `New Enquiry: ${service}` : 'Company Profile Enquiry');
+        const message = data.message || (service ? `Service Needed: ${service}` : 'Enquiry from website');
 
-        // Validation to ensure all fields are provided
-        if (!name || !email || !phone || !subject || !message) {
+        // Validation to ensure all essential fields are provided
+        if (!name || !email || !phone) {
             return NextResponse.json(
                 { error: 'Missing required fields' },
                 { status: 400 }
@@ -30,7 +33,7 @@ export async function POST(request) {
             from: `"${name}" <${process.env.EMAIL_USER}>`, // sender address (must be the authenticated user for many SMTP providers)
             replyTo: email,
             to: process.env.EMAIL_TO,
-            subject: `New Enquiry: ${subject}`,
+            subject: `New Enquiry: ${service || subject}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
                     <div style="background-color: #0f172a; color: #ffffff; padding: 20px; text-align: center;">
@@ -40,7 +43,7 @@ export async function POST(request) {
                         <table style="width: 100%; border-collapse: collapse;">
                             <tbody>
                                 <tr>
-                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #334155; width: 120px;">Name:</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #334155; width: 140px;">Name:</td>
                                     <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${name}</td>
                                 </tr>
                                 <tr>
@@ -51,6 +54,11 @@ export async function POST(request) {
                                     <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #334155;">Phone:</td>
                                     <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${phone}</td>
                                 </tr>
+                                ${service ? `
+                                <tr>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #334155;">Service Needed:</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; color: #0f172a; font-weight: 600;">${service}</td>
+                                </tr>` : ''}
                                 <tr>
                                     <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #334155;">Subject:</td>
                                     <td style="padding: 12px 15px; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${subject}</td>

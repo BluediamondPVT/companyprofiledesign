@@ -7368,11 +7368,11 @@ span svg {
 
     .sidebar-header h3 {
         font-size: 18px;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
     }
 
     .sidebar-header p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .sidebar-header .close-btn {
@@ -7385,12 +7385,12 @@ span svg {
 
     /* Compact Form for Mobile */
     .form-group-custom {
-        margin-bottom: 12px;
+        margin-bottom: 15px;
     }
 
     .form-label-custom {
-        font-size: 11px;
-        margin-bottom: 5px;
+        font-size: 12px;
+        margin-bottom: 6px;
     }
 
     .input-with-icon {
@@ -7402,25 +7402,29 @@ span svg {
     }
 
     .input-with-icon svg {
-        width: 15px !important;
-        height: 15px !important;
+        width: 16px !important;
+        height: 16px !important;
     }
 
     .input-with-icon input,
     .input-with-icon textarea {
-        padding: 8px 12px 8px 36px;
-        font-size: 12px;
+        padding: 10px 12px 10px 36px;
+        font-size: 14px;
+    }
+    
+    .input-with-icon textarea {
+        height: 70px;
     }
 
     /* Compact Captcha for Mobile */
     .captcha-container-custom {
-        padding: 10px;
+        padding: 12px;
         border-radius: 6px;
     }
 
     .captcha-label {
-        font-size: 10px;
-        margin-bottom: 6px;
+        font-size: 11px;
+        margin-bottom: 8px;
     }
 
     .captcha-row {
@@ -7428,28 +7432,28 @@ span svg {
     }
 
     .captcha-math-box {
-        padding: 6px 12px;
-        font-size: 13px;
-        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 6px;
     }
 
     .captcha-input {
-        width: 55px !important;
-        padding: 6px 8px !important;
-        font-size: 13px;
-        border-radius: 4px !important;
+        width: 60px !important;
+        padding: 8px !important;
+        font-size: 14px;
+        border-radius: 6px !important;
     }
 
     .captcha-refresh-btn {
-        padding: 6px;
-        border-radius: 4px;
+        padding: 8px;
+        border-radius: 6px;
     }
 
     /* Compact Submit button for Mobile */
     .submit-btn-custom {
-        padding: 10px 15px;
-        font-size: 13px;
-        border-radius: 6px;
+        padding: 12px 15px;
+        font-size: 14px;
+        border-radius: 8px;
         margin-top: 5px;
     }
 

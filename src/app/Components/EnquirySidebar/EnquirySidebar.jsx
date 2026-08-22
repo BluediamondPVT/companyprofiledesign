@@ -41,61 +41,22 @@ const EnquirySidebar = () => {
 
         let autoOpenTimer;
         let isOpenedOnTimeout = false;
-        let isOpenedOnScroll = false;
 
         const openFormFromTimeout = () => {
-            if (!isOpenedOnTimeout && !isOpenedOnScroll) {
+            if (!isOpenedOnTimeout) {
                 setIsOpen(true);
                 isOpenedOnTimeout = true;
-            }
-        };
-
-        const openFormFromScroll = () => {
-            if (!isOpenedOnScroll) {
-                setIsOpen(true);
-                isOpenedOnScroll = true;
-                if (autoOpenTimer) {
-                    clearTimeout(autoOpenTimer);
-                }
             }
         };
 
         // 1. Auto open form after 5 seconds on load
         autoOpenTimer = setTimeout(openFormFromTimeout, 5000);
 
-        // 2. Auto open when scrolled 90%
-        const handleScroll = () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            const scrollHeight = Math.max(
-                document.documentElement.scrollHeight,
-                document.body.scrollHeight,
-                document.documentElement.offsetHeight,
-                document.body.offsetHeight
-            );
-            const clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-            
-            const totalScrollable = scrollHeight - clientHeight;
-            
-            if (totalScrollable > 50) {
-                const scrollPercent = (scrollTop / totalScrollable) * 100;
-                
-                // Debug console log so we can inspect
-                console.log(`Scroll percentage: ${scrollPercent.toFixed(1)}%`);
-                
-                if (scrollPercent >= 90) {
-                    openFormFromScroll();
-                }
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
         const handleCustomOpen = () => setIsOpen(true);
         window.addEventListener('openEnquirySidebar', handleCustomOpen);
 
         return () => {
             clearTimeout(autoOpenTimer);
-            window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('openEnquirySidebar', handleCustomOpen);
         };
     }, [pathname]);
@@ -288,7 +249,7 @@ const EnquirySidebar = () => {
                                         <textarea
                                             name="message"
                                             rows="4"
-                                            placeholder="Describe your project specifications and requirements..."
+                                            placeholder="Describe your project"
                                             value={formData.message}
                                             onChange={handleChange}
                                             className={errors.message ? 'error' : ''}
