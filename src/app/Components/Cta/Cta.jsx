@@ -67,9 +67,9 @@ const Cta = ({
                                 <Image src="/assets/images/resource/call.png" alt="img" width={50} height={50} />
                             </div>
                             <div className="call-number">
-                                <h1 style={{ color: '#ffffff', fontSize: '26px', fontWeight: '700', margin: '10px 0 5px' }}>
+                                <span className="d-block" style={{ color: '#ffffff', fontSize: '26px', fontWeight: '700', margin: '10px 0 5px', fontFamily: 'var(--heading-font)' }}>
                                     +91 77189 67729
-                                </h1>
+                                </span>
                             </div>
                             <div className="call-text">
                                 <span style={{ color: '#ffffff', opacity: 0.9 }}>(Whats App/Call)</span>

@@ -85,39 +85,39 @@ const Contact = () => {
 				</div>
 				<div className="col-lg-6">
 					<div className="company-profile-design-section-title padding-lg1">
-						<h1>Send Us a Message</h1>
+						<h2>Send Us a Message</h2>
 						<p>Send Us Your Valuable Message & We will reply your Message soon!</p>
 					</div>
 					<div className="contact-form-box3">
 						<form onSubmit={handleSubmit} id="dreamit-form">
 							<div className="row">
 								<div className="col-lg-12">
-									<h6 className="form-title"> Name*</h6>
+									<label className="form-title d-block mb-1"> Name*</label>
 									<div className="form-box">
 										<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter Your Name" />
 									</div>
 								</div>
 								<div className="col-lg-12"> 
-									<h6 className="form-title"> Your E-Mail*</h6>
+									<label className="form-title d-block mb-1"> Your E-Mail*</label>
 									<div className="form-box">
 										<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter E-Mail" />
 									</div>
 								</div>
 								<div className="col-lg-6"> 
-									<h6 className="form-title"> Your Phone Number*</h6>
+									<label className="form-title d-block mb-1"> Your Phone Number*</label>
 									<div className="form-box">
 										<input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter Phone Number" />
 									</div>
 								</div>
 								<div className="col-lg-6"> 
-									<h6 className="form-title"> Subject*</h6>
+									<label className="form-title d-block mb-1"> Subject*</label>
 									<div className="form-box">
 										<input type="text" name="subject" value={formData.subject} onChange={handleChange} placeholder="Subject" />
 									</div>
 								</div>
 								<div className="col-lg-12">
 									<div className="form-box">
-										<h6 className="form-title"> Comment*</h6>
+										<label className="form-title d-block mb-1"> Comment*</label>
 										<textarea name="message" value={formData.message} onChange={handleChange} id="massage" cols="30" rows="10" placeholder="Write Comment"></textarea>
 									</div>
 								</div>

@@ -25,9 +25,9 @@ const GraphicDesignWebsitesGuide = () => {
 
             {/* Main Article Content */}
             <div className="blog-content2">
-                <h1 className="blog-title2 mb-4" style={{ fontSize: '32px', fontWeight: '700', color: 'var(--secondary-color)', lineHeight: '1.3' }}>
+                <h2 className="blog-title2 mb-4" style={{ fontSize: '32px', fontWeight: '700', color: 'var(--secondary-color)', lineHeight: '1.3' }}>
                     Looking for the Best Graphic Design Websites? Here’s What You Need to Know!
-                </h1>
+                </h2>
 
                 <p className="mb-4 text-muted" style={{ fontSize: '17px', lineHeight: '1.8' }}>
                     In today’s digital era, having a strong visual identity is crucial for businesses of all sizes. From company profiles to social media designs and digital marketing, businesses need a one-stop solution for all their branding and IT needs. But with so many options available, how do you choose the right graphic design website? Let’s dive into some essential questions to help you find the best service provider for your needs.

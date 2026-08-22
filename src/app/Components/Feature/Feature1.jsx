@@ -74,8 +74,8 @@ const Feature1 = () => {
                         <div key={i} className="col-lg-3 col-md-6">
                             <div className="single-counter-box">
                                 <div className="counter-title">
-                                    <h1 className="counter">{item.number}</h1>
-                                    <h1>{item.symbol}</h1>
+                                    <span className="counter">{item.number}</span>
+                                    <span className="counter-symbol">{item.symbol}</span>
                                 </div>
                                 <div className="counter-text">
                                     <p>{item.desc}</p>

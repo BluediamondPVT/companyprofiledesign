@@ -36,7 +36,7 @@ const Faq = () => {
 			<div className="row">
 				<div className="col-lg-12">
 					<div className="company-profile-design-section-title text-center padding-lg">
-						<h1>Frequently Asked Questions</h1>
+						<h2>Frequently Asked Questions</h2>
 						<p className="mx-auto" style={{ maxWidth: '900px', width: '100%' }}>
 							We have listed everything for the information for our customers, Still, if you find any doubt you can connect with us via Email or Social Media Network. Here are answers to some Frequently Asked Questions.
 						</p>

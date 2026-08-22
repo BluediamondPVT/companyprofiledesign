@@ -103,6 +103,8 @@ const schemaGraph = {
       "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
       "about": { "@id": "https://www.companyprofiledesign.in/#organization" },
       "description": "Get a professional company profile design starting at just ₹2500 from India’s leading profile design company.",
+      "datePublished": "2020-01-04T05:12:03+00:00",
+      "dateModified": "2026-08-22T12:00:00+00:00",
       "breadcrumb": { "@id": "https://www.companyprofiledesign.in/#breadcrumb" },
       "inLanguage": "en-US"
     },

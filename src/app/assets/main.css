@@ -1914,10 +1914,15 @@ img {
     z-index: 1;
 }
 
-.counter-title h1 {
+.counter-title h1,
+.counter-title .counter,
+.counter-title .counter-symbol {
     font-size: 50px;
     font-weight: 500;
     display: inline-block;
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+    line-height: 1.2;
 }
 
 .counter-text p {
@@ -2273,11 +2278,13 @@ a.company-profile-design-button i {
     display: inline-block;
 }
 
-.service .company-profile-design-section-title h1 {
+.service .company-profile-design-section-title h1,
+.service .company-profile-design-section-title h2 {
     line-height: 0;
 }
 
-.service h1.sections {
+.service h1.sections,
+.service h2.sections {
     margin-top: 48px;
 }
 

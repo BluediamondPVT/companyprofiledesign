@@ -49,7 +49,7 @@ const Team = () => {
 			<div className="row">
 				<div className="col-lg-12">
 					<div className="company-profile-design-section-title text-center padding-lg">
-						<h1> Our Core Values</h1>
+						<h2> Our Core Values</h2>
                         <p>We possess a number of values ​​and principles that we pursue in all of our services, these values ​​are our way to continue our success and provide the best services to design company profiles. </p>
 					</div>
 				</div>

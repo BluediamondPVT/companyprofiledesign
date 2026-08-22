@@ -12,20 +12,20 @@ const BlogCommentForm = () => {
             <form action="#" method="POST" id="dreamit-form">
                 <div className="row g-3">
                     <div className="col-lg-6">
-                        <h6 className="form-title small fw-bold">Name *</h6>
+                        <label className="form-title small fw-bold d-block mb-1">Name *</label>
                         <div className="form-box">
                             <input type="text" className="form-control" placeholder="Enter Your Name" required />
                         </div>
                     </div>
                     <div className="col-lg-6"> 
-                        <h6 className="form-title small fw-bold">Your E-Mail *</h6>
+                        <label className="form-title small fw-bold d-block mb-1">Your E-Mail *</label>
                         <div className="form-box">
                             <input type="email" className="form-control" placeholder="Enter E-Mail" required />
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="form-box">
-                            <h6 className="form-title small fw-bold">Comment *</h6>
+                            <label className="form-title small fw-bold d-block mb-1">Comment *</label>
                             <textarea name="massage" className="form-control" rows={5} placeholder="Write Comment..." required></textarea>
                         </div>
                     </div>

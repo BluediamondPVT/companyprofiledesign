@@ -62,7 +62,7 @@ const CompanyFaq = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="company-profile-design-section-title text-center padding-lg">
-              <h1>Frequently Asked Questions</h1>
+              <h2>Frequently Asked Questions</h2>
               <p
                 className="mx-auto"
                 style={{ maxWidth: "900px", width: "100%" }}

@@ -25,9 +25,9 @@ const BestCompanyProfileDesignGuide = () => {
 
             {/* Main Article Content */}
             <div className="blog-content2">
-                <h1 className="blog-title2 mb-4" style={{ fontSize: '32px', fontWeight: '700', color: 'var(--secondary-color)', lineHeight: '1.3' }}>
+                <h2 className="blog-title2 mb-4" style={{ fontSize: '32px', fontWeight: '700', color: 'var(--secondary-color)', lineHeight: '1.3' }}>
                     Best Company Profile Design Guide 2025
-                </h1>
+                </h2>
 
                 <p className="mb-4 text-muted" style={{ fontSize: '17px', lineHeight: '1.8' }}>
                     A strong company profile design isn't just a document, it's a powerful branding tool that communicates your business identity, values, services, and strengths. In 2025, the competition is higher than ever, which means your company profile must be visually appealing, professionally structured, and strategically written to win clients and build credibility.
@@ -228,11 +228,11 @@ const BestCompanyProfileDesignGuide = () => {
                 <h3 className="fw-bold mb-4 mt-5" style={{ color: 'var(--secondary-color)' }}>9. FAQs (Optimised for Google Snippets)</h3>
                 <div className="accordion mb-5" id="faqAccordion">
                     <div className="accordion-item mb-3 border rounded-3 overflow-hidden">
-                        <h2 className="accordion-header" id="headingOne">
+                        <h4 className="accordion-header" id="headingOne">
                             <button className="accordion-button bg-light fw-bold text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Q1. What is the purpose of a company profile?
                             </button>
-                        </h2>
+                        </h4>
                         <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                             <div className="accordion-body text-muted">
                                 It introduces your business professionally and helps potential clients understand who you are.
@@ -240,11 +240,11 @@ const BestCompanyProfileDesignGuide = () => {
                         </div>
                     </div>
                     <div className="accordion-item mb-3 border rounded-3 overflow-hidden">
-                        <h2 className="accordion-header" id="headingTwo">
+                        <h4 className="accordion-header" id="headingTwo">
                             <button className="accordion-button collapsed bg-light fw-bold text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Q2. How many pages should a company profile be?
                             </button>
-                        </h2>
+                        </h4>
                         <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                             <div className="accordion-body text-muted">
                                 Ideally 8–20 pages, depending on the industry.
@@ -252,11 +252,11 @@ const BestCompanyProfileDesignGuide = () => {
                         </div>
                     </div>
                     <div className="accordion-item mb-3 border rounded-3 overflow-hidden">
-                        <h2 className="accordion-header" id="headingThree">
+                        <h4 className="accordion-header" id="headingThree">
                             <button className="accordion-button collapsed bg-light fw-bold text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Q3. What format is best?
                             </button>
-                        </h2>
+                        </h4>
                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                             <div className="accordion-body text-muted">
                                 PDF is the most common, but digital flipbooks are trending in 2025.
@@ -264,11 +264,11 @@ const BestCompanyProfileDesignGuide = () => {
                         </div>
                     </div>
                     <div className="accordion-item mb-3 border rounded-3 overflow-hidden">
-                        <h2 className="accordion-header" id="headingFour">
+                        <h4 className="accordion-header" id="headingFour">
                             <button className="accordion-button collapsed bg-light fw-bold text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 Q4. Can a company profile help in marketing?
                             </button>
-                        </h2>
+                        </h4>
                         <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                             <div className="accordion-body text-muted">
                                 Yes. It enhances branding and makes your business look more credible.

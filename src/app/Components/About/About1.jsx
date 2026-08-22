@@ -8,8 +8,8 @@ const About1 = ({mainimage,title1,title2,content,listTitle,listItem,btnName,btnU
        
         <div className="col-lg-6 ps-5"> 
             <div className="company-profile-design-section-title">
-                <h1>{title1}</h1>
-                <h1>{title2}</h1>
+                {title1 && <h2>{title1}</h2>}
+                {title2 && <h2>{title2}</h2>}
                 <p>{content}</p>
             </div>
             <div className="about-item-list">

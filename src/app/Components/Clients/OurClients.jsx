@@ -116,9 +116,9 @@ const OurClients = () => {
                 <div className="row dream1-bg">
                     <div className="col-lg-12 text-center" style={{ position: 'relative', zIndex: 5 }}>
                         <div className="company-profile-design-section-title white mb-5">
-                            <h1 style={{ color: '#ffffff', fontSize: '38px', fontWeight: '700' }}>
+                            <h2 style={{ color: '#ffffff', fontSize: '38px', fontWeight: '700' }}>
                                 Our Happy <span style={{ color: 'var(--primary-color)' }}>Customers</span>
-                            </h1>
+                            </h2>
                             <p className="mx-auto mt-3" style={{ color: '#a8a8b3', maxWidth: '900px', width: '100%', fontSize: '16px', lineHeight: '1.8' }}>
                                 We have a large customer base from all around the world. Our every customer is proud to associate with us and take our services. We always aim to continue the creative journey with our customers and grow exponentially by providing the best services in the market. We value every customer and always offer them the best of our services.
                             </p>

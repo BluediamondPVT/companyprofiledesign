@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
 			<div className="row dream1-bg">
 				<div className="col-lg-12">
 					<div className="company-profile-design-section-title white text-center padding-lg1 mb-5">
-						<h1 className="sections">Why Choose Us as Your Profile Design Company</h1>
+						<h2 className="sections">Why Choose Us as Your Profile Design Company</h2>
 						<p className="mx-auto pb-1" style={{ maxWidth: '1100px', width: '100%' }}>
 							The services we offer to our exclusive customers are unmatchable in this industry, we provide a comprehensive range of services under same roof.
 						</p>

@@ -209,7 +209,7 @@ const HowToWriteCompanyProfile = () => {
 
               {/* Main Article Content */}
               <div className="blog-content2">
-                <h1
+                <h2
                   className="blog-title2 mb-4"
                   style={{
                     fontSize: "32px",
@@ -219,7 +219,7 @@ const HowToWriteCompanyProfile = () => {
                   }}
                 >
                   Top 5 Inspiring Company Profile Sample for Business
-                </h1>
+                </h2>
 
                 <p
                   className="lead fs-5 mb-4"

@@ -38,9 +38,9 @@ const Portfolio = ({
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="mb-5">
-                            <h1 style={{ color: '#1c1f1c', fontSize: '42px', fontWeight: '700', fontFamily: 'var(--heading-font)' }}>
+                            <h2 style={{ color: '#1c1f1c', fontSize: '42px', fontWeight: '700', fontFamily: 'var(--heading-font)' }}>
                                 {title}
-                            </h1>
+                            </h2>
                             <p className="mx-auto mt-3" style={{ color: '#55585b', maxWidth: '1000px', width: '100%', fontSize: '16px', lineHeight: '1.8' }}>
                                 {paragraphText}
                             </p>

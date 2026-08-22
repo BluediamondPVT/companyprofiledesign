@@ -13,7 +13,7 @@ const BlogGrid = ({ title, subTitle, description, limit }) => {
                     <div className="col-lg-12">
                         <div className="company-profile-design-section-title text-center padding-lg mb-5">
                             {subTitle && <h4>{subTitle}</h4>}
-                            {title && <h1>{title}</h1>}
+                            {title && <h2>{title}</h2>}
                             {description && (
                                 <p className="mx-auto mt-3" style={{ maxWidth: '900px', width: '100%' }}>
                                     {description}
