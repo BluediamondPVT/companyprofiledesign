@@ -31,7 +31,7 @@ const Cta2 = () => {
 						</div>
 						<div className="contact-title">
 							<span>What’s App</span>
-							<h5>+91-77189 67729</h5>
+							<h5>+91 77000 91613</h5>
 						</div>
 					</div>
 				</div> 
