@@ -36,7 +36,9 @@ const BlogGrid = ({ title, subTitle, description, limit }) => {
 								<p className="blog-desc">{item.desc}</p>
 							</div>
 							<div className="blog-btn mt-auto pt-3">
-								<Link href={item.link} aria-label={`Read article: ${item.title}`}>Read More</Link>
+								<Link href={item.link} aria-label={`Read complete article: ${item.title}`}>
+									Read Full Article &rarr;
+								</Link>
 							</div>
 						</div>
 					</div>

@@ -152,7 +152,7 @@ const EnquirySidebar = () => {
     return (
         <>
             {/* Floating button on the right edge */}
-            <button className="enquiry-fab-btn" onClick={() => setIsOpen(true)}>
+            <button className="enquiry-fab-btn" onClick={() => setIsOpen(true)} aria-label="Open Project Enquiry Form">
                 <span>Enquire Now</span>
             </button>
 
@@ -167,7 +167,7 @@ const EnquirySidebar = () => {
                             <h3>Let&apos;s Get in Touch! 👋</h3>
                             <p>Share your requirements and we will get back to you shortly.</p>
                         </div>
-                        <button className="close-btn" onClick={() => setIsOpen(false)}>
+                        <button className="close-btn" onClick={() => setIsOpen(false)} aria-label="Close Enquiry Form">
                             <X size={22} />
                         </button>
                     </div>
@@ -288,6 +288,7 @@ const EnquirySidebar = () => {
                                             type="button" 
                                             onClick={generateCaptcha} 
                                             className="captcha-refresh-btn"
+                                            aria-label="Refresh Security Math Captcha"
                                             title="Refresh verification code"
                                         >
                                             <RefreshCw size={14} />

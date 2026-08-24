@@ -23,7 +23,7 @@ const BlogSidebar = () => {
 										<p className="blog-desc mt-2">{item.desc}</p>
 									</div>
 									<div className="blog-btn mt-3">
-                                    	<Link href={item.link || "/our-blog"} aria-label={`Read article: ${item.title}`}>Read More</Link>
+                                    	<Link href={item.link || "/our-blog"} aria-label={`Read complete article: ${item.title}`}>Read Full Article &rarr;</Link>
 									</div>
 								</div>
 							</div>
@@ -35,8 +35,8 @@ const BlogSidebar = () => {
 					<div className="widget_search upper mb-4">
 						<form action="#" method="get">
 							<input type="text" name="s" defaultValue="" placeholder="Search Here" title="Search for:" />
-							<button type="submit" className="icons">
-                            <i className="bi bi-search"></i>
+							<button type="submit" className="icons" aria-label="Search articles">
+								<i className="bi bi-search"></i>
 							</button>
 						</form>
 					</div>

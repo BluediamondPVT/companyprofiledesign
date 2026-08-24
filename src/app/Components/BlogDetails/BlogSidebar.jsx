@@ -9,7 +9,7 @@ const BlogSidebar = () => {
             <div className="widget_search upper mb-4">
                 <form action="#" method="get">
                     <input type="text" name="s" defaultValue="" placeholder="Search Here" title="Search for:" />
-                    <button type="submit" className="icons">
+                    <button type="submit" className="icons" aria-label="Search articles">
                         <i className="bi bi-search"></i>
                     </button>
                 </form>
