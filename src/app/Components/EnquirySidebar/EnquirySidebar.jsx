@@ -43,24 +43,10 @@ const EnquirySidebar = () => {
         setIsSubmitted(false);
         generateCaptcha();
 
-        let autoOpenTimer;
-        let isOpenedOnTimeout = false;
-
-        const openFormFromTimeout = () => {
-            if (!isOpenedOnTimeout) {
-                setIsOpen(true);
-                isOpenedOnTimeout = true;
-            }
-        };
-
-        // 1. Auto open form after 5 seconds on load
-        autoOpenTimer = setTimeout(openFormFromTimeout, 5000);
-
         const handleCustomOpen = () => setIsOpen(true);
         window.addEventListener('openEnquirySidebar', handleCustomOpen);
 
         return () => {
-            clearTimeout(autoOpenTimer);
             window.removeEventListener('openEnquirySidebar', handleCustomOpen);
         };
     }, [pathname, isExcludedPage]);
