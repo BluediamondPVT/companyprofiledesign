@@ -2,7 +2,6 @@ import { Kumbh_Sans } from "next/font/google";
 import localFont from 'next/font/local';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import "slick-carousel/slick/slick.css";
 import "./assets/main.css";
 import './assets/responsive.css';
 import ContactToolbar from "./Components/ContactToolbar/ContactToolbar";

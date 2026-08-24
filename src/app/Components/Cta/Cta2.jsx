@@ -20,7 +20,7 @@ const Cta2 = () => {
 						</div>
 						<div className="contact-title">
 							<span>Email Us</span>
-							<h5>bdm@thebdit.net</h5>
+							<h5>info@companyprofiledesign.in</h5>
 						</div>
 					</div>
 				</div>

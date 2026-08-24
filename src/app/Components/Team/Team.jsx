@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import data from '../../Data/team1.json';
 import loadBackgroudImages from '../Common/loadBackgroudImages';
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
 import brand from '../../Data/brand.json';
 import Image from 'next/image';
 

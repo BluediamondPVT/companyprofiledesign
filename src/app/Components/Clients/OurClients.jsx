@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
 import brand from '../../Data/brand.json';
 import Image from 'next/image';
 import loadBackgroudImages from '../Common/loadBackgroudImages';
