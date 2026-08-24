@@ -8,6 +8,7 @@ import ContactToolbar from "./Components/ContactToolbar/ContactToolbar";
 import EnquirySidebar from "./Components/EnquirySidebar/EnquirySidebar";
 import TrackingScripts from "./Components/Common/TrackingScripts";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const kumbh_sans = Kumbh_Sans({
   subsets: ['latin'],
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
         <EnquirySidebar />
         <TrackingScripts />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
