@@ -13,7 +13,7 @@ const Cta2 = () => {
         <div className="call-to-action style-two" data-background="/assets/images/resource/call-bg.png">
 		<div className="container">
 			<div className="row dream1-bg">
-				<div className="col-lg-4 col-md-6">
+				<div className="col-lg-5 col-md-6">
 					<div className="contact-info h-100">
 						<div className="contact-icon">
 							<i className="bi bi-envelope"></i>
@@ -24,7 +24,7 @@ const Cta2 = () => {
 						</div>
 					</div>
 				</div>
-				<div className="col-lg-4 col-md-6">
+				<div className="col-lg-3 col-md-6">
 					<div className="contact-info upper h-100">
 						<div className="contact-icon">
 							<i className="bi bi-whatsapp"></i>
