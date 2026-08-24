@@ -1,2 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /api/
+
+# Host
+Host: https://www.companyprofiledesign.in
+
+# Sitemaps
+Sitemap: https://www.companyprofiledesign.in/sitemap.xml

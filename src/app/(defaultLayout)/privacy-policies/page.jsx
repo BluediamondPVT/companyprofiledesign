@@ -2,10 +2,128 @@ import BreadCumb from "@/app/Components/Common/BreadCumb";
 import Link from "next/link";
 import React from "react";
 
+// 1. Next.js App Router Metadata (Preserving WordPress SEO Authority + Enhancements)
 export const metadata = {
-  title: "Privacy Policy | Company Profile Design",
-  description:
-    "Learn how Blue Diamond Infotech collects, protects, and manages your personal information and privacy.",
+  title: "Privacy Policy | Company Profile Design | Profile Design Company",
+  description: "Learn how Blue Diamond Infotech collects, protects, and manages your personal information and privacy for our company profile design and branding services.",
+  alternates: {
+    canonical: "https://www.companyprofiledesign.in/privacy-policies/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+  },
+  openGraph: {
+    locale: "en_IN",
+    type: "article",
+    title: "Privacy Policy | Company Profile Design | Profile Design Company",
+    description: "Learn how Blue Diamond Infotech collects, protects, and manages your personal information and privacy for our company profile design and branding services.",
+    url: "https://www.companyprofiledesign.in/privacy-policies/",
+    siteName: "Company Profile Design | Profile Design Company",
+    images: [
+      {
+        url: "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        width: 384,
+        height: 80,
+        alt: "Privacy Policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Company Profile Design | Profile Design Company",
+    description: "Learn how Blue Diamond Infotech collects, protects, and manages your personal information and privacy for our company profile design and branding services.",
+    images: ["https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png"],
+  },
+  verification: {
+    google: [
+      "fz__DsrAHtHD5Yr3iarcIuZf6fuBHMh55wAGlNFLQNI",
+      "NkkC2VmcZACC6OvOjJH8axgdErjv2uwIFZrlNMXfkXI",
+    ],
+  },
+};
+
+// 2. Clean Unified Schema Graph (Yoast / Google Rich Results Validated)
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    // Organization Schema
+    {
+      "@type": "Organization",
+      "@id": "https://www.companyprofiledesign.in/#organization",
+      "name": "Company Profile Design",
+      "url": "https://www.companyprofiledesign.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/",
+        "url": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "contentUrl": "https://www.companyprofiledesign.in/wp-content/uploads/2020/02/company-profile-design-logo.png",
+        "width": 384,
+        "height": 80,
+        "caption": "Company Profile Design"
+      },
+      "image": { "@id": "https://www.companyprofiledesign.in/#/schema/logo/image/" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+917718967729",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://in.pinterest.com/companyprofiledesignind"
+      ]
+    },
+
+    // WebSite Schema
+    {
+      "@type": "WebSite",
+      "@id": "https://www.companyprofiledesign.in/#website",
+      "url": "https://www.companyprofiledesign.in/",
+      "name": "Company Profile Design",
+      "description": "Design Company Profile, Brochures, Catalogs, etc",
+      "publisher": { "@id": "https://www.companyprofiledesign.in/#organization" },
+      "alternateName": "Profile Design Company",
+      "inLanguage": "en-US"
+    },
+
+    // WebPage Schema
+    {
+      "@type": "WebPage",
+      "@id": "https://www.companyprofiledesign.in/privacy-policies/",
+      "url": "https://www.companyprofiledesign.in/privacy-policies/",
+      "name": "Privacy Policy | Company Profile Design | Profile Design Company",
+      "isPartOf": { "@id": "https://www.companyprofiledesign.in/#website" },
+      "datePublished": "2021-05-29T12:20:00+00:00",
+      "dateModified": "2021-05-29T12:25:00+00:00",
+      "description": "Learn how Blue Diamond Infotech collects, protects, and manages your personal information and privacy for our company profile design and branding services.",
+      "breadcrumb": { "@id": "https://www.companyprofiledesign.in/privacy-policies/#breadcrumb" },
+      "inLanguage": "en-US"
+    },
+
+    // BreadcrumbList Schema (Home -> Privacy Policy)
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.companyprofiledesign.in/privacy-policies/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.companyprofiledesign.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "https://www.companyprofiledesign.in/privacy-policies/"
+        }
+      ]
+    }
+  ]
 };
 
 const policySections = [
@@ -38,6 +156,11 @@ const policySections = [
 const PrivacyPoliciesPage = () => {
   return (
     <div>
+      {/* Single Consolidated Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+      />
       <BreadCumb
         bgImg="/assets/images/resource/inner-bg.webp"
         subTitle="privacy-policies"

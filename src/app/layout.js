@@ -23,13 +23,21 @@ const clashdisplay = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://www.companyprofiledesign.in'),
+  title: {
+    default: "Company Profile Design | Profile Design Company",
+    template: "%s",
+  },
+  description: "Leading company profile design and corporate branding agency in India. We craft bespoke company profiles, brochures, catalogues, and corporate presentations.",
   robots: {
-    index: false,
-    follow: false,
-    nocache: true,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 };
@@ -38,7 +46,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="robots" content="noindex, nofollow" />
         <meta name="author" content="Company Profile Design" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
