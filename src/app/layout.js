@@ -7,6 +7,7 @@ import './assets/responsive.css';
 import ContactToolbar from "./Components/ContactToolbar/ContactToolbar";
 import EnquirySidebar from "./Components/EnquirySidebar/EnquirySidebar";
 import TrackingScripts from "./Components/Common/TrackingScripts";
+import { Analytics } from "@vercel/analytics/react";
 
 const kumbh_sans = Kumbh_Sans({
   subsets: ['latin'],
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
         <ContactToolbar />
         <EnquirySidebar />
         <TrackingScripts />
+        <Analytics />
       </body>
     </html>
   );
