@@ -7,6 +7,7 @@ import './assets/responsive.css';
 import ContactToolbar from "./Components/ContactToolbar/ContactToolbar";
 import EnquirySidebar from "./Components/EnquirySidebar/EnquirySidebar";
 import TrackingScripts from "./Components/Common/TrackingScripts";
+import { Analytics } from '@vercel/analytics/next';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
