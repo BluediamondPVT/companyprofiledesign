@@ -44,7 +44,7 @@ const portfolioImages = [
   },
   {
     id: 8,
-    src: "/assets/images/portfolio/Profile-Design-Company-4.jpg",
+    src: "/assets/images/portfolio/Profile-Design-Company-1.jpg",
     alt: "Company Profile Design 8",
   },
 ];
