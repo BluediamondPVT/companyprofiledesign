@@ -34,12 +34,12 @@ const portfolioImages = [
   },
   {
     id: 6,
-    src: "/assets/images/portfolio/Company-profile-Design-1.jpg",
+    src: "/assets/images/portfolio/Company-profile-Design-11.jpg",
     alt: "Company Profile Design 6",
   },
   {
     id: 7,
-    src: "/assets/images/portfolio/Company-profile-Design-4.jpg",
+    src: "/assets/images/portfolio/Company-profile-Design-10.jpg",
     alt: "Company Profile Design 7",
   },
   {
@@ -78,12 +78,6 @@ const LandingPortfolio = () => {
                       className="portfolio-img"
                     />
                   </Zoom>
-                </div>
-                <div className="portfolio-card-footer">
-                  <Link href="#contact" className="nav-style-btn w-100">
-                    <Mail size={16} className="btn-icon" />
-                    <span>Order This Design</span>
-                  </Link>
                 </div>
               </div>
             </div>

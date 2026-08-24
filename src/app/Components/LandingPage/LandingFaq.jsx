@@ -4,36 +4,36 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const faqData = [
     {
-        question: "1. What is the process of getting a company profile?",
-        answer: "Our process is simple and streamlined: We start by understanding your business and requirements, followed by drafting the content. Once the content is approved, our designers create a custom layout. Finally, we refine the design based on your feedback until you are completely satisfied."
+        question: "1. Can you provide content for the company profile?",
+        answer: "Yes, we have an in-house content writing team that creates custom-written content for every project, ensuring your company profile is professional, authentic, and uniquely crafted to reflect your brand identity and business strengths."
     },
     {
-        question: "2. Do you provide content for the company profile?",
-        answer: "Yes, we have a dedicated team of professional content writers who specialize in corporate communication. They will craft engaging, persuasive, and professional content tailored to your brand's voice and industry."
+        question: "2. How long does it take to complete a company profile?",
+        answer: "Most company profiles are completed within 24 to 72 hours, depending on the number of pages, content requirements, and the timely availability of information and feedback from the client."
     },
     {
-        question: "3. How many revisions do I get?",
-        answer: "The number of revision rounds depends on the package you select. Our Basic package includes 2 rounds of revisions, Standard includes 3 rounds, and Premium includes up to 5 rounds to ensure the final product perfectly aligns with your vision."
+        question: "3. Do you design Construction Company Profiles and Civil Contractor Profiles?",
+        answer: "Absolutely. We specialize in Construction Company Profile, Civil Contractor Profile, and Corporate Profile Design solutions for businesses across various industries."
     },
     {
-        question: "4. Will my company profile be optimized for digital viewing and PDF sharing?",
-        answer: "Absolutely. We deliver your final company profile as a high-quality, print-ready PDF, as well as a compressed, web-optimized PDF that is perfect for emailing and sharing digitally on platforms like WhatsApp or LinkedIn."
+        question: "4. Can I request revisions to the design?",
+        answer: "Yes, revision options are included in our packages to ensure the final company profile aligns perfectly with your brand and expectations."
     },
     {
-        question: "5. Can you print the company profile as well?",
-        answer: "Yes, we offer premium printing services alongside our design solutions. We can provide you with various paper qualities and finishes. Please reach out to our team for a custom printing quote based on your requirements."
+        question: "5. What if I don't have images for my company profile?",
+        answer: "No problem. We can use premium, royalty-free stock images relevant to your industry, or you can provide your own images and branding materials."
     },
     {
-        question: "6. What is the standard cost for a company profile?",
-        answer: "Our costs are highly competitive and structured around our three main packages: Basic, Standard, and Premium. The price varies depending on the number of pages, content requirements, and specific design needs. Contact us for a customized quote."
+        question: "6. What information do I need to provide to get started?",
+        answer: "Simply share your company details, services, products, logo, clients, and any relevant business information. Our team will take care of the content, design, and presentation to create a professional company profile."
     },
     {
-        question: "7. How long does it take to get a final design?",
-        answer: "Delivery timelines depend on the package you choose. Typically, our Basic package is delivered in 3-4 days, Standard in 4-5 days, and Premium in 6-7 days. We also ensure fast turnaround times for urgent requests."
+        question: "7. Will my company profile be customized for my business?",
+        answer: "Yes. Every Company Profile Design is created from scratch and tailored to your brand identity, industry, and business objectives."
     },
     {
-        question: "8. Can I update my company profile in the future?",
-        answer: "Yes, you can. If you choose our Premium or Standard packages, we provide you with the open source files (Ai, InDesign), allowing you to make edits. Alternatively, our team is always available to assist you with any future updates at a nominal cost."
+        question: "8. In which formats will I receive the final company profile?",
+        answer: "You will receive a high-quality PDF file suitable for digital sharing, client presentations, proposals, websites, and business meetings. We also provide the editable source file, giving you complete flexibility for future updates and modifications."
     }
 ];
 
@@ -105,7 +105,7 @@ const LandingFaq = () => {
                             Frequently Asked Questions
                         </h2>
                         <p style={{ fontSize: '16px', color: '#555', marginTop: '15px', maxWidth: '800px', margin: '15px auto 0' }}>
-                            We have answered some of the most common questions our clients ask us about our company profile design services. If you have more questions, feel free to contact us.
+Get quick answers to the most commonly asked questions about our company profile solutions, timelines, pricing, and project workflow.
                         </p>
                     </div>
                 </div>

@@ -10,6 +10,10 @@ import {
   MapPin,
   Globe,
   MessageCircle,
+  PhoneCall,
+  Briefcase,
+  FileText,
+  Building
 } from "lucide-react";
 import Link from "next/link";
 
@@ -137,7 +141,7 @@ const LandingFooter = () => {
       }}
     >
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-center align-items-center">
           {/* Left Contact Info */}
           <div className="col-lg-6 col-md-12 mb-5 pe-lg-5">
             <div className="contact-info-list">
@@ -161,8 +165,7 @@ const LandingFooter = () => {
                       color: "#e1e8ed",
                     }}
                   >
-                    1002, 10th Floor, The Ambience Court, Plot No. 2, Sector
-                    19D, Vashi, Navi Mumbai, Maharashtra 400705
+                    B 403, Virani Business Center, Opposite Bharat Gears, Mumbai-Pune Road, Thane, Mumbai – Maharashtra 400612.
                   </p>
                 </div>
               </div>
@@ -176,11 +179,11 @@ const LandingFooter = () => {
                     marginRight: "15px",
                   }}
                 >
-                  <Phone size={24} color="#ffffff" />
+                  <PhoneCall size={24} color="#ffffff" />
                 </div>
                 <div>
                   <p style={{ margin: 0, fontSize: "16px" }}>
-                    Call:{" "}
+                    Sales:{" "}
                     <a
                       href="tel:+917718967729"
                       style={{
@@ -189,7 +192,35 @@ const LandingFooter = () => {
                         fontWeight: "600",
                       }}
                     >
-                      +91 77189 67729
+                      +91 7700091613
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="d-flex align-items-center mb-4">
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                    padding: "12px",
+                    borderRadius: "50%",
+                    marginRight: "15px",
+                  }}
+                >
+                  <Briefcase size={24} color="#ffffff" />
+                </div>
+                <div>
+                  <p style={{ margin: 0, fontSize: "16px" }}>
+                    Projects:{" "}
+                    <a
+                      href="tel:+917718967729"
+                      style={{
+                        color: "#ffffff",
+                        textDecoration: "none",
+                        fontWeight: "600",
+                      }}
+                    >
+                      +91 7700090159
                     </a>
                   </p>
                 </div>
@@ -210,14 +241,14 @@ const LandingFooter = () => {
                   <p style={{ margin: 0, fontSize: "16px" }}>
                     Email:{" "}
                     <a
-                      href="mailto:info@companyprofiledesign.in"
+                      href="mailto:bdm@thebdit.net"
                       style={{
                         color: "#ffffff",
                         textDecoration: "none",
                         fontWeight: "600",
                       }}
                     >
-                      info@companyprofiledesign.in
+                      bdm@thebdit.net
                     </a>
                   </p>
                 </div>
@@ -232,14 +263,14 @@ const LandingFooter = () => {
                     marginRight: "15px",
                   }}
                 >
-                  <Globe size={24} color="#ffffff" />
+                  <FileText size={24} color="#ffffff" />
                 </div>
                 <div>
                   <p style={{ margin: 0, fontSize: "16px" }}>
-                    Website:{" "}
+                    GSTIN:{" "}
                     <a
-                      href="https://www.companyprofiledesign.in"
-                      target="_blank"
+                      href="#"
+                      
                       rel="noopener noreferrer"
                       style={{
                         color: "#ffffff",
@@ -247,7 +278,7 @@ const LandingFooter = () => {
                         fontWeight: "600",
                       }}
                     >
-                      www.companyprofiledesign.in
+                     27AAFCB0696M1Z9
                     </a>
                   </p>
                 </div>
@@ -262,14 +293,14 @@ const LandingFooter = () => {
                     marginRight: "15px",
                   }}
                 >
-                  <MessageCircle size={24} color="#ffffff" />
+                  <Building size={24} color="#ffffff" />
                 </div>
                 <div>
                   <p style={{ margin: 0, fontSize: "16px" }}>
-                    WhatsApp:{" "}
+                    CIN:{" "}
                     <a
-                      href="https://wa.me/917718967729"
-                      target="_blank"
+                      href="#"
+                      
                       rel="noopener noreferrer"
                       style={{
                         color: "#ffffff",
@@ -277,7 +308,7 @@ const LandingFooter = () => {
                         fontWeight: "600",
                       }}
                     >
-                      +91 77189 67729
+                      U72300MH2012PTC232709
                     </a>
                   </p>
                 </div>

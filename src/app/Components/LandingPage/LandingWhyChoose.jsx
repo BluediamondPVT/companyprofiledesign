@@ -5,23 +5,23 @@ import Image from 'next/image';
 
 const features = [
     {
-        title: "10+ Years of Company Profile Design Expertise",
-        desc: "With 10+ years of experience in the design industry, we deliver solutions that meet your goals.",
+        title: "15+ Years of Company Profile Design Expertise",
+        desc: "Backed by over 15 years of industry experience, we have helped businesses across diverse sectors create impactful company profiles that build trust, strengthen brands, and drive growth.",
         icon: Award
     },
     {
-        title: "Professional, Clean & Creative Design",
-        desc: "Our creative process guarantees aesthetically pleasing and professional layout that make your brand stand out.",
+        title: "Professional Content & Creative Design",
+        desc: "Our in-house team combines strategic content writing with premium design to deliver impactful Corporate Profile Design, Construction Company Profile, and Civil Contractor Profile solutions.",
         icon: Palette
     },
     {
-        title: "100% Custom & Concept-Driven",
-        desc: "Unique designs tailored exactly to your brand. We avoid templates to deliver 100% custom company profiles.",
+        title: "100% Original & Customized Content",
+        desc: "Every company profile is written from scratch, ensuring unique, plagiarism-free content that accurately reflects your brand identity and business strengths.",
         icon: CheckCircle
     },
     {
         title: "Fast Turnaround Time",
-        desc: "Timely delivery without compromising quality. Expect quick turnaround times for all projects.",
+        desc: "Need your profile urgently? We can deliver professionally designed company profiles within 24–72 hours, depending on project requirements.",
         icon: Clock
     }
 ];
@@ -37,14 +37,12 @@ const LandingWhyChoose = () => {
                             Why Choose Us
                         </h2>
                         <p style={{ fontSize: '18px', fontWeight: '600', color: '#1b4f91', marginBottom: '20px', lineHeight: '1.5' }}>
-                            We don't just design; we build experiences that drive results.
+                            Why Leading Businesses Choose Us for Their Company Profile Design
                         </p>
                         <p style={{ fontSize: '15px', color: '#555', marginBottom: '15px', lineHeight: '1.7' }}>
-                            With a proven track record, we offer tailored design solutions that perfectly align with your brand's vision. Our dedicated team of professionals ensures every project is executed with precision and creativity.
+                            We combine strategic content, premium design, and industry expertise to create professional company profiles that build credibility, strengthen brands, and drive business growth.
                         </p>
-                        <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7' }}>
-                            We take pride in our ability to understand your unique requirements and translate them into compelling visual narratives that resonate with your target audience and stakeholders.
-                        </p>
+
                     </div>
 
                     {/* Right side grid */}
