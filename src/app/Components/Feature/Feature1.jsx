@@ -65,8 +65,8 @@ const Feature1 = () => {
                             "Then we will discuss and synergize your ideology and our design.",
                             "Finally, on approval, we will provide you a copy for printing."
                         ]} 
-                        btnName="Learn More"
-                        btnUrl="/about"
+                        btnName="Learn More About Us"
+                        btnUrl="/about-companyprofiledesign"
                     ></About1>
  
                     <div className="row counter-bg">

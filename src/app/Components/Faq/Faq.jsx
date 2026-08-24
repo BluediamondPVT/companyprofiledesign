@@ -48,7 +48,7 @@ const Faq = () => {
 	                         <ul className="accordion">
                              {data.slice(0, 4).map((item, index)=>(
 		                        <li key={index} className={`cs_accordian ${index === openItemIndex ? "active" : "" }`}>
-		                            <a onClick={() => handleItemClick(index)}><span> {item.title}</span> <ChevronDown size={18} style={{ display: 'inline-block', transition: 'transform 0.3s ease' }} className="faq-chevron" /></a>
+		                            <button type="button" onClick={() => handleItemClick(index)} aria-expanded={index === openItemIndex}><span> {item.title}</span> <ChevronDown size={18} style={{ display: 'inline-block', transition: 'transform 0.3s ease' }} className="faq-chevron" /></button>
 		                            <p ref={accordionContentRef}>{item.desc}</p>
 		                        </li>
                                 ))}
@@ -64,7 +64,7 @@ const Faq = () => {
                                 const absoluteIndex = index + 4;
                                 return (
                                     <li key={absoluteIndex} className={`cs_accordian ${absoluteIndex === openItemIndex ? "active" : "" }`}>
-                                        <a onClick={() => handleItemClick(absoluteIndex)}><span> {item.title} </span> <ChevronDown size={18} style={{ display: 'inline-block', transition: 'transform 0.3s ease' }} className="faq-chevron" /></a>
+                                        <button type="button" onClick={() => handleItemClick(absoluteIndex)} aria-expanded={absoluteIndex === openItemIndex}><span> {item.title} </span> <ChevronDown size={18} style={{ display: 'inline-block', transition: 'transform 0.3s ease' }} className="faq-chevron" /></button>
                                         <p ref={accordionContentRef}>{item.desc}</p>
                                     </li>
                                 );

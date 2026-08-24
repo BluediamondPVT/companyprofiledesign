@@ -76,7 +76,7 @@ const CatalogueAbout = ({
 						))}
 					</div>
 					<div className="about-button">
-						<Link className="company-profile-design-button" href="/contact-us">Learn More <i className="bi bi-arrow-right-short"></i> </Link>
+						<Link className="company-profile-design-button" href="/contact-us" aria-label={`Contact us to learn more about ${title || 'our services'}`}>Learn More <i className="bi bi-arrow-right-short"></i> </Link>
 					</div>
 				</div>
 			</div>

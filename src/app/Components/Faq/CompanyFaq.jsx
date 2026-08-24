@@ -87,9 +87,10 @@ const CompanyFaq = () => {
                         index === openItemIndex ? "active" : ""
                       }`}
                     >
-                      <a
+                      <button
+                        type="button"
                         onClick={() => handleItemClick(index)}
-                        style={{ cursor: "pointer" }}
+                        aria-expanded={index === openItemIndex}
                       >
                         <span>{item.title}</span>
                         <ChevronDown
@@ -104,7 +105,7 @@ const CompanyFaq = () => {
                           }}
                           className="faq-chevron"
                         />
-                      </a>
+                      </button>
                       <p
                         style={{
                           display: index === openItemIndex ? "block" : "none",
@@ -133,9 +134,10 @@ const CompanyFaq = () => {
                           absoluteIndex === openItemIndex ? "active" : ""
                         }`}
                       >
-                        <a
+                        <button
+                          type="button"
                           onClick={() => handleItemClick(absoluteIndex)}
-                          style={{ cursor: "pointer" }}
+                          aria-expanded={absoluteIndex === openItemIndex}
                         >
                           <span>{item.title}</span>
                           <ChevronDown
@@ -150,7 +152,7 @@ const CompanyFaq = () => {
                             }}
                             className="faq-chevron"
                           />
-                        </a>
+                        </button>
                         <p
                           style={{
                             display:

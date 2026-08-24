@@ -3908,7 +3908,8 @@ h2.accordion-title {
     box-shadow: 0 8px 25px rgba(255, 77, 0, 0.15);
 }
 
-.accordion li a {
+.accordion li a,
+.accordion li button {
     position: relative;
     width: 100%;
     display: flex;
@@ -3922,9 +3923,13 @@ h2.accordion-title {
     padding: 18px 0;
     z-index: 1;
     transition: color 0.3s ease;
+    background: transparent;
+    border: none;
+    text-align: left;
 }
 
-.accordion li.active a {
+.accordion li.active a,
+.accordion li.active button {
     color: var(--primary-color) !important;
     border-bottom: 1px solid rgba(255, 77, 0, 0.15);
 }

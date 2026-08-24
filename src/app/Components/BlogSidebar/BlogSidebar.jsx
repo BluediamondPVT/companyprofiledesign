@@ -23,7 +23,7 @@ const BlogSidebar = () => {
 										<p className="blog-desc mt-2">{item.desc}</p>
 									</div>
 									<div className="blog-btn mt-3">
-                                    	<Link href={item.link || "/our-blog"}>Read More</Link>
+                                    	<Link href={item.link || "/our-blog"} aria-label={`Read article: ${item.title}`}>Read More</Link>
 									</div>
 								</div>
 							</div>
