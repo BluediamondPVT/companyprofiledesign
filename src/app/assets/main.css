@@ -3930,7 +3930,8 @@ h2.accordion-title {
 
 .accordion li.active a,
 .accordion li.active button {
-    color: var(--primary-color) !important;
+    color: #002b59 !important;
+    font-weight: 700;
     border-bottom: 1px solid rgba(255, 77, 0, 0.15);
 }
 
@@ -5486,7 +5487,8 @@ p.blog-desc {
 }
 
 .blog-btn a {
-    color: #FF4D00;
+    color: #B83200;
+    font-weight: 700;
     text-decoration: underline;
 }
 
@@ -7005,12 +7007,12 @@ span svg {
     right: 0;
     top: 50%;
     transform: translateY(-50%) translateX(0);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: #E03E00;
+    color: #FFFFFF;
     border: none;
     padding: 20px 12px;
-    font-weight: 700;
-    font-size: 13px;
+    font-weight: 800;
+    font-size: 13.5px;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 8px 0 0 8px;

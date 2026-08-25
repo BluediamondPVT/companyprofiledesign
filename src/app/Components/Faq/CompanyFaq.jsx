@@ -186,7 +186,7 @@ const CompanyFaq = () => {
                 boxShadow: "0 4px 15px rgba(0, 48, 97, 0.04)",
               }}
             >
-              <h5
+              <p
                 className="mb-0"
                 style={{
                   fontSize: "18px",
@@ -204,9 +204,9 @@ const CompanyFaq = () => {
                     marginLeft: "6px",
                   }}
                 >
-                  +91 7700091613
+                  +91 77000 91613
                 </a>
-              </h5>
+              </p>
             </div>
           </div>
         </div>

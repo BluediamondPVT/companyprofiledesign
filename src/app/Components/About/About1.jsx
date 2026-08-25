@@ -13,7 +13,7 @@ const About1 = ({mainimage,title1,title2,content,listTitle,listItem,btnName,btnU
                 <p>{content}</p>
             </div>
             <div className="about-item-list">
-                {listTitle && <h5 className="fw-bold text-dark mb-3">{listTitle}</h5>}
+                {listTitle && <h3 className="fw-bold text-dark mb-3 fs-5">{listTitle}</h3>}
                 <ul>
                 {listItem?.map((item, index) => (
                     <li key={index} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}><CheckCheck size={18} className="text-success" style={{ flexShrink: 0 }} /> {item} </li>

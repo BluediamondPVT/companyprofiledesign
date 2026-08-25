@@ -43,7 +43,7 @@ const Footer = () => {
                 {/* Column 1 */}
 				<div className="col-lg-3  col-md-6 col-12 mb-4">
 					<div className="widget widget-nav-menu">
-						<h4 className="widget-title custom-widget-title">Contact Info</h4>
+						<h3 className="widget-title custom-widget-title h4">Contact Info</h3>
 						<div className="menu-quick-info-content">
 							<ul className="footer-info custom-footer-text">
 								<li>Wafa Park, Tetavli, Thane, Mumbai, Maharashtra 400612</li>
@@ -59,7 +59,7 @@ const Footer = () => {
                 {/* Column 2 */}
 				<div className="col-lg-2 col-md-6 col-12 mb-4">
 					<div className="widget widget-nav-menu">
-						<h4 className="widget-title custom-widget-title">Our Services</h4>
+						<h3 className="widget-title custom-widget-title h4">Our Services</h3>
 						<div className="menu-quick-link-content">
 							<ul className="footer-menu custom-footer-list">
                             {OurServices.map((item, i) => (
@@ -73,7 +73,7 @@ const Footer = () => {
                 {/* Column 3 */}
 				<div className="col-lg-2 col-md-6 col-12 mb-4">
 					<div className="widget widget-nav-menu">
-						<h4 className="widget-title custom-widget-title">Quick Links</h4>
+						<h3 className="widget-title custom-widget-title h4">Quick Links</h3>
 						<div className="menu-quick-info-content">
 							<ul className="footer-menu custom-footer-list">
                             {QuickLinks.map((item, i) => (
@@ -87,7 +87,7 @@ const Footer = () => {
                 {/* Column 4 */}
 				<div className="col-lg-2 col-md-6 col-12 mb-4">
 					<div className="widget widget-nav-menu">
-						<h4 className="widget-title custom-widget-title">About Us</h4>
+						<h3 className="widget-title custom-widget-title h4">About Us</h3>
 						<div className="menu-quick-info-content">
 							<ul className="footer-menu custom-footer-list">
                             {AboutUsLinks.map((item, i) => (
@@ -101,7 +101,7 @@ const Footer = () => {
                 {/* Column 5 */}
 				<div className="col-lg-3 col-md-12 col-12 mb-4">
 					<div className="widget widget-nav-menu">
-						<h4 className="widget-title custom-widget-title">About Us</h4>
+						<h3 className="widget-title custom-widget-title h4">About Us</h3>
 						<div className="menu-quick-info-content custom-footer-text" style={{ fontSize: '13.5px', lineHeight: '1.9' }}>
 							<p>We are a Profile design company for the companies of subsidiaries of Blue Diamond Infotech, we are professional in designing the company profile and we have designers brochures at the highest level of experience, efficiency and creativity, we guarantee you design profiles that fit with the nature of your business to express them strongly and attract customers and are a reason to achieve your goals and successes.</p>
 						</div>

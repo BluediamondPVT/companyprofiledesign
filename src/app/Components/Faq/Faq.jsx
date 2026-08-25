@@ -85,9 +85,9 @@ const Faq = () => {
 						border: '1px solid rgba(255, 77, 0, 0.2)',
 						boxShadow: '0 4px 15px rgba(0, 48, 97, 0.04)'
 					}}>
-						<h5 className="mb-0" style={{ fontSize: '18px', fontWeight: '600', color: 'var(--secondary-color)' }}>
+						<p className="mb-0" style={{ fontSize: '18px', fontWeight: '600', color: 'var(--secondary-color)' }}>
 							For More Query Contact us on : <a href="tel:+917718967729" style={{ color: 'var(--primary-color)', fontWeight: '700', textDecoration: 'none', marginLeft: '6px' }}>+91 77189 67729</a>
-						</h5>
+						</p>
 					</div>
 				</div>
 			</div>

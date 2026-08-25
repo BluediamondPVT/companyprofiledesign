@@ -6,7 +6,9 @@ const DefalultLayout = ({ children }) => {
     return (
         <div className='main-page-area'>
             <HeaderStyle></HeaderStyle>
-            {children}
+            <main id="main-content">
+                {children}
+            </main>
             <Footer></Footer>
         </div>
     );

@@ -24,7 +24,7 @@ const Feature1 = () => {
                                     Content="Get a professional company profile design starting at just ₹2500 from India’s leading profile design company. <br>  We create tailored profiles for businesses across all sectors."
                                 ></SectionTitle>
 
-                                <h4 className="text-center fs-2 pt-4 text-dark">Our Company Profile Design Process</h4>
+                                <h3 className="text-center fs-2 pt-4 text-dark">Our Company Profile Design Process</h3>
                             </div>
                         </div>
                         <div className="dream-shape">
