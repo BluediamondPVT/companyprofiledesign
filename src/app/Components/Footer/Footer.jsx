@@ -49,7 +49,7 @@ const Footer = () => {
 								<li>Wafa Park, Tetavli, Thane, Mumbai, Maharashtra 400612</li>
 								<li>Phone: +91-7700091613</li>
 								<li>Mobile: +91-7700090159</li>
-								<li>Email: info@companyprofiledesign.in</li>
+								<li>Email: bdm@thebdit.net</li>
                                 <li>Web: www.companyprofiledesign.in</li>
 							</ul>
 						</div>
