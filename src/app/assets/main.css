@@ -7007,7 +7007,7 @@ span svg {
     right: 0;
     top: 50%;
     transform: translateY(-50%) translateX(0);
-    background-color: #E03E00;
+    background-color: var(--secondary-color); /* Dark Blue for high contrast */
     color: #FFFFFF;
     border: none;
     padding: 20px 12px;
@@ -7029,8 +7029,8 @@ span svg {
 
 .enquiry-fab-btn:hover {
     transform: translateY(-50%) translateX(-4px);
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color); /* Orange on hover */
+    color: #FFFFFF;
 }
 
 .enquiry-sidebar-container {
