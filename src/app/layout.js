@@ -49,6 +49,52 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="author" content="Company Profile Design" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Company Profile Design India",
+              "url": "https://www.companyprofiledesign.in",
+              "priceRange": "₹2500 - ₹15000",
+              "telephone": "+917700091613",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Thane",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Design Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Company Profile Design"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Corporate Brochure Design"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Catalog Design"
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
       </head>
       <body className={`${kumbh_sans.variable} ${clashdisplay.variable}`}>
         {/* Google Tag Manager (noscript) */}
@@ -60,7 +106,9 @@ export default function RootLayout({ children }) {
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <ContactToolbar />
         <EnquirySidebar />
         <TrackingScripts />

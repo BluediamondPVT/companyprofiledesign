@@ -32,13 +32,13 @@ const HeroBanner1 = ({ bgmage, Title1, Title2, content, btnName, btnName2, btnUr
 						</div> 
 						<div className="hero-all-shape">
 							<div className="hero-shape">
-								<Image src={heroShape1} alt="shape" width={500} height={467} />
+								<Image src={heroShape1} alt="shape" width={500} height={467} priority={true} />
 							</div>
 							<div className="hero-shape2">
-								<Image src={heroShape2} alt="shape" width={436} height={442} />
+								<Image src={heroShape2} alt="shape" width={436} height={442} priority={true} />
 							</div>
 							<div className="hero-shape3">
-								<Image src="/assets/images/slider/hero-shp4.png" alt="shape" width={796} height={74} />
+								<Image src="/assets/images/slider/hero-shp4.png" alt="shape" width={796} height={74} priority={true} />
 							</div>
 							<div className="hero-shape4">
 								<Image src="/assets/images/slider/hero-shp.png" alt="shape" width={150} height={250} />

@@ -41,22 +41,25 @@ export default function HeaderStyle({ variant }) {
         <div className="container-fluid">
           <div className="cs_main_header_in">
             <div className="cs_main_header_left">
-              <Link href="/" className="cs_site_branding">
+              <Link href="/" className="cs_site_branding" aria-label="Home">
                 <Image src="/assets/images/logo.png" alt="Logo" width={300} height={150}   />
               </Link>
               </div>
               <div className="cs_main_header_center">
                 <div className="cs_nav cs_primary_font fw-medium">
-                  <span
+                  <button
                     className={
                       mobileToggle
                         ? 'cs-munu_toggle cs_teggle_active'
                         : 'cs-munu_toggle'
                     }
                     onClick={() => setMobileToggle(!mobileToggle)}
+                    aria-label="Toggle menu"
+                    aria-expanded={mobileToggle}
+                    style={{ background: 'transparent', border: 'none' }}
                   >
                     <span></span>
-                  </span>
+                  </button>
                   <Nav setMobileToggle={setMobileToggle} />
                 </div>
               </div>

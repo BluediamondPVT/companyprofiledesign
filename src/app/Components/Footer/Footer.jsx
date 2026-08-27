@@ -36,7 +36,7 @@ const Footer = () => {
       }, []);
 
     return (
-        <div className="footer-section" data-background="/assets/images/resource/footer-bg.webp"> 
+        <footer className="footer-section" data-background="/assets/images/resource/footer-bg.webp"> 
 		<div className="container-fluid px-sm-3 px-lg-5 px-xl-5">
 			<div className="row">
 				
@@ -175,7 +175,7 @@ const Footer = () => {
                 transform: translateX(5px);
             }
         `}</style>
-	</div>	
+	</footer>	
     );
 };
 
