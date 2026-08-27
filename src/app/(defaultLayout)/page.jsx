@@ -1,11 +1,13 @@
 import React from 'react';
 import HeroBanner1 from '../Components/HeroBanner/HeroBanner1';
 import Feature1 from '../Components/Feature/Feature1';
-import Portfolio from '../Components/Portfolio/Portfolio';
-import WhyChooseUs from '../Components/Services/WhyChooseUs';
-import Faq from '../Components/Faq/Faq';
-import BlogGrid from '../Components/Blog/BlogGrid';
-import OurClients from '../Components/Clients/OurClients';
+import dynamic from 'next/dynamic';
+
+const Portfolio = dynamic(() => import('../Components/Portfolio/Portfolio'));
+const WhyChooseUs = dynamic(() => import('../Components/Services/WhyChooseUs'));
+const Faq = dynamic(() => import('../Components/Faq/Faq'));
+const BlogGrid = dynamic(() => import('../Components/Blog/BlogGrid'));
+const OurClients = dynamic(() => import('../Components/Clients/OurClients'));
 
 // 1. Next.js App Router Native Metadata (Super Fast & SEO Optimized)
 export const metadata = {
