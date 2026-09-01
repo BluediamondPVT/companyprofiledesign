@@ -13,7 +13,7 @@ import {
   PhoneCall,
   Briefcase,
   FileText,
-  Building
+  Building,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -49,7 +49,16 @@ const LandingFooter = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (name === "phone") {
+      const numericValue = value.replace(/\D/g, "");
+      if (numericValue.length > 10) return;
+
+      setFormData((prev) => ({ ...prev, [name]: numericValue }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -65,8 +74,9 @@ const LandingFooter = () => {
     }
     if (!formData.phone.trim()) {
       newErrors.phone = "Contact number is required";
-    } else if (formData.phone.replace(/[^0-9]/g, "").length < 10) {
-      newErrors.phone = "Please enter a valid 10-digit phone number";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      // Yahan regex update kiya hai
+      newErrors.phone = "Please enter exactly a 10-digit phone number";
     }
     if (!formData.service) {
       newErrors.service = "Please select a service";
@@ -165,7 +175,8 @@ const LandingFooter = () => {
                       color: "#e1e8ed",
                     }}
                   >
-                    B 403, Virani Business Center, Opposite Bharat Gears, Mumbai-Pune Road, Thane, Mumbai – Maharashtra 400612.
+                    B 403, Virani Business Center, Opposite Bharat Gears,
+                    Mumbai-Pune Road, Thane, Mumbai – Maharashtra 400612.
                   </p>
                 </div>
               </div>
@@ -270,7 +281,6 @@ const LandingFooter = () => {
                     GSTIN:{" "}
                     <a
                       href="#"
-                      
                       rel="noopener noreferrer"
                       style={{
                         color: "#ffffff",
@@ -278,7 +288,7 @@ const LandingFooter = () => {
                         fontWeight: "600",
                       }}
                     >
-                     27AAFCB0696M1Z9
+                      27AAFCB0696M1Z9
                     </a>
                   </p>
                 </div>
@@ -300,7 +310,6 @@ const LandingFooter = () => {
                     CIN:{" "}
                     <a
                       href="#"
-                      
                       rel="noopener noreferrer"
                       style={{
                         color: "#ffffff",
@@ -462,6 +471,8 @@ const LandingFooter = () => {
                           placeholder="Enter your contact number"
                           value={formData.phone}
                           onChange={handleChange}
+                          maxLength="10"
+                          pattern="[0-9]*"
                           style={{
                             width: "100%",
                             padding: "10px 15px 10px 40px",

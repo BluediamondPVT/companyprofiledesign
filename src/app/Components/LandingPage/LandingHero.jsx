@@ -389,8 +389,8 @@ const LandingHero = () => {
                         placeholder="Enter your contact number"
                         value={formData.phone}
                         onChange={handleChange}
-                        maxLength="10" // <-- Ise add karein (HTML level pe 10 block karne ke liye)
-                        pattern="[0-9]*" // <-- Ise add karein (Mobile me number keyboard open karne ke liye)
+                        maxLength="10"
+                        pattern="[0-9]*" 
                         style={{
                           width: "100%",
                           padding: "10px 15px 10px 40px",
