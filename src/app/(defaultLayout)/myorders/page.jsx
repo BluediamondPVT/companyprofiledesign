@@ -207,7 +207,7 @@ const myOrders = () => {
       <LandingHero />
       <LandingPricing />
       <LandingPortfolio />
-      <LandingFaq />
+      <LandingFaq /> 
       <LandingIndustries />
       <LandingOtherServices />
       <LandingWhyChoose />

@@ -42,7 +42,17 @@ const LandingHero = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Phone number ke liye sirf number aur max 10 digits ki condition
+    if (name === "phone") {
+      const numericValue = value.replace(/\D/g, ""); // Letters aur symbols ko remove kar dega
+      if (numericValue.length > 10) return; // 10 se zyada type hi nahi hone dega
+
+      setFormData((prev) => ({ ...prev, [name]: numericValue }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -51,16 +61,20 @@ const LandingHero = () => {
   const validate = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Full name is required";
+
     if (!formData.email.trim()) {
       newErrors.email = "Email address is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
+
+    // Phone Validation Update
     if (!formData.phone.trim()) {
       newErrors.phone = "Contact number is required";
-    } else if (formData.phone.replace(/[^0-9]/g, "").length < 10) {
-      newErrors.phone = "Please enter a valid 10-digit phone number";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Please enter exactly a 10-digit phone number";
     }
+
     if (!formData.service) {
       newErrors.service = "Please select a service";
     }
@@ -375,6 +389,8 @@ const LandingHero = () => {
                         placeholder="Enter your contact number"
                         value={formData.phone}
                         onChange={handleChange}
+                        maxLength="10" // <-- Ise add karein (HTML level pe 10 block karne ke liye)
+                        pattern="[0-9]*" // <-- Ise add karein (Mobile me number keyboard open karne ke liye)
                         style={{
                           width: "100%",
                           padding: "10px 15px 10px 40px",
