@@ -4,6 +4,7 @@ const VisitorSchema = new mongoose.Schema({
   ipAddress: {
     type: String,
     required: true,
+    index: true,
   },
   pageVisited: {
     type: String,
@@ -14,8 +15,13 @@ const VisitorSchema = new mongoose.Schema({
     default: Date.now,
     index: true,
   },
+  visitCount: {
+    type: Number,
+    default: 1,
+  },
 });
 
+VisitorSchema.index({ ipAddress: 1 });
 VisitorSchema.index({ timestamp: -1 });
 
 const Visitor = mongoose.models.Visitor || mongoose.model('Visitor', VisitorSchema);

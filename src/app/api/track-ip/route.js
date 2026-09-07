@@ -26,15 +26,19 @@ export async function POST(req) {
     const body = await req.json().catch(() => ({}));
     const pageVisited = body.pageVisited || body.path || '/';
 
-    // 3. Connect to database and save record
+    // 3. Connect to database, count total visits for this IP, and save record
     await connectToDatabase();
+    const previousVisits = await Visitor.countDocuments({ ipAddress: clientIp });
+    const currentVisitNumber = previousVisits + 1;
+
     await Visitor.create({
       ipAddress: clientIp,
       pageVisited,
       timestamp: new Date(),
+      visitCount: currentVisitNumber,
     });
 
-    return NextResponse.json({ success: true }, { status: 201 });
+    return NextResponse.json({ success: true, visitNumber: currentVisitNumber }, { status: 201 });
   } catch (error) {
     console.error('Track IP Error:', error);
     return NextResponse.json(

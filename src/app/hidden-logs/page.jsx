@@ -51,12 +51,33 @@ export default async function HiddenLogsPage() {
     notFound();
   }
 
-  // 4. Fetch visitor records sorted newest first
+  // 4. Fetch visitor records and calculate visit count per IP
   let visitors = [];
+  let ipCountsMap = {};
+  let totalUniqueIPs = 0;
+  let topVisitor = null;
   let dbError = null;
+
   try {
     await connectToDatabase();
-    visitors = await Visitor.find({}).sort({ timestamp: -1 }).limit(250).lean();
+    
+    // Fetch newest visitor logs
+    visitors = await Visitor.find({}).sort({ timestamp: -1 }).limit(300).lean();
+
+    // Aggregate total visits count for every IP across the entire database
+    const ipCounts = await Visitor.aggregate([
+      { $group: { _id: '$ipAddress', totalVisits: { $sum: 1 } } },
+      { $sort: { totalVisits: -1 } },
+    ]);
+
+    ipCounts.forEach((item) => {
+      if (item._id) {
+        ipCountsMap[item._id] = item.totalVisits;
+      }
+    });
+
+    totalUniqueIPs = ipCounts.length;
+    topVisitor = ipCounts[0] || null;
   } catch (err) {
     console.error('Error querying visitor logs:', err);
     dbError = err.message;
@@ -70,7 +91,7 @@ export default async function HiddenLogsPage() {
       padding: '40px 20px',
       fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
     }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1150px', margin: '0 auto' }}>
         
         {/* Top Header Card */}
         <div style={{
@@ -79,8 +100,8 @@ export default async function HiddenLogsPage() {
           justifyContent: 'space-between',
           alignItems: 'center',
           gap: '16px',
-          marginBottom: '28px',
-          paddingBottom: '24px',
+          marginBottom: '24px',
+          paddingBottom: '20px',
           borderBottom: '1px solid #1e293b'
         }}>
           <div>
@@ -112,7 +133,8 @@ export default async function HiddenLogsPage() {
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          {/* Stat Badges */}
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <div style={{
               backgroundColor: '#0f172a',
               border: '1px solid #1e293b',
@@ -123,6 +145,33 @@ export default async function HiddenLogsPage() {
             }}>
               Total Records: <strong style={{ color: '#38bdf8' }}>{visitors.length}</strong>
             </div>
+
+            <div style={{
+              backgroundColor: '#0f172a',
+              border: '1px solid #1e293b',
+              padding: '6px 14px',
+              borderRadius: '8px',
+              fontSize: '13px',
+              color: '#cbd5e1'
+            }}>
+              Unique IPs: <strong style={{ color: '#10b981' }}>{totalUniqueIPs}</strong>
+            </div>
+
+            {topVisitor && (
+              <div style={{
+                backgroundColor: '#0f172a',
+                border: '1px solid #1e293b',
+                padding: '6px 14px',
+                borderRadius: '8px',
+                fontSize: '13px',
+                color: '#cbd5e1'
+              }}>
+                Top Visitor:{' '}
+                <strong style={{ color: '#f59e0b', fontFamily: 'monospace' }}>
+                  {topVisitor._id} ({topVisitor.totalVisits}x)
+                </strong>
+              </div>
+            )}
           </div>
         </div>
 
@@ -165,8 +214,9 @@ export default async function HiddenLogsPage() {
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em'
                 }}>
-                  <th style={{ padding: '14px 20px', width: '60px' }}>#</th>
+                  <th style={{ padding: '14px 20px', width: '50px' }}>#</th>
                   <th style={{ padding: '14px 20px' }}>IP Address</th>
+                  <th style={{ padding: '14px 20px' }}>Total Visits</th>
                   <th style={{ padding: '14px 20px' }}>Page Visited</th>
                   <th style={{ padding: '14px 20px' }}>Date &amp; Time</th>
                 </tr>
@@ -174,61 +224,97 @@ export default async function HiddenLogsPage() {
               <tbody>
                 {visitors.length === 0 ? (
                   <tr>
-                    <td colSpan={4} style={{ padding: '40px 20px', textAlign: 'center', color: '#64748b' }}>
+                    <td colSpan={5} style={{ padding: '40px 20px', textAlign: 'center', color: '#64748b' }}>
                       No visitor records recorded yet. Visit any page on the site to trigger the tracker!
                     </td>
                   </tr>
                 ) : (
-                  visitors.map((visitor, idx) => (
-                    <tr
-                      key={visitor._id ? visitor._id.toString() : idx}
-                      style={{
-                        borderBottom: '1px solid #1e293b',
-                        backgroundColor: idx % 2 === 0 ? '#0f172a' : '#0b1120'
-                      }}
-                    >
-                      <td style={{ padding: '14px 20px', color: '#64748b', fontSize: '13px' }}>
-                        {idx + 1}
-                      </td>
-                      <td style={{ padding: '14px 20px' }}>
-                        <span style={{
-                          fontFamily: 'monospace',
-                          color: '#34d399',
-                          backgroundColor: 'rgba(52, 211, 153, 0.08)',
-                          padding: '4px 8px',
-                          borderRadius: '4px',
-                          border: '1px solid rgba(52, 211, 153, 0.2)',
-                          fontSize: '13px'
-                        }}>
-                          {visitor.ipAddress}
-                        </span>
-                      </td>
-                      <td style={{ padding: '14px 20px' }}>
-                        <span style={{
-                          color: '#818cf8',
-                          backgroundColor: 'rgba(99, 102, 241, 0.1)',
-                          padding: '4px 8px',
-                          borderRadius: '4px',
-                          border: '1px solid rgba(99, 102, 241, 0.2)',
-                          fontFamily: 'monospace',
-                          fontSize: '13px'
-                        }}>
-                          {visitor.pageVisited || '/'}
-                        </span>
-                      </td>
-                      <td style={{ padding: '14px 20px', color: '#94a3b8', whiteSpace: 'nowrap', fontSize: '13px' }}>
-                        {new Date(visitor.timestamp).toLocaleString('en-IN', {
-                          year: 'numeric',
-                          month: 'short',
-                          day: 'numeric',
-                          hour: '2-digit',
-                          minute: '2-digit',
-                          second: '2-digit',
-                          hour12: true,
-                        })}
-                      </td>
-                    </tr>
-                  ))
+                  visitors.map((visitor, idx) => {
+                    const totalVisits = ipCountsMap[visitor.ipAddress] || visitor.visitCount || 1;
+                    const isFrequent = totalVisits >= 3;
+                    const isSuperFrequent = totalVisits >= 5;
+
+                    return (
+                      <tr
+                        key={visitor._id ? visitor._id.toString() : idx}
+                        style={{
+                          borderBottom: '1px solid #1e293b',
+                          backgroundColor: idx % 2 === 0 ? '#0f172a' : '#0b1120',
+                          transition: 'background-color 0.15s ease',
+                        }}
+                      >
+                        <td style={{ padding: '14px 20px', color: '#64748b', fontSize: '13px' }}>
+                          {idx + 1}
+                        </td>
+                        <td style={{ padding: '14px 20px' }}>
+                          <span style={{
+                            fontFamily: 'monospace',
+                            color: '#34d399',
+                            backgroundColor: 'rgba(52, 211, 153, 0.08)',
+                            padding: '4px 8px',
+                            borderRadius: '4px',
+                            border: '1px solid rgba(52, 211, 153, 0.2)',
+                            fontSize: '13px'
+                          }}>
+                            {visitor.ipAddress}
+                          </span>
+                        </td>
+                        <td style={{ padding: '14px 20px' }}>
+                          <span style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '5px',
+                            padding: '3px 10px',
+                            borderRadius: '5px',
+                            fontSize: '12px',
+                            fontWeight: 600,
+                            backgroundColor: isSuperFrequent
+                              ? 'rgba(239, 68, 68, 0.12)'
+                              : isFrequent
+                              ? 'rgba(245, 158, 11, 0.12)'
+                              : 'rgba(56, 189, 248, 0.1)',
+                            color: isSuperFrequent
+                              ? '#f87171'
+                              : isFrequent
+                              ? '#fbbf24'
+                              : '#38bdf8',
+                            border: isSuperFrequent
+                              ? '1px solid rgba(239, 68, 68, 0.25)'
+                              : isFrequent
+                              ? '1px solid rgba(245, 158, 11, 0.25)'
+                              : '1px solid rgba(56, 189, 248, 0.2)',
+                          }}>
+                            {isSuperFrequent ? '🔥' : isFrequent ? '⚡' : '👤'}
+                            {totalVisits} {totalVisits === 1 ? 'visit' : 'visits'}
+                          </span>
+                        </td>
+                        <td style={{ padding: '14px 20px' }}>
+                          <span style={{
+                            color: '#818cf8',
+                            backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                            padding: '4px 8px',
+                            borderRadius: '4px',
+                            border: '1px solid rgba(99, 102, 241, 0.2)',
+                            fontFamily: 'monospace',
+                            fontSize: '13px'
+                          }}>
+                            {visitor.pageVisited || '/'}
+                          </span>
+                        </td>
+                        <td style={{ padding: '14px 20px', color: '#94a3b8', whiteSpace: 'nowrap', fontSize: '13px' }}>
+                          {new Date(visitor.timestamp).toLocaleString('en-IN', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            second: '2-digit',
+                            hour12: true,
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })
                 )}
               </tbody>
             </table>
