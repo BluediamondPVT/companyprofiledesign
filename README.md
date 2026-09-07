@@ -36,8 +36,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
-Ek AI ENGINEER ko kya kya kaam karna hota hai 
-
-industry mai kyo requirement hai 
-
-agar bnna hai to kon konsi skils language aana cahiye 
