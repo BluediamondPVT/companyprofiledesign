@@ -16,6 +16,7 @@
     "critters": "^0.0.23",
     "html-react-parser": "^5.1.18",
     "lucide-react": "^1.27.0",
+    "mongoose": "^9.9.5",
     "next": "14.2.14",
     "nodemailer": "^9.0.5",
     "react": "^18",
