@@ -18,9 +18,17 @@ export default async function HiddenLogsPage() {
   // 1. Read incoming request IP using Next.js headers
   const headersList = headers();
   const forwardedFor = headersList.get('x-forwarded-for');
+  const vercelForwarded = headersList.get('x-vercel-forwarded-for');
+  const cloudflareIp = headersList.get('cf-connecting-ip');
   const realIp = headersList.get('x-real-ip');
   
-  let incomingIp = forwardedFor ? forwardedFor.split(',')[0].trim() : realIp || '127.0.0.1';
+  let incomingIp =
+    (forwardedFor ? forwardedFor.split(',')[0].trim() : null) ||
+    (vercelForwarded ? vercelForwarded.split(',')[0].trim() : null) ||
+    cloudflareIp ||
+    realIp ||
+    '127.0.0.1';
+
   if (incomingIp === '::1') {
     incomingIp = '127.0.0.1';
   }

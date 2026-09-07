@@ -4,11 +4,18 @@ import Visitor from '@/models/Visitor';
 
 export async function POST(req) {
   try {
-    // 1. Extract IP address from request headers
+    // 1. Extract IP address from request headers (support Vercel, Cloudflare, standard proxies)
     const forwardedFor = req.headers.get('x-forwarded-for');
+    const vercelForwarded = req.headers.get('x-vercel-forwarded-for');
+    const cloudflareIp = req.headers.get('cf-connecting-ip');
     const realIp = req.headers.get('x-real-ip');
     
-    let clientIp = forwardedFor ? forwardedFor.split(',')[0].trim() : realIp || '127.0.0.1';
+    let clientIp =
+      (forwardedFor ? forwardedFor.split(',')[0].trim() : null) ||
+      (vercelForwarded ? vercelForwarded.split(',')[0].trim() : null) ||
+      cloudflareIp ||
+      realIp ||
+      '127.0.0.1';
 
     // Normalize IPv6 localhost
     if (clientIp === '::1') {
