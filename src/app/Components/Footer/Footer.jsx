@@ -26,6 +26,7 @@ const Footer = () => {
         {title: 'Home', link: '/'},
         {title: 'About', link: '/about-companyprofiledesign'},
         {title: 'Portfolio', link: '/portfolio'},
+        {title: 'Faq', link: '/faq'},
         {title: 'Terms and Conditions', link: '/terms-and-conditions'},
         {title: 'Privacy Policies', link: '/privacy-policies'},
         {title: 'Refund Policy', link: '/refund-policy'}
