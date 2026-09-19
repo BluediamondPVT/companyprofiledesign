@@ -19,7 +19,7 @@ export default function IPTracker() {
 
     const track = async () => {
       try {
-        await fetch('/api/track-ip', {
+        const res = await fetch('/api/track-ip', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -27,6 +27,20 @@ export default function IPTracker() {
           body: JSON.stringify({ pageVisited: pathname }),
           keepalive: true,
         });
+
+        const data = await res.json();
+        
+        // Enforce Client-Side Block
+        if (data && data.isBlocked) {
+          document.body.innerHTML = `
+            <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f8fafc; font-family: system-ui, sans-serif;">
+              <div style="text-align: center; padding: 40px; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+                <h1 style="color: #ef4444; margin-bottom: 10px;">403 Access Denied</h1>
+                <p style="color: #64748b; margin: 0;">You do not have permission to access this resource.</p>
+              </div>
+            </div>
+          `;
+        }
       } catch (err) {
         // Silently ignore tracking failures so the user experience is uninterrupted
       }

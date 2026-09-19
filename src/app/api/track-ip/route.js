@@ -28,6 +28,14 @@ export async function POST(req) {
 
     // 3. Connect to database, count total visits for this IP, and save record
     await connectToDatabase();
+    
+    // Check if IP is blocked
+    const BlockedIP = (await import('@/models/BlockedIP')).default;
+    const isBlocked = await BlockedIP.findOne({ ipAddress: clientIp }).lean();
+    if (isBlocked) {
+      return NextResponse.json({ isBlocked: true }, { status: 200 });
+    }
+
     const previousVisits = await Visitor.countDocuments({ ipAddress: clientIp });
     const currentVisitNumber = previousVisits + 1;
 

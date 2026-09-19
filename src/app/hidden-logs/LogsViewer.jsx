@@ -18,7 +18,7 @@ export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAll
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ targetIp: ip, action })
       });
-      
+
       if (res.ok) {
         setBlockedIps(prev => {
           const newSet = new Set(prev);
@@ -259,7 +259,7 @@ export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAll
               <option value="15days"> Last 15 Days</option>
               <option value="1month"> Last 1 Month</option>
             </select>
-          </div> 
+          </div>
 
           {/* Search by IP or Page */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: '1', maxWidth: '340px' }}>
