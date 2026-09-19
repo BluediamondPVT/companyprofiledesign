@@ -1,3 +1,5 @@
+import { headers } from 'next/headers';
+import connectToDatabase from '@/lib/mongodb';
 import { Kumbh_Sans } from "next/font/google";
 import localFont from 'next/font/local';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -45,7 +47,52 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // IP Blocking Logic
+  let isBlocked = false;
+  try {
+    const headersList = headers();
+    const forwardedFor = headersList.get('x-forwarded-for');
+    const vercelForwarded = headersList.get('x-vercel-forwarded-for');
+    const cloudflareIp = headersList.get('cf-connecting-ip');
+    const realIp = headersList.get('x-real-ip');
+    
+    let incomingIp =
+      (forwardedFor ? forwardedFor.split(',')[0].trim() : null) ||
+      (vercelForwarded ? vercelForwarded.split(',')[0].trim() : null) ||
+      cloudflareIp ||
+      realIp ||
+      '127.0.0.1';
+
+    if (incomingIp === '::1') {
+      incomingIp = '127.0.0.1';
+    }
+
+    await connectToDatabase();
+    const BlockedIP = (await import('@/models/BlockedIP')).default;
+    const blockedRecord = await BlockedIP.findOne({ ipAddress: incomingIp }).lean();
+    if (blockedRecord) {
+      isBlocked = true;
+    }
+  } catch (err) {
+    console.error("Error checking blocked IP in layout:", err);
+  }
+
+  if (isBlocked) {
+    return (
+      <html lang="en">
+        <body>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f8fafc', fontFamily: 'system-ui, sans-serif' }}>
+            <div style={{ textAlign: 'center', padding: '40px', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', border: '1px solid #e2e8f0' }}>
+              <h1 style={{ color: '#ef4444', marginBottom: '10px' }}>403 Access Denied</h1>
+              <p style={{ color: '#64748b', margin: 0 }}>You do not have permission to access this resource.</p>
+            </div>
+          </div>
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang="en">
       <head>

@@ -2,9 +2,40 @@
 
 import { useState, useMemo } from 'react';
 
-export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAllTime }) {
+export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAllTime, initialBlockedIps = [] }) {
   const [dateFilter, setDateFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [blockedIps, setBlockedIps] = useState(new Set(initialBlockedIps));
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const handleToggleBlock = async (ip, currentStatus) => {
+    if (isProcessing) return;
+    setIsProcessing(true);
+    try {
+      const action = currentStatus ? 'unblock' : 'block';
+      const res = await fetch('/api/manage-block', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ targetIp: ip, action })
+      });
+      
+      if (res.ok) {
+        setBlockedIps(prev => {
+          const newSet = new Set(prev);
+          if (currentStatus) newSet.delete(ip);
+          else newSet.add(ip);
+          return newSet;
+        });
+      } else {
+        const error = await res.json();
+        alert(error.error || 'Failed to update block status');
+      }
+    } catch (err) {
+      alert('Network error while processing block action');
+    } finally {
+      setIsProcessing(false);
+    }
+  };
 
   // Filter visitors based on selected date range and search query
   const filteredVisitors = useMemo(() => {
@@ -295,6 +326,7 @@ export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAll
                   <th style={{ padding: '14px 20px' }}>Total Visits</th>
                   <th style={{ padding: '14px 20px' }}>Page Visited</th>
                   <th style={{ padding: '14px 20px' }}>Date &amp; Time</th>
+                  <th style={{ padding: '14px 20px', textAlign: 'center' }}>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -315,6 +347,7 @@ export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAll
                     const totalVisits = visitor.visitCount || 1;
                     const isFrequent = totalVisits >= 3;
                     const isSuperFrequent = totalVisits >= 5;
+                    const isBlocked = blockedIps.has(visitor.ipAddress);
 
                     return (
                       <tr
@@ -395,6 +428,38 @@ export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAll
                             second: '2-digit',
                             hour12: true,
                           })}
+                        </td>
+                        <td style={{ padding: '14px 20px', textAlign: 'center' }}>
+                          <button
+                            onClick={() => handleToggleBlock(visitor.ipAddress, isBlocked)}
+                            disabled={isProcessing}
+                            style={{
+                              backgroundColor: isBlocked ? '#fef2f2' : '#ffffff',
+                              color: isBlocked ? '#ef4444' : '#64748b',
+                              border: isBlocked ? '1px solid #fecaca' : '1px solid #cbd5e1',
+                              padding: '6px 12px',
+                              borderRadius: '6px',
+                              fontSize: '12px',
+                              fontWeight: 600,
+                              cursor: isProcessing ? 'not-allowed' : 'pointer',
+                              transition: 'all 0.2s ease',
+                              opacity: isProcessing ? 0.6 : 1
+                            }}
+                            onMouseOver={(e) => {
+                              if (!isProcessing) {
+                                e.target.style.backgroundColor = isBlocked ? '#fee2e2' : '#f8fafc';
+                                e.target.style.borderColor = isBlocked ? '#fca5a5' : '#94a3b8';
+                              }
+                            }}
+                            onMouseOut={(e) => {
+                              if (!isProcessing) {
+                                e.target.style.backgroundColor = isBlocked ? '#fef2f2' : '#ffffff';
+                                e.target.style.borderColor = isBlocked ? '#fecaca' : '#cbd5e1';
+                              }
+                            }}
+                          >
+                            {isBlocked ? '✅ Unblock' : '🚫 Block'}
+                          </button>
                         </td>
                       </tr>
                     );

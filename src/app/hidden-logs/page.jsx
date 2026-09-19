@@ -52,10 +52,11 @@ export default async function HiddenLogsPage() {
     notFound();
   }
 
-  // 4. Fetch visitor records and calculate visit count per IP
+  // 4. Fetch visitor records, calculate visit count, and get blocked IPs
   let visitors = [];
   let ipCountsMap = {};
   let dbError = null;
+  let blockedIpsList = [];
 
   try {
     await connectToDatabase();
@@ -73,6 +74,11 @@ export default async function HiddenLogsPage() {
         ipCountsMap[item._id] = item.totalVisits;
       }
     });
+
+    // Fetch blocked IPs
+    const BlockedIP = (await import('@/models/BlockedIP')).default;
+    const blockedRecords = await BlockedIP.find({}, 'ipAddress').lean();
+    blockedIpsList = blockedRecords.map(b => b.ipAddress);
   } catch (err) {
     console.error('Error querying visitor logs:', err);
     dbError = err.message;
@@ -121,6 +127,7 @@ export default async function HiddenLogsPage() {
       initialVisitors={serializedVisitors}
       incomingIp={incomingIp}
       totalUniqueAllTime={Object.keys(ipCountsMap).length}
+      initialBlockedIps={blockedIpsList}
     />
   );
 }
