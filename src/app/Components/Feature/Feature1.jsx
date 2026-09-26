@@ -51,7 +51,7 @@ const Feature1 = () => {
                 </div>
 
                 <About1
-                    mainimage="/assets/images/slider/about-home.webp"
+                    mainimage="/assets/images/slider/about-home.jpeg"
                     title1="Get Complete Company Profile"
                     title2="Design Services Online"
                     content="Professionally designed profile or brochure is an excellent and informative tool that can convince your potential customers and encourage them to choose you.The company’s profile or creative brochure can achieve great conversions from customers and achieve more sales which can’t be achieved by any other means."

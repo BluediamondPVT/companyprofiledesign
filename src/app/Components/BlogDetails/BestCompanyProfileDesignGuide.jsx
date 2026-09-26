@@ -10,7 +10,7 @@ const BestCompanyProfileDesignGuide = () => {
             {/* Featured Banner */}
             <div className=" mb-4" style={{ borderRadius: '12px', overflow: 'hidden' }}>
                 <Image 
-                    src="/assets/images/blog/best-company-profile-design-guide-2025.jpg" 
+                    src="/assets/images/blog/best-company-profile-design-guide-2025.jpeg" 
                     alt="Best Company Profile Design Guide 2025" 
                     width={1200} 
                     height={675} 

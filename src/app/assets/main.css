@@ -7000,11 +7000,12 @@ span svg {
 }
 
 /* ==========================================
-   Floating Enquiry Sidebar Styles (Right Side)
+   Floating Enquiry Sidebar Styles (Left Side)
    ========================================== */
 .enquiry-fab-btn {
     position: fixed;
-    right: 0;
+    left: 0;
+    right: auto;
     top: 50%;
     transform: translateY(-50%) translateX(0);
     background-color: var(--secondary-color); /* Dark Blue for high contrast */
@@ -7015,8 +7016,8 @@ span svg {
     font-size: 13.5px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 8px 0 0 8px;
-    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
     z-index: 9998;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -7028,7 +7029,7 @@ span svg {
 }
 
 .enquiry-fab-btn:hover {
-    transform: translateY(-50%) translateX(-4px);
+    transform: translateY(-50%) translateX(4px);
     background-color: var(--primary-color); /* Orange on hover */
     color: #FFFFFF;
 }
@@ -7036,7 +7037,7 @@ span svg {
 .enquiry-sidebar-container {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 10000;
@@ -7067,18 +7068,20 @@ span svg {
 .enquiry-sidebar-panel {
     position: absolute;
     top: 0;
-    right: -450px;
+    left: -450px;
+    right: auto;
     width: 450px;
     height: 100%;
     background-color: #ffffff;
-    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .enquiry-sidebar-container.active .enquiry-sidebar-panel {
-    right: 0;
+    left: 0;
+    right: auto;
 }
 
 .sidebar-header {
@@ -7368,7 +7371,13 @@ span svg {
 
     .enquiry-sidebar-panel {
         width: 100vw;
-        right: -100vw;
+        left: -100vw;
+        right: auto;
+    }
+
+    .enquiry-sidebar-container.active .enquiry-sidebar-panel {
+        left: 0;
+        right: auto;
     }
 
     .sidebar-header {

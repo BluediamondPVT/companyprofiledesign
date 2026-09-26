@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   User,
   Mail,
   Phone,
   ShieldCheck,
-  RefreshCw,
   CheckCircle2,
 } from "lucide-react";
 import Image from "next/image";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 const LandingHero = () => {
   const [formData, setFormData] = useState({
@@ -16,29 +16,14 @@ const LandingHero = () => {
     email: "",
     phone: "",
     service: "",
-    captchaInput: "",
   });
 
-  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, result: 0 });
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef(null);
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-
-  const generateCaptcha = () => {
-    const num1 = Math.floor(Math.random() * 9) + 1;
-    const num2 = Math.floor(Math.random() * 9) + 1;
-    setCaptcha({
-      num1,
-      num2,
-      result: num1 + num2,
-    });
-    setFormData((prev) => ({ ...prev, captchaInput: "" }));
-  };
-
-  useEffect(() => {
-    generateCaptcha();
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,8 +63,8 @@ const LandingHero = () => {
     if (!formData.service) {
       newErrors.service = "Please select a service";
     }
-    if (parseInt(formData.captchaInput) !== captcha.result) {
-      newErrors.captchaInput = "Incorrect captcha answer";
+    if (!turnstileToken) {
+      newErrors.turnstile = "Please complete security verification";
     }
 
     setErrors(newErrors);
@@ -105,6 +90,7 @@ const LandingHero = () => {
             service: formData.service,
             subject: `New Enquiry for ${formData.service}`,
             message: `Service Requested: ${formData.service}`,
+            turnstileToken,
           }),
         });
 
@@ -118,10 +104,12 @@ const LandingHero = () => {
               email: "",
               phone: "",
               service: "",
-              captchaInput: "",
             });
+            setTurnstileToken("");
+            if (turnstileRef.current?.reset) {
+              turnstileRef.current.reset();
+            }
             setIsSubmitted(false);
-            generateCaptcha();
           }, 5000);
         } else {
           setSubmitError(
@@ -524,86 +512,32 @@ const LandingHero = () => {
                     )}
                   </div>
 
+                  {/* Cloudflare Turnstile Captcha */}
                   <div
-                    className="form-group-custom captcha-container-custom"
+                    className="form-group-custom"
                     style={{
                       marginBottom: "15px",
-                      background: "#f8f9fb",
-                      padding: "15px",
-                      borderRadius: "8px",
-                      border: "1px solid rgba(0,0,0,0.05)",
                     }}
                   >
-                    <label
-                      className="captcha-label"
-                      style={{
-                        fontSize: "12px",
-                        fontWeight: "600",
-                        color: "#555",
-                        marginBottom: "10px",
-                        display: "flex",
-                        alignItems: "center",
+                    <Turnstile
+                      ref={turnstileRef}
+                      siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY || "0x4AAAAAAFEPTwsQxY3K4K_Q"}
+                      onSuccess={(token) => {
+                        setTurnstileToken(token);
+                        setErrors((prev) => ({ ...prev, turnstile: "" }));
                       }}
-                    >
-                      <ShieldCheck
-                        size={16}
-                        className="text-muted mr-1"
-                        style={{ marginRight: "5px" }}
-                      />
-                      Security Verification (Solve the math problem):
-                    </label>
-                    <div
-                      className="captcha-row"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
+                      onError={() => {
+                        setTurnstileToken("");
                       }}
-                    >
-                      <span
-                        className="captcha-math-box"
-                        style={{
-                          background: "#003061",
-                          color: "#f5683d",
-                          padding: "8px 15px",
-                          borderRadius: "6px",
-                          fontWeight: "700",
-                          letterSpacing: "1px",
-                        }}
-                      >
-                        {captcha.num1} + {captcha.num2} =
-                      </span>
-                      <input
-                        type="number"
-                        name="captchaInput"
-                        placeholder="?"
-                        value={formData.captchaInput}
-                        onChange={handleChange}
-                        style={{
-                          width: "70px",
-                          padding: "8px",
-                          textAlign: "center",
-                          border: "1px solid rgba(0,0,0,0.15)",
-                          borderRadius: "6px",
-                          fontWeight: "700",
-                        }}
-                        className={errors.captchaInput ? "error" : ""}
-                      />
-                      <button
-                        type="button"
-                        onClick={generateCaptcha}
-                        style={{
-                          background: "#fff",
-                          border: "1px solid rgba(0,0,0,0.1)",
-                          padding: "8px",
-                          borderRadius: "6px",
-                          cursor: "pointer",
-                        }}
-                      >
-                        <RefreshCw size={16} color="#555" />
-                      </button>
-                    </div>
-                    {errors.captchaInput && (
+                      onExpire={() => {
+                        setTurnstileToken("");
+                      }}
+                      options={{
+                        theme: "light",
+                        size: "normal",
+                      }}
+                    />
+                    {errors.turnstile && (
                       <span
                         className="error-text"
                         style={{
@@ -613,7 +547,7 @@ const LandingHero = () => {
                           marginTop: "5px",
                         }}
                       >
-                        {errors.captchaInput}
+                        {errors.turnstile}
                       </span>
                     )}
                   </div>

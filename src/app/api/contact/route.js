@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function POST(request) {
     try {
         const data = await request.json();
-        const { name, email, phone } = data;
+        const { name, email, phone, turnstileToken } = data;
         const service = data.service || '';
         const subject = data.subject || (service ? `New Enquiry: ${service}` : 'Company Profile Enquiry');
         const message = data.message || (service ? `Service Needed: ${service}` : 'Enquiry from website');
@@ -15,6 +15,31 @@ export async function POST(request) {
                 { error: 'Missing required fields' },
                 { status: 400 }
             );
+        }
+
+        // Verify Cloudflare Turnstile CAPTCHA
+        const turnstileSecret = process.env.CLOUDFLARE_SECRET_KEY || "0x4AAAAAAFEPTxZhDqbPopoT4mmJBdRX1vw";
+        if (turnstileSecret && turnstileToken) {
+            try {
+                const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        secret: turnstileSecret,
+                        response: turnstileToken,
+                    }),
+                });
+                const outcome = await verifyRes.json();
+                if (!outcome.success) {
+                    console.warn('Turnstile verification failed:', outcome);
+                    return NextResponse.json(
+                        { error: 'Security verification failed. Please try again.' },
+                        { status: 400 }
+                    );
+                }
+            } catch (verErr) {
+                console.error('Error verifying Turnstile token:', verErr);
+            }
         }
 
         // Configure Nodemailer transporter

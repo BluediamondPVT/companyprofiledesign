@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   User,
   Mail,
@@ -8,10 +8,10 @@ import {
   MessageSquare,
   ShieldCheck,
   X,
-  RefreshCw,
   CheckCircle2,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 const EnquirySidebar = () => {
   const pathname = usePathname();
@@ -24,26 +24,14 @@ const EnquirySidebar = () => {
     phone: "",
     subject: "",
     message: "",
-    captchaInput: "",
   });
 
-  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, result: 0 });
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef(null);
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-
-  // Generate random math captcha
-  const generateCaptcha = () => {
-    const num1 = Math.floor(Math.random() * 9) + 1;
-    const num2 = Math.floor(Math.random() * 9) + 1;
-    setCaptcha({
-      num1,
-      num2,
-      result: num1 + num2,
-    });
-    setFormData((prev) => ({ ...prev, captchaInput: "" }));
-  };
 
   useEffect(() => {
     if (isExcludedPage) return;
@@ -51,7 +39,6 @@ const EnquirySidebar = () => {
     // Reset states on path change
     setIsOpen(false);
     setIsSubmitted(false);
-    generateCaptcha();
 
     const handleCustomOpen = () => setIsOpen(true);
     window.addEventListener("openEnquirySidebar", handleCustomOpen);
@@ -94,8 +81,8 @@ const EnquirySidebar = () => {
     }
     if (!formData.subject.trim()) newErrors.subject = "Subject is required";
     if (!formData.message.trim()) newErrors.message = "Message is required";
-    if (parseInt(formData.captchaInput) !== captcha.result) {
-      newErrors.captchaInput = "Incorrect captcha answer";
+    if (!turnstileToken) {
+      newErrors.turnstile = "Please complete security verification";
     }
 
     setErrors(newErrors);
@@ -120,6 +107,7 @@ const EnquirySidebar = () => {
             phone: formData.phone,
             subject: formData.subject,
             message: formData.message,
+            turnstileToken,
           }),
         });
 
@@ -134,11 +122,13 @@ const EnquirySidebar = () => {
               phone: "",
               subject: "",
               message: "",
-              captchaInput: "",
             });
+            setTurnstileToken("");
+            if (turnstileRef.current?.reset) {
+              turnstileRef.current.reset();
+            }
             setIsSubmitted(false);
             setIsOpen(false);
-            generateCaptcha();
           }, 3000);
         } else {
           setSubmitError(
@@ -302,35 +292,30 @@ const EnquirySidebar = () => {
                 </div>
 
                 {/* Captcha */}
-                <div className="form-group-custom captcha-container-custom">
-                  <label className="captcha-label">
-                    <ShieldCheck size={16} className="text-muted mr-1" />
-                    Security Verification (Solve the math problem):
-                  </label>
-                  <div className="captcha-row">
-                    <span className="captcha-math-box">
-                      {captcha.num1} + {captcha.num2} =
+                {/* Cloudflare Turnstile Captcha */}
+                <div className="form-group-custom" style={{ marginTop: "15px", marginBottom: "15px" }}>
+                  <Turnstile
+                    ref={turnstileRef}
+                    siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY || "0x4AAAAAAFEPTwsQxY3K4K_Q"}
+                    onSuccess={(token) => {
+                      setTurnstileToken(token);
+                      setErrors((prev) => ({ ...prev, turnstile: "" }));
+                    }}
+                    onError={() => {
+                      setTurnstileToken("");
+                    }}
+                    onExpire={() => {
+                      setTurnstileToken("");
+                    }}
+                    options={{
+                      theme: "light",
+                      size: "normal",
+                    }}
+                  />
+                  {errors.turnstile && (
+                    <span className="error-text" style={{ display: "block", marginTop: "6px" }}>
+                      {errors.turnstile}
                     </span>
-                    <input
-                      type="number"
-                      name="captchaInput"
-                      placeholder="?"
-                      value={formData.captchaInput}
-                      onChange={handleChange}
-                      className={`captcha-input ${errors.captchaInput ? "error" : ""}`}
-                    />
-                    <button
-                      type="button"
-                      onClick={generateCaptcha}
-                      className="captcha-refresh-btn"
-                      aria-label="Refresh Security Math Captcha"
-                      title="Refresh verification code"
-                    >
-                      <RefreshCw size={14} />
-                    </button>
-                  </div>
-                  {errors.captchaInput && (
-                    <span className="error-text">{errors.captchaInput}</span>
                   )}
                 </div>
 

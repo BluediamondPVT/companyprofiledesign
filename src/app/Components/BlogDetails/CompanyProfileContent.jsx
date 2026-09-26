@@ -180,7 +180,7 @@ const CompanyProfileDesignGuide = () => {
                 style={{ borderRadius: "12px", overflow: "hidden" }}
               >
                 <Image
-                  src="/assets/images/blog/what-should-company-profile-content-include.jpg"
+                  src="/assets/images/blog/what-should-company-profile-content-include.webp"
                   alt="What Should A Company Profile Content Include"
                   width={1200}
                   height={675}
