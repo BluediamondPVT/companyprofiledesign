@@ -30,7 +30,7 @@ export const metadata = {
     authors: ["TheBDIT"],
     images: [
       {
-        url: "https://www.companyprofiledesign.in/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg",
+        url: "https://www.companyprofiledesign.in/assets/images/blog/how-to-write-a-company-profile.jpg",
         width: 1200,
         height: 675,
         alt: "How to write a company profile",
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       "Learn how to write a compelling, professional company profile with our complete step-by-step guide. Includes structure tips, checklist, and key writing strategies.",
     images: [
-      "https://www.companyprofiledesign.in/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg",
+      "https://www.companyprofiledesign.in/assets/images/blog/how-to-write-a-company-profile.jpg",
     ],
   },
   verification: {
@@ -104,9 +104,9 @@ const schemaGraph = {
       "@type": "ImageObject",
       "@id":
         "https://www.companyprofiledesign.in/how-to-write-company-profile/#primaryimage",
-      url: "https://www.companyprofiledesign.in/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg",
+      url: "https://www.companyprofiledesign.in/assets/images/blog/how-to-write-a-company-profile.jpg",
       contentUrl:
-        "https://www.companyprofiledesign.in/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg",
+        "https://www.companyprofiledesign.in/assets/images/blog/how-to-write-a-company-profile.jpg",
       width: 1200,
       height: 675,
       caption: "How to write a company profile",
@@ -139,7 +139,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/how-to-write-company-profile/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg",
+        "https://www.companyprofiledesign.in/assets/images/blog/how-to-write-a-company-profile.jpg",
       keywords: [
         "How to write a company profile",
         "Company profile writing",
@@ -168,7 +168,7 @@ const schemaGraph = {
           "https://www.companyprofiledesign.in/how-to-write-company-profile/#primaryimage",
       },
       thumbnailUrl:
-        "https://www.companyprofiledesign.in/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg",
+        "https://www.companyprofiledesign.in/assets/images/blog/how-to-write-a-company-profile.jpg",
       datePublished: "2025-08-15T10:00:00+00:00",
       description:
         "Learn how to write a compelling, professional company profile with our complete step-by-step guide. Includes structure tips, checklist, and key writing strategies.",

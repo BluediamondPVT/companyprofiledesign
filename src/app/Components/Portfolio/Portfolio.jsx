@@ -11,25 +11,21 @@ const Portfolio = ({
     content,
     desc
 }) => {
-    const defaultDesc = hideBanner
-        ? "We own many clients around the world, our expertise in setting up and designing Our team of designers looking for creativity and development We own many clients around the world, our expertise in setting up and designing Our team of designers looking for creativity and development"
+    const defaultDesc = hideBanner 
+        ? "We have designed impactful, conversion-driven company profiles for global enterprises, startups, and SMEs, ensuring brand credibility, visual excellence, and business growth." 
         : "We have served clients across the globe with professionally designed company profiles. Our experienced design team focuses on creativity, brand clarity, and business growth.";
 
     const paragraphText = content || desc || defaultDesc;
 
     const portfolioImages = [
-        { id: 1, src: "/assets/images/portfolio/Company-profile-Design-3.jpg", alt: "Company Profile Design Work 1" },
-        { id: 2, src: "/assets/images/portfolio/Profile-Design-Company-2.jpg", alt: "Company Profile Design Work 2" },
-        { id: 3, src: "/assets/images/portfolio/Profile-Design-Company-1.jpeg", alt: "Company Profile Design Work 3" },
-        { id: 4, src: "/assets/images/portfolio/Company-profile-Design-2.jpeg", alt: "Company Profile Design Work 4" },
-        { id: 5, src: "/assets/images/portfolio/Profile-Design-Company-3.jpeg", alt: "Company Profile Design Work 5" },
-        { id: 6, src: "/assets/images/portfolio/Company-profile-Design-10.jpeg", alt: "Company Profile Design Work 6" },
-        { id: 7, src: "/assets/images/portfolio/Company-profile-Design-11.jpg", alt: "Company Profile Design Work 7" },
-        { id: 8, src: "/assets/images/portfolio/profile-design-company-4.jpg", alt: "Company Profile Design Work 8" },
-        { id: 9, src: "/assets/images/portfolio/Company-profile-Design-3.jpg", alt: "Company Profile Design Work 9" },
-        { id: 10, src: "/assets/images/portfolio/Profile-Design-Company-1.jpeg", alt: "Company Profile Design Work 10" },
-        { id: 11, src: "/assets/images/portfolio/Company-profile-Design-2.jpeg", alt: "Company Profile Design Work 11" },
-        { id: 12, src: "/assets/images/portfolio/Company-profile-Design-10.jpeg", alt: "Company Profile Design Work 12" },
+        { id: 1, src: "/assets/images/portfolio/corporate-tech-profile.jpg", alt: "Technology & AI Corporate Profile Design" },
+        { id: 2, src: "/assets/images/portfolio/construction-engineering-profile.jpg", alt: "Architecture & Infrastructure Engineering Profile" },
+        { id: 3, src: "/assets/images/portfolio/finance-consulting-profile.jpg", alt: "Financial Advisory & Corporate Governance Profile" },
+        { id: 4, src: "/assets/images/portfolio/healthcare-medical-profile.jpg", alt: "MedTech & Healthcare Innovations Profile" },
+        { id: 5, src: "/assets/images/portfolio/renewable-energy-profile.jpg", alt: "Renewable Energy & ESG Sustainability Profile" },
+        { id: 6, src: "/assets/images/portfolio/luxury-real-estate-profile.jpg", alt: "Luxury Real Estate & Penthouse Development Profile" },
+        { id: 7, src: "/assets/images/portfolio/logistics-supply-chain-profile.jpg", alt: "Global Logistics & Freight Supply Chain Profile" },
+        { id: 8, src: "/assets/images/portfolio/creative-branding-profile.jpg", alt: "Creative Agency & Brand Identity Profile" },
     ];
 
     return (
@@ -115,26 +111,17 @@ const Portfolio = ({
                 }
                 .portfolio-item-img {
                     width: 100%;
-                    height: 340px;
+                    aspect-ratio: 4 / 3;
+                    height: auto;
                     object-fit: cover;
                     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
                     display: block;
                 }
                 .portfolio-item-card:hover .portfolio-item-img {
-                    transform: scale(1.08);
+                    transform: scale(1.06);
                 }
                 .portfolio-phone-link:hover {
                     color: var(--primary-color) !important;
-                }
-                @media (max-width: 991px) {
-                    .portfolio-item-img {
-                        height: 280px;
-                    }
-                }
-                @media (max-width: 575px) {
-                    .portfolio-item-img {
-                        height: 250px;
-                    }
                 }
                 
                 /* Fix react-medium-image-zoom close button */

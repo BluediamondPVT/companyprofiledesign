@@ -9,43 +9,59 @@ import Link from "next/link";
 const portfolioImages = [
   {
     id: 1,
-    src: "/assets/images/portfolio/Company-profile-Design-3.jpg",
-    alt: "Company Profile Design 1",
+    src: "/assets/images/portfolio/corporate-tech-profile.jpg",
+    alt: "Technology & AI Corporate Profile Design",
+    title: "Technology & AI Corporate Profile",
+    category: "Technology",
   },
   {
     id: 2,
-    src: "/assets/images/portfolio/Profile-Design-Company-2.jpg",
-    alt: "Company Profile Design 2",
+    src: "/assets/images/portfolio/construction-engineering-profile.jpg",
+    alt: "Architecture & Infrastructure Engineering Profile",
+    title: "Infrastructure & Civil Engineering",
+    category: "Architecture",
   },
   {
     id: 3,
-    src: "/assets/images/portfolio/Profile-Design-Company-1.jpeg",
-    alt: "Company Profile Design 3",
+    src: "/assets/images/portfolio/finance-consulting-profile.jpg",
+    alt: "Financial Advisory & Corporate Governance Profile",
+    title: "Financial Advisory & Consulting",
+    category: "Finance",
   },
   {
     id: 4,
-    src: "/assets/images/portfolio/Company-profile-Design-2.jpeg",
-    alt: "Company Profile Design 4",
+    src: "/assets/images/portfolio/healthcare-medical-profile.jpg",
+    alt: "MedTech & Healthcare Innovations Profile",
+    title: "MedTech & Healthcare Profile",
+    category: "Healthcare",
   },
   {
     id: 5,
-    src: "/assets/images/portfolio/Profile-Design-Company-3.jpeg",
-    alt: "Company Profile Design 5",
+    src: "/assets/images/portfolio/renewable-energy-profile.jpg",
+    alt: "Renewable Energy & ESG Sustainability Profile",
+    title: "CleanTech & Renewable Energy",
+    category: "Energy & ESG",
   },
   {
     id: 6,
-    src: "/assets/images/portfolio/Company-profile-Design-11.jpg",
-    alt: "Company Profile Design 6",
+    src: "/assets/images/portfolio/luxury-real-estate-profile.jpg",
+    alt: "Luxury Real Estate & Penthouse Development Profile",
+    title: "Luxury Real Estate & Penthouse",
+    category: "Real Estate",
   },
   {
     id: 7,
-    src: "/assets/images/portfolio/Company-profile-Design-10.jpeg",
-    alt: "Company Profile Design 7",
+    src: "/assets/images/portfolio/logistics-supply-chain-profile.jpg",
+    alt: "Global Logistics & Freight Supply Chain Profile",
+    title: "Global Logistics & Supply Chain",
+    category: "Logistics",
   },
   {
     id: 8,
-    src: "/assets/images/portfolio/Profile-Design-Company-1.jpeg",
-    alt: "Company Profile Design 8",
+    src: "/assets/images/portfolio/creative-branding-profile.jpg",
+    alt: "Creative Agency & Brand Identity Profile",
+    title: "Creative Agency & Brand Identity",
+    category: "Branding",
   },
 ];
 
@@ -69,6 +85,7 @@ const LandingPortfolio = () => {
             <div key={item.id} className="col-lg-3 col-md-6 col-sm-6 col-12">
               <div className="portfolio-card">
                 <div className="portfolio-img-wrapper">
+                  <span className="portfolio-category-badge">{item.category}</span>
                   <Zoom>
                     <Image
                       src={item.src}
@@ -76,8 +93,12 @@ const LandingPortfolio = () => {
                       width={600}
                       height={450}
                       className="portfolio-img"
+                      priority={item.id <= 2}
                     />
                   </Zoom>
+                </div>
+                <div className="portfolio-card-info">
+                  <h3 className="portfolio-item-title">{item.title}</h3>
                 </div>
               </div>
             </div>
@@ -87,8 +108,9 @@ const LandingPortfolio = () => {
 
       <style jsx>{`
         .landing-portfolio-section {
-          background-color: #1968b3;
-          padding: 80px 0;
+          background-color: #0b3b68;
+          background: linear-gradient(180deg, #0e4579 0%, #082d52 100%);
+          padding: 85px 0;
         }
         .portfolio-title {
           color: #ffffff;
@@ -96,43 +118,81 @@ const LandingPortfolio = () => {
           font-weight: 700;
           font-family: var(--heading-font);
           margin-bottom: 16px;
+          letter-spacing: -0.5px;
         }
         .portfolio-desc {
-          color: #e3f2fd;
-          font-size: 15px;
-          line-height: 1.7;
+          color: #d1e7fd;
+          font-size: 15.5px;
+          line-height: 1.75;
           max-width: 860px;
           margin: 0 auto;
         }
         .portfolio-card {
           background: #ffffff;
-          border-radius: 8px;
+          border-radius: 12px;
           overflow: hidden;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
+            transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
+            box-shadow 0.35s ease;
           display: flex;
           flex-direction: column;
           height: 100%;
+          border: 1px solid rgba(255, 255, 255, 0.15);
         }
         .portfolio-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+          transform: translateY(-6px);
+          box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
         }
         .portfolio-img-wrapper {
           overflow: hidden;
-          background: #f0f4f8;
+          background: #0f2740;
+          position: relative;
+          aspect-ratio: 4 / 3;
+          width: 100%;
+        }
+        .portfolio-category-badge {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgba(8, 35, 65, 0.85);
+          color: #ffffff;
+          backdrop-filter: blur(4px);
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          padding: 4px 10px;
+          border-radius: 20px;
+          z-index: 2;
+          pointer-events: none;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         .portfolio-img {
           width: 100%;
-          height: 240px;
+          height: 100%;
+          aspect-ratio: 4 / 3;
           object-fit: cover;
           display: block;
-          transition: transform 0.5s ease;
+          transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         .portfolio-card:hover .portfolio-img {
           transform: scale(1.05);
+        }
+        .portfolio-card-info {
+          padding: 12px 14px;
+          background: #ffffff;
+          text-align: center;
+          border-top: 1px solid #edf2f7;
+        }
+        .portfolio-item-title {
+          font-size: 13.5px;
+          font-weight: 600;
+          color: #0f2b48;
+          margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .portfolio-card-footer {
           padding: 12px;

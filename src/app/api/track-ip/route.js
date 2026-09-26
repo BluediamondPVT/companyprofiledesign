@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/mongodb';
 import Visitor from '@/models/Visitor';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req) {
   try {
     // 1. Extract IP address from request headers (support Vercel, Cloudflare, standard proxies)

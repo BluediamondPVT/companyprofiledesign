@@ -10,10 +10,10 @@ const BestCompanyProfileDesignGuide = () => {
             {/* Featured Banner */}
             <div className=" mb-4" style={{ borderRadius: '12px', overflow: 'hidden' }}>
                 <Image 
-                    src="/assets/images/blog/Brochure-Designing-Services-Riyadh-Company-Brochure-Services-Saudi-Arabia-Company-Brochure-Services-36wa5b3w3w7txmxs0fh4i2-400x250-1.jpg" 
+                    src="/assets/images/blog/best-company-profile-design-guide-2025.jpg" 
                     alt="Best Company Profile Design Guide 2025" 
-                    width={846} 
-                    height={476} 
+                    width={1200} 
+                    height={675} 
                     style={{ width: '100%', height: '550px', objectFit: 'cover', borderRadius: '12px' }}
                 />
                 <div className="meta-blog mt-3 d-flex gap-3 text-muted fs-6">

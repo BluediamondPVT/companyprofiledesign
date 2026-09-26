@@ -1,16 +1,15 @@
 import { NextResponse } from 'next/server';
-import { headers } from 'next/headers';
 import connectToDatabase from '@/lib/mongodb';
-import BlockedIP from '@/models/BlockedIP';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
   try {
     // 1. Verify Admin Access
-    const headersList = headers();
-    const forwardedFor = headersList.get('x-forwarded-for');
-    const vercelForwarded = headersList.get('x-vercel-forwarded-for');
-    const cloudflareIp = headersList.get('cf-connecting-ip');
-    const realIp = headersList.get('x-real-ip');
+    const forwardedFor = req.headers.get('x-forwarded-for');
+    const vercelForwarded = req.headers.get('x-vercel-forwarded-for');
+    const cloudflareIp = req.headers.get('cf-connecting-ip');
+    const realIp = req.headers.get('x-real-ip');
     
     let incomingIp =
       (forwardedFor ? forwardedFor.split(',')[0].trim() : null) ||
@@ -53,6 +52,7 @@ export async function POST(req) {
 
     // 3. Connect to DB and apply action
     await connectToDatabase();
+    const BlockedIP = (await import('@/models/BlockedIP')).default;
 
     if (action === 'block') {
       await BlockedIP.findOneAndUpdate(

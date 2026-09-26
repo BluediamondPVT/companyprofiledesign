@@ -22,7 +22,7 @@ const HowToWriteCompanyProfile = () => {
             {/* Featured Post Banner Image */}
             <div className="mb-4" style={{ borderRadius: '12px', overflow: 'hidden' }}>
                 <Image 
-                    src="/assets/images/blog/How-to-write-a-company-profile-1200x675.jpg" 
+                    src="/assets/images/blog/how-to-write-a-company-profile.jpg" 
                     alt="How to write a Company Profile" 
                     width={1200} 
                     height={675} 

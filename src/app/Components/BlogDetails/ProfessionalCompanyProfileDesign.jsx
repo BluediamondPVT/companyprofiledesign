@@ -180,10 +180,10 @@ const CompanyProfileDesignGuide = () => {
                 style={{ borderRadius: "12px", overflow: "hidden" }}
               >
                 <Image
-                  src="/assets/images/blog/Construction-Company-Profile-1-1200x675.jpg"
+                  src="/assets/images/blog/importance-of-construction-company-profile.jpg"
                   alt="Importance of Construction Company Profile"
-                  width={846}
-                  height={476}
+                  width={1200}
+                  height={675}
                   style={{
                     width: "100%",
                     height: "550px",

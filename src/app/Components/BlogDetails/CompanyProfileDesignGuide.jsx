@@ -180,10 +180,10 @@ const CompanyProfileDesignGuide = () => {
                 style={{ borderRadius: "12px", overflow: "hidden" }}
               >
                 <Image
-                  src="/assets/images/blog/Company-Profile-Design-1-800x450.jpeg"
+                  src="/assets/images/blog/company-profile-design-complete-guide.jpg"
                   alt="Company Profile Design in India: Complete Guide for Businesses"
-                  width={800}
-                  height={450}
+                  width={1200}
+                  height={675}
                   style={{
                     width: "100%",
                     height: "550px",

@@ -180,7 +180,7 @@ const CompanyProfileSample = () => {
                 style={{ borderRadius: "12px", overflow: "hidden" }}
               >
                 <Image
-                  src="/assets/images/blog/Professional-Company-Profile-1200x675.jpg"
+                  src="/assets/images/blog/top-5-inspiring-company-profile-samples.jpg"
                   alt="Top 5 Inspiring Company Profile Samples for Business"
                   width={1200}
                   height={675}

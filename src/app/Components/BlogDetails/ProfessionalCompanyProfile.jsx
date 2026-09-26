@@ -180,7 +180,7 @@ const ProfessionalCompanyProfile = () => {
                 style={{ borderRadius: "12px", overflow: "hidden" }}
               >
                 <Image
-                  src="/assets/images/blog/Professional-Company-Profile-1200x675.jpg"
+                  src="/assets/images/blog/how-can-you-make-a-professional-company-profile.jpg"
                   alt="How can you make a professional company profile?"
                   width={1200}
                   height={675}
