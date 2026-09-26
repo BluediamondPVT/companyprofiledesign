@@ -19,17 +19,17 @@ const portfolioImages = [
   },
   {
     id: 3,
-    src: "/assets/images/portfolio/Profile-Design-Company-1.jpg",
+    src: "/assets/images/portfolio/Profile-Design-Company-1.jpeg",
     alt: "Company Profile Design 3",
   },
   {
     id: 4,
-    src: "/assets/images/portfolio/Company-profile-Design-2.jpg",
+    src: "/assets/images/portfolio/Company-profile-Design-2.jpeg",
     alt: "Company Profile Design 4",
   },
   {
     id: 5,
-    src: "/assets/images/portfolio/Profile-Design-Company-3.jpg",
+    src: "/assets/images/portfolio/Profile-Design-Company-3.jpeg",
     alt: "Company Profile Design 5",
   },
   {
@@ -39,12 +39,12 @@ const portfolioImages = [
   },
   {
     id: 7,
-    src: "/assets/images/portfolio/Company-profile-Design-10.jpg",
+    src: "/assets/images/portfolio/Company-profile-Design-10.jpeg",
     alt: "Company Profile Design 7",
   },
   {
     id: 8,
-    src: "/assets/images/portfolio/Profile-Design-Company-1.jpg",
+    src: "/assets/images/portfolio/Profile-Design-Company-1.jpeg",
     alt: "Company Profile Design 8",
   },
 ];
