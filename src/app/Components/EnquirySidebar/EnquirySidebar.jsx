@@ -292,26 +292,28 @@ const EnquirySidebar = () => {
                 </div>
 
                 {/* Captcha */}
-                {/* Cloudflare Turnstile Captcha */}
+                {/* Cloudflare Turnstile Captcha - Only loaded when drawer is opened */}
                 <div className="form-group-custom" style={{ marginTop: "15px", marginBottom: "15px" }}>
-                  <Turnstile
-                    ref={turnstileRef}
-                    siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY || "0x4AAAAAAFEPTwsQxY3K4K_Q"}
-                    onSuccess={(token) => {
-                      setTurnstileToken(token);
-                      setErrors((prev) => ({ ...prev, turnstile: "" }));
-                    }}
-                    onError={() => {
-                      setTurnstileToken("");
-                    }}
-                    onExpire={() => {
-                      setTurnstileToken("");
-                    }}
-                    options={{
-                      theme: "light",
-                      size: "normal",
-                    }}
-                  />
+                  {isOpen && (
+                    <Turnstile
+                      ref={turnstileRef}
+                      siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY || "0x4AAAAAAFEPTwsQxY3K4K_Q"}
+                      onSuccess={(token) => {
+                        setTurnstileToken(token);
+                        setErrors((prev) => ({ ...prev, turnstile: "" }));
+                      }}
+                      onError={() => {
+                        setTurnstileToken("");
+                      }}
+                      onExpire={() => {
+                        setTurnstileToken("");
+                      }}
+                      options={{
+                        theme: "light",
+                        size: "normal",
+                      }}
+                    />
+                  )}
                   {errors.turnstile && (
                     <span className="error-text" style={{ display: "block", marginTop: "6px" }}>
                       {errors.turnstile}

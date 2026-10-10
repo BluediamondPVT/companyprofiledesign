@@ -105,8 +105,7 @@ h4 a,
 h5 a,
 h6 a {
     color: inherit;
-    -webkit-transition: .5s;
-    transition: .5s;
+    transition: color 0.3s ease;
 }
 
 h1 {

@@ -64,10 +64,6 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const OurClients = () => {
-    useEffect(() => {
-        loadBackgroudImages();
-    }, []);
-
     // Duplicate brand list to ensure smooth infinite sliding across all screen sizes
     const clientLogos = [...brand, ...brand, ...brand];
 
@@ -112,7 +108,7 @@ const OurClients = () => {
     };
 
     return (
-        <div className="call-to-action our-clients-section" data-background="/assets/images/resource/call-bg.png" style={{ padding: '100px 0', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div className="call-to-action our-clients-section" data-background="/assets/images/resource/call-bg.png" style={{ backgroundImage: 'url(/assets/images/resource/call-bg.png)', padding: '100px 0', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative', overflow: 'hidden' }}>
             <div className="container">
                 <div className="row dream1-bg">
                     <div className="col-lg-12 text-center" style={{ position: 'relative', zIndex: 5 }}>

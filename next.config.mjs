@@ -6,7 +6,11 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
+  },
+  experimental: {
+    optimizeCss: true,
   },
 };
 
-export default nextConfig; 
+export default nextConfig;

@@ -25,13 +25,8 @@ const Faq = () => {
     }, [firstItemOpen]);
 
 
-    useEffect(() => {
-        loadBackgroudImages();
-      }, []);
-
-
     return (
-        <div className="about-section style-three faq" data-background="/assets/images/resource/about-bg3.webp">
+        <div className="about-section style-three faq" data-background="/assets/images/resource/about-bg3.webp" style={{ backgroundImage: 'url(/assets/images/resource/about-bg3.webp)' }}>
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-12">

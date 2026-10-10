@@ -8,13 +8,8 @@ import counter from '../../Data/counter.json';
 import Image from "next/image";
 
 const Feature1 = () => {
-
-    useEffect(() => {
-        loadBackgroudImages();
-    }, []);
-
     return (
-        <div className="feature-section" data-background="/assets/images/resource/feature-bg.webp">
+        <div className="feature-section" data-background="/assets/images/resource/feature-bg.webp" style={{ backgroundImage: 'url(/assets/images/resource/feature-bg.webp)' }}>
             <div className="container">
                 <div className="row dream-bg">
                     <div className="col-lg-12">

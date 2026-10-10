@@ -57,6 +57,7 @@ const Portfolio = ({
                                         alt={item.alt}
                                         width={600}
                                         height={450}
+                                        sizes="(max-width: 576px) 100vw, (max-width: 991px) 50vw, (max-width: 1200px) 33vw, 25vw"
                                         className="portfolio-item-img"
                                     />
                                 </Zoom>

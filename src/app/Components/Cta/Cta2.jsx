@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Cta2 = () => {
 
@@ -15,8 +16,8 @@ const Cta2 = () => {
 			<div className="row dream1-bg">
 				<div className="col-lg-5 col-md-6">
 					<div className="contact-info h-100">
-						<div className="contact-icon">
-							<i className="bi bi-envelope"></i>
+						<div className="contact-icon d-flex align-items-center justify-content-center">
+							<Mail size={24} color="var(--primary-color)" />
 						</div>
 						<div className="contact-title">
 							<span>Email Us</span>
@@ -26,8 +27,8 @@ const Cta2 = () => {
 				</div>
 				<div className="col-lg-3 col-md-6">
 					<div className="contact-info upper h-100">
-						<div className="contact-icon">
-							<i className="bi bi-whatsapp"></i>
+						<div className="contact-icon d-flex align-items-center justify-content-center">
+							<Phone size={24} color="var(--primary-color)" />
 						</div>
 						<div className="contact-title">
 							<span>What’s App</span>
@@ -37,8 +38,8 @@ const Cta2 = () => {
 				</div> 
 				<div className="col-lg-4 col-md-6">
 					<div className="contact-info upper2 h-100">
-						<div className="contact-icon">
-							<i className="bi bi-geo-alt-fill"></i>
+						<div className="contact-icon d-flex align-items-center justify-content-center">
+							<MapPin size={24} color="var(--primary-color)" />
 						</div>
 						<div className="contact-title">
 							<span>Address</span>

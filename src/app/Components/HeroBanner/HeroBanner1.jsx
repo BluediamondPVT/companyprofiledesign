@@ -6,11 +6,6 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const HeroBanner1 = ({ bgmage, Title1, Title2, content, btnName, btnName2, btnUrl, btnUrl2, heroShape1, heroShape2, heroShape3 }) => {
-
-	useEffect(() => { 
-		loadBackgroudImages();
-	}, []);
-
     return (
         <div 
             className="hero-section d-flex align-items-center" 

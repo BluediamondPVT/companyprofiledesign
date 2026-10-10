@@ -196,7 +196,7 @@ const LandingFooter = () => {
                   <p style={{ margin: 0, fontSize: "16px" }}>
                     Sales:{" "}
                     <a
-                      href="tel:+917718967729"
+                      href="tel:+917700091613"
                       style={{
                         color: "#ffffff",
                         textDecoration: "none",
@@ -224,7 +224,7 @@ const LandingFooter = () => {
                   <p style={{ margin: 0, fontSize: "16px" }}>
                     Projects:{" "}
                     <a
-                      href="tel:+917718967729"
+                      href="tel:+917700090159"
                       style={{
                         color: "#ffffff",
                         textDecoration: "none",

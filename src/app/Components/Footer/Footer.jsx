@@ -32,12 +32,8 @@ const Footer = () => {
         {title: 'Refund Policy', link: '/refund-policy'}
       ];
 
-      useEffect(() => {
-        loadBackgroudImages();
-      }, []);
-
     return (
-        <footer className="footer-section" data-background="/assets/images/resource/footer-bg.webp"> 
+        <footer className="footer-section" data-background="/assets/images/resource/footer-bg.webp" style={{ backgroundImage: 'url(/assets/images/resource/footer-bg.webp)' }}> 
 		<div className="container-fluid px-sm-3 px-lg-5 px-xl-5">
 			<div className="row">
 				
@@ -102,9 +98,9 @@ const Footer = () => {
                 {/* Column 5 */}
 				<div className="col-lg-3 col-md-12 col-12 mb-4">
 					<div className="widget widget-nav-menu">
-						<h3 className="widget-title custom-widget-title h4">About Us</h3>
+						<h3 className="widget-title custom-widget-title h4">Who We Are</h3>
 						<div className="menu-quick-info-content custom-footer-text" style={{ fontSize: '13.5px', lineHeight: '1.9' }}>
-							<p>We are a Profile design company for the companies of subsidiaries of Blue Diamond Infotech, we are professional in designing the company profile and we have designers brochures at the highest level of experience, efficiency and creativity, we guarantee you design profiles that fit with the nature of your business to express them strongly and attract customers and are a reason to achieve your goals and successes.</p>
+							<p>We are a specialized corporate profile and branding design agency under Blue Diamond Infotech Pvt Ltd. We craft bespoke company profiles, brochures, and catalogues designed to showcase your brand with authority, captivate prospects, and drive business growth.</p>
 						</div>
 					</div>
 				</div>
@@ -172,7 +168,6 @@ const Footer = () => {
             }
             .custom-footer-list a:hover {
                 color: #000000 !important;
-                font-weight: 600;
                 transform: translateX(5px);
             }
         `}</style>

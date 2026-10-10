@@ -202,6 +202,9 @@ const schemaGraph = {
 const HomePage = () => {
   return (
     <>
+      {/* Preload Hero LCP Image for immediate discovery */}
+      <link rel="preload" as="image" href="/assets/images/slider/hero-bg.jpg" fetchPriority="high" />
+
       {/* Single Consolidated Schema Script */}
       <script
         type="application/ld+json"

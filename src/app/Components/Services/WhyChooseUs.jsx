@@ -4,13 +4,8 @@ import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Image from "next/image";
 
 const WhyChooseUs = () => {
-
-    useEffect(() => {
-        loadBackgroudImages();
-    }, []);
-
     return (
-        <div className="service-section service" data-background="/assets/images/resource/service-bg.webp">
+        <div className="service-section service" data-background="/assets/images/resource/service-bg.webp" style={{ backgroundImage: 'url(/assets/images/resource/service-bg.webp)' }}>
 		<div className="container">
 			<div className="row dream1-bg">
 				<div className="col-lg-12">

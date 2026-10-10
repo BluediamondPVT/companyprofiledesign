@@ -33,9 +33,7 @@
     "eslint-config-next": "14.2.14"
   },
   "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead",
-    "not IE 11"
+    "defaults and fully supports es6-module",
+    "not dead"
   ]
 }
