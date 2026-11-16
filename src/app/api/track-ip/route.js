@@ -20,7 +20,7 @@ export async function POST(req) {
       '127.0.0.1';
 
     // Normalize IPv6 localhost
-    if (clientIp === '::1') {
+    if (clientIp === '::1' || clientIp === '::ffff:127.0.0.1') {
       clientIp = '127.0.0.1';
     }
 
@@ -31,11 +31,26 @@ export async function POST(req) {
     // 3. Connect to database, count total visits for this IP, and save record
     await connectToDatabase();
     
-    // Check if IP is blocked
-    const BlockedIP = (await import('@/models/BlockedIP')).default;
-    const isBlocked = await BlockedIP.findOne({ ipAddress: clientIp }).lean();
-    if (isBlocked) {
-      return NextResponse.json({ isBlocked: true }, { status: 200 });
+    // Check if IP is localhost or whitelisted admin IP - NEVER block localhost or admin
+    const isLocalhost =
+      clientIp === '127.0.0.1' ||
+      clientIp === '::1' ||
+      clientIp === 'localhost' ||
+      clientIp.includes('127.0.0.1');
+    const rawAllowedIps = process.env.MY_ALLOWED_IP || '';
+    const allowedIps = rawAllowedIps
+      .split(',')
+      .map((ip) => ip.trim())
+      .filter(Boolean);
+    const isAdminOrLocal = isLocalhost || allowedIps.includes(clientIp);
+
+    if (!isAdminOrLocal) {
+      // Check if IP is blocked
+      const BlockedIP = (await import('@/models/BlockedIP')).default;
+      const isBlocked = await BlockedIP.findOne({ ipAddress: clientIp }).lean();
+      if (isBlocked) {
+        return NextResponse.json({ isBlocked: true }, { status: 200 });
+      }
     }
 
     const previousVisits = await Visitor.countDocuments({ ipAddress: clientIp });

@@ -10,8 +10,23 @@ export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAll
   const [isProcessing, setIsProcessing] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  const isProtectedIp = (ip) => {
+    if (!ip) return false;
+    return (
+      ip === '127.0.0.1' ||
+      ip === '::1' ||
+      ip === 'localhost' ||
+      ip.includes('127.0.0.1') ||
+      ip === incomingIp
+    );
+  };
+
   const handleToggleBlock = async (ip, currentStatus) => {
     if (isProcessing) return;
+    if (!currentStatus && isProtectedIp(ip)) {
+      alert('Cannot block Localhost or Admin IP.');
+      return;
+    }
     setIsProcessing(true);
     try {
       const action = currentStatus ? 'unblock' : 'block';
@@ -710,36 +725,58 @@ export default function LogsViewer({ initialVisitors, incomingIp, totalUniqueAll
                           })}
                         </td>
                         <td style={{ padding: '14px 20px', textAlign: 'center' }}>
-                          <button
-                            onClick={() => handleToggleBlock(visitor.ipAddress, isBlocked)}
-                            disabled={isProcessing}
-                            style={{
-                              backgroundColor: isBlocked ? '#fef2f2' : '#ffffff',
-                              color: isBlocked ? '#ef4444' : '#64748b',
-                              border: isBlocked ? '1px solid #fecaca' : '1px solid #cbd5e1',
-                              padding: '6px 12px',
-                              borderRadius: '6px',
-                              fontSize: '12px',
-                              fontWeight: 600,
-                              cursor: isProcessing ? 'not-allowed' : 'pointer',
-                              transition: 'all 0.2s ease',
-                              opacity: isProcessing ? 0.6 : 1
-                            }}
-                            onMouseOver={(e) => {
-                              if (!isProcessing) {
-                                e.target.style.backgroundColor = isBlocked ? '#fee2e2' : '#f8fafc';
-                                e.target.style.borderColor = isBlocked ? '#fca5a5' : '#94a3b8';
-                              }
-                            }}
-                            onMouseOut={(e) => {
-                              if (!isProcessing) {
-                                e.target.style.backgroundColor = isBlocked ? '#fef2f2' : '#ffffff';
-                                e.target.style.borderColor = isBlocked ? '#fecaca' : '#cbd5e1';
-                              }
-                            }}
-                          >
-                            {isBlocked ? '✅ Unblock' : '🚫 Block'}
-                          </button>
+                          {isProtectedIp(visitor.ipAddress) && !isBlocked ? (
+                            <span
+                              title="Admin or Localhost IP cannot be blocked"
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '4px',
+                                backgroundColor: '#f1f5f9',
+                                color: '#64748b',
+                                border: '1px solid #e2e8f0',
+                                padding: '5px 10px',
+                                borderRadius: '6px',
+                                fontSize: '12px',
+                                fontWeight: 600,
+                                cursor: 'default',
+                                userSelect: 'none'
+                              }}
+                            >
+                              🛡️ Protected
+                            </span>
+                          ) : (
+                            <button
+                              onClick={() => handleToggleBlock(visitor.ipAddress, isBlocked)}
+                              disabled={isProcessing}
+                              style={{
+                                backgroundColor: isBlocked ? '#fef2f2' : '#ffffff',
+                                color: isBlocked ? '#ef4444' : '#64748b',
+                                border: isBlocked ? '1px solid #fecaca' : '1px solid #cbd5e1',
+                                padding: '6px 12px',
+                                borderRadius: '6px',
+                                fontSize: '12px',
+                                fontWeight: 600,
+                                cursor: isProcessing ? 'not-allowed' : 'pointer',
+                                transition: 'all 0.2s ease',
+                                opacity: isProcessing ? 0.6 : 1
+                              }}
+                              onMouseOver={(e) => {
+                                if (!isProcessing) {
+                                  e.target.style.backgroundColor = isBlocked ? '#fee2e2' : '#f8fafc';
+                                  e.target.style.borderColor = isBlocked ? '#fca5a5' : '#94a3b8';
+                                }
+                              }}
+                              onMouseOut={(e) => {
+                                if (!isProcessing) {
+                                  e.target.style.backgroundColor = isBlocked ? '#fef2f2' : '#ffffff';
+                                  e.target.style.borderColor = isBlocked ? '#fecaca' : '#cbd5e1';
+                                }
+                              }}
+                            >
+                              {isBlocked ? '✅ Unblock' : '🚫 Block'}
+                            </button>
+                          )}
                         </td>
                       </tr>
                     );

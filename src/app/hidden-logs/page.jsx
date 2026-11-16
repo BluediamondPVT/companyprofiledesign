@@ -30,7 +30,7 @@ export default async function HiddenLogsPage() {
     realIp ||
     '127.0.0.1';
 
-  if (incomingIp === '::1') {
+  if (incomingIp === '::1' || incomingIp === '::ffff:127.0.0.1') {
     incomingIp = '127.0.0.1';
   }
 
@@ -41,11 +41,13 @@ export default async function HiddenLogsPage() {
     .map((ip) => ip.trim())
     .filter(Boolean);
 
-  // Check matching: handle localhost (::1 and 127.0.0.1) and exact matches
-  const isLocalhost = incomingIp === '::1' || incomingIp === '127.0.0.1';
-  const isAllowed =
-    allowedIps.includes(incomingIp) ||
-    (isLocalhost && (allowedIps.includes('127.0.0.1') || allowedIps.includes('::1')));
+  // Check matching: handle localhost and whitelisted admin IPs
+  const isLocalhost =
+    incomingIp === '::1' ||
+    incomingIp === '127.0.0.1' ||
+    incomingIp === 'localhost' ||
+    incomingIp.includes('127.0.0.1');
+  const isAllowed = isLocalhost || allowedIps.includes(incomingIp);
 
   // 3. Unauthorized access -> 404 Not Found immediately
   if (!isAllowed) {

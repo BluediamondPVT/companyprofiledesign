@@ -105,11 +105,7 @@ const LandingPricing = () => {
                 style={{ listStyle: "none", padding: 0, margin: "0 0 30px 0" }}
               >
                 {[
-                  "About Us",
-                  "Mission",
-                  "Vision",
-                  "Values",
-                  "Services / Products",
+                  "About Us, Mission, Vision, Values, Services / Products",
                   "Unique design for each page",
                   "Professional Graphic Designer",
                   "2 on-call discussions with coordinator",
@@ -125,6 +121,7 @@ const LandingPricing = () => {
                       alignItems: "flex-start",
                       marginBottom: "12px",
                       fontSize: "15px",
+                      lineHeight: "1.4",
                       color: "#444",
                     }}
                   >
@@ -232,15 +229,7 @@ const LandingPricing = () => {
                   }}
                 >
                   {[
-                    "About Us",
-                    "Mission",
-                    "Vision",
-                    "Values",
-                    "Services / Products",
-                    "Gallery",
-                    "Clients",
-                    "Project List",
-                    "Certificates",
+                    "About Us, Mission, Vision, Values, Services / Products, Gallery, Clients, Project List, Certificates",
                     "Unique design for each page",
                     "Dedicated professional designer",
                     "Dedicated Project Coordinator",
@@ -257,6 +246,7 @@ const LandingPricing = () => {
                         alignItems: "flex-start",
                         marginBottom: "12px",
                         fontSize: "15px",
+                        lineHeight: "1.4",
                         color: "#fff",
                       }}
                     >
@@ -339,13 +329,7 @@ const LandingPricing = () => {
                 style={{ listStyle: "none", padding: 0, margin: "0 0 30px 0" }}
               >
                 {[
-                  "About Us",
-                  "Mission",
-                  "Vision",
-                  "Values",
-                  "Services / Products",
-                  "Gallery",
-                  "Clients",
+                  "About Us, Mission, Vision, Values, Services / Products, Gallery, Clients",
                   "Unique design for each page",
                   "Sr. Graphic Designer",
                   "Dedicated Project Coordinator",
@@ -361,6 +345,7 @@ const LandingPricing = () => {
                       alignItems: "flex-start",
                       marginBottom: "12px",
                       fontSize: "15px",
+                      lineHeight: "1.4",
                       color: "#444",
                     }}
                   >

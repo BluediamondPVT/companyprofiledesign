@@ -18,7 +18,7 @@ export async function POST(req) {
       realIp ||
       '127.0.0.1';
 
-    if (incomingIp === '::1') {
+    if (incomingIp === '::1' || incomingIp === '::ffff:127.0.0.1') {
       incomingIp = '127.0.0.1';
     }
 
@@ -28,10 +28,13 @@ export async function POST(req) {
       .map((ip) => ip.trim())
       .filter(Boolean);
 
-    const isLocalhost = incomingIp === '::1' || incomingIp === '127.0.0.1';
-    const isAdmin =
-      allowedIps.includes(incomingIp) ||
-      (isLocalhost && (allowedIps.includes('127.0.0.1') || allowedIps.includes('::1')));
+    const isLocalhost =
+      incomingIp === '::1' ||
+      incomingIp === '127.0.0.1' ||
+      incomingIp === 'localhost' ||
+      incomingIp.includes('127.0.0.1');
+
+    const isAdmin = isLocalhost || allowedIps.includes(incomingIp);
 
     if (!isAdmin) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
@@ -45,9 +48,15 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
     }
 
-    // Protect admin from blocking themselves
-    if (targetIp === incomingIp || allowedIps.includes(targetIp)) {
-      return NextResponse.json({ error: 'Cannot block an admin IP' }, { status: 400 });
+    // Protect localhost and admin IPs from being blocked
+    const isTargetLocalhost =
+      targetIp === '127.0.0.1' ||
+      targetIp === '::1' ||
+      targetIp === 'localhost' ||
+      targetIp.includes('127.0.0.1');
+
+    if (action === 'block' && (isTargetLocalhost || targetIp === incomingIp || allowedIps.includes(targetIp))) {
+      return NextResponse.json({ error: 'Cannot block localhost or admin IP' }, { status: 400 });
     }
 
     // 3. Connect to DB and apply action
